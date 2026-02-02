@@ -4,45 +4,34 @@ import Link from "next/link";
 export default function Sponsors() {
   const sponsors = [
     { name: "Swiggy", image: "/swiggy_logo.png" },
-    { name: "Jharkhand Tourism", image: "/titlesplogo.png" },
-    { name: "Domino's", image: "/dominos_logo.png" },
-    { name: "Hero MotoCorp", image: "/hero_logo.png" },
-    { name: "The Social House", image: "/social_house_logo.png" },
-    { name: "Himalaya Health Care", image: "/himalaya_hair_care_logo.png" },
-    { name: "VLCC", image: "/sponsors/previousSponsors/vlcc.png" },
-    {
-      name: "Chicago Pizza",
-      image: "/sponsors/previousSponsors/chicagoPizza.png",
-    },
-    { name: "Beyond", image: "/sponsors/previousSponsors/beyond.png" },
-    {
-      name: "Career Launcher",
-      image: "/sponsors/previousSponsors/careerLauncher.png",
-    },
-    {
-      name: "Coding Blocks",
-      image: "/sponsors/previousSponsors/CodingBlocks.png",
-    },
-    {
-      name: "cureMantra",
-      image: "/sponsors/previousSponsors/cureMantra.png",
-    },
-    {
-      name: "dareCompete",
-      image: "/sponsors/previousSponsors/dareCompete.png",
-    },
-    {
-      name: "FairAndHandsome",
-      image: "/sponsors/previousSponsors/FairAndHandsome.png",
-    },
-    {
-      name: "IES Master",
-      image: "/sponsors/previousSponsors/IESMaster.png",
-    },
-    {
-      name: "Pizza Hut",
-      image: "/sponsors/previousSponsors/PizzaHut.png",
-    },
+    { name: "Ease my trip", image: "/sponsors/24Sponsors/EaseMyTrip.png" },
+    { name: "FujiFilm", image: "/sponsors/24Sponsors/fujiFilm.png" },
+    { name: "TimesOfIndia", image: "/sponsors/24Sponsors/TimesOfIndia.png" },
+    // { name: "AR Beauty Salon", image: "/sponsors/24Sponsors/" },
+    // { name: "Aadhunik aroma's", image: "/sponsors/24Sponsors/" },
+    { name: "Campus events", image: "/sponsors/24Sponsors/CampusEvents.png" },
+    { name: "IMS", image: "/sponsors/24Sponsors/IMS.png" },
+    { name: "Campus music festival", image: "/sponsors/24Sponsors/CampusMusicFestival.png" },
+    { name: "Innovaders", image: "/sponsors/24Sponsors/Innovaders.png" },
+    { name: "Tattoo tattva", image: "/sponsors/24Sponsors/TattooTattva.png" },
+    { name: "99 Pancakes", image: "/sponsors/24Sponsors/99Pancakes.png" },
+    { name: "Radio City 911", image: "/sponsors/24Sponsors/RadioCity911.png" },
+    // { name: "Retro Garden", image: "/sponsors/24Sponsors/" },
+    { name: "Rollick", image: "/sponsors/24Sponsors/Rollick.png" },
+    { name: "Jamshedpur management association", image: "/sponsors/24Sponsors/JamshedpurManagementAssociation.png" },
+    { name: "Prabhat Khabar", image: "/sponsors/24Sponsors/PrabhatKhabar.png" },
+    // { name: "Persica", image: "/sponsors/24Sponsors/" },
+    { name: "Winkies", image: "/sponsors/previousSponsors/Winkies.png" },
+    { name: "Emami fair and handsome", image: "/sponsors/24Sponsors/EmamiFairAndHandsome.png" },
+    { name: "Golden Leaf Resort", image: "/sponsors/24Sponsors/GoldenLeafResort.png" },
+    // { name: "Sheesh Mahal", image: "/sponsors/24Sponsors/" },
+    { name: "Beyond temptation ", image: "/sponsors/24Sponsors/BeyondTemptation.png" },
+    { name: "Verzeo", image: "/sponsors/24Sponsors/Verzeo.png" },
+    // { name: "Chicago Pizza", image: "/sponsors/24Sponsors/" },
+    { name: "Career Launcher" , image: "/sponsors/24Sponsors/CareerLauncher.png" },
+    { name: "VLCC" , image: "/sponsors/24Sponsors/VLCC.png" },
+    { name: "Himalaya Haircare" , image: "/sponsors/24Sponsors/HimalayaHaircare.png" }
+    
   ];
 
   return (
