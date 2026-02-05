@@ -5,684 +5,440 @@ import { motion } from "framer-motion";
 export default function AnimatedHeroBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [showText, setShowText] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Golden bubbles animation on black background
+  // Responsive Check
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile(); // Check on mount
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    // Countdown Logic (Target: Feb 26, 2026)
+    const targetDate = new Date("2026-02-26T00:00:00").getTime();
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        return;
+      }
+
+      setTimeLeft({
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000)
+      });
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    }
+  }, []);
+
+  // Hexagon Tech Grid & Embers Animation
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
     };
     window.addEventListener("resize", handleResize);
 
-    // Create golden bubbles - dense
-    const bubbles: { x: number; y: number; r: number; o: number; d: number; c: string }[] = [];
-    const goldenColors = ["#ffd700", "#ffb700", "#ffc107", "#f9a825", "#ffca28", "#ffe082"];
+    // Embers Particles
+    const embers: { x: number; y: number; s: number; vy: number; vx: number; alpha: number; life: number }[] = [];
+    const maxEmbers = 150;
 
-    for (let i = 0; i < 700; i++) {
-      bubbles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 1.5 + 0.5,
-        o: Math.random() * 0.7 + 0.3,
-        d: Math.random() > 0.5 ? 0.01 : -0.01,
-        c: goldenColors[Math.floor(Math.random() * goldenColors.length)],
-      });
-    }
+    const createEmber = () => {
+      return {
+        x: Math.random() * width,
+        y: height + Math.random() * 100, // Start below
+        s: Math.random() * 3 + 1,
+        vy: Math.random() * 1 + 0.5,
+        vx: (Math.random() - 0.5) * 0.5,
+        alpha: Math.random() * 0.8 + 0.2,
+        life: Math.random() * 0.01 + 0.005,
+      };
+    };
 
-    let animId: number;
+    for (let i = 0; i < maxEmbers; i++) embers.push(createEmber());
+
+    let time = 0;
+
+    const drawHexagon = (x: number, y: number, r: number) => {
+      ctx.beginPath();
+      for (let i = 0; i < 6; i++) {
+        const angle = (Math.PI / 3) * i;
+        const hx = x + r * Math.cos(angle);
+        const hy = y + r * Math.sin(angle);
+        if (i === 0) ctx.moveTo(hx, hy);
+        else ctx.lineTo(hx, hy);
+      }
+      ctx.closePath();
+      ctx.stroke();
+    };
+
     const draw = () => {
-      // Pure black background
-      ctx.fillStyle = "#000000";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      time++;
+      // Dark Tech Background
+      ctx.fillStyle = "#0f172a"; // Dark Slate
+      ctx.fillRect(0, 0, width, height);
 
-      bubbles.forEach((b) => {
-        b.o += b.d;
-        if (b.o > 0.9 || b.o < 0.2) b.d *= -1;
+      // Draw Hex Grid (Subtle)
+      ctx.strokeStyle = "rgba(59, 130, 246, 0.15)"; // Blue Tech
+      ctx.lineWidth = 1;
+      const hexSize = 60;
+      const hexH = hexSize * Math.sin(Math.PI / 3);
 
-        ctx.beginPath();
-        ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-        ctx.fillStyle = b.c;
-        ctx.globalAlpha = b.o;
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = b.c;
-        ctx.fill();
-        ctx.shadowBlur = 0;
-        ctx.globalAlpha = 1;
+      // Moving Grid Effect
+      const scrollY = (time * 0.5) % (hexH * 2);
+
+      for (let y = -hexH * 2; y < height + hexH * 2; y += hexH) {
+        for (let x = 0; x < width + hexSize * 2; x += hexSize * 1.5) {
+          // Offset every other row
+          const yOffset = (Math.floor(x / (hexSize * 1.5)) % 2) * (hexH / 2);
+          drawHexagon(x, y + yOffset + scrollY, hexSize);
+        }
+      }
+
+      // Draw Embers (Fire/Action)
+      embers.forEach((ember, i) => {
+        ember.y -= ember.vy;
+        ember.x += ember.vx;
+        ember.alpha -= ember.life;
+
+        if (ember.alpha <= 0 || ember.y < -50) {
+          embers[i] = createEmber();
+        } else {
+          ctx.beginPath();
+          ctx.arc(ember.x, ember.y, ember.s, 0, Math.PI * 2);
+          // Fire Colors: Red/Orange/Gold
+          const color = Math.random() > 0.5 ? "239, 68, 68" : "234, 179, 8"; // Red : Gold
+          ctx.fillStyle = `rgba(${color}, ${ember.alpha})`;
+          ctx.fill();
+        }
       });
 
-      animId = requestAnimationFrame(draw);
+      requestAnimationFrame(draw);
     };
     draw();
 
-    setTimeout(() => setShowText(true), 300);
+    setTimeout(() => setShowText(true), 600);
 
     return () => {
-      cancelAnimationFrame(animId);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  const text = "CULFEST'26";
+  // Custom Avengers "A" Shape SVG
+  const AvengersLogo = ({ style }: { style: React.CSSProperties }) => (
+    <svg viewBox="0 0 100 100" style={style}>
+      <path
+        d="M 40 5 L 60 5 L 90 90 L 70 90 L 63 70 L 37 70 L 40 5 Z M 44 25 L 56 25 L 50 45 Z"
+        fill="transparent"
+        stroke="rgba(255, 255, 255, 0.05)"
+        strokeWidth="1"
+      />
+      {/* Circle Ring */}
+      <circle cx="50" cy="50" r="45" stroke="rgba(255,255,255,0.05)" strokeWidth="1" fill="none" />
+      {/* Arrow */}
+      <path d="M 63 70 L 95 70" stroke="rgba(255,255,255,0.05)" strokeWidth="1" />
+    </svg>
+  );
+
+  // REALISTIC INFINITY STONE SVG
+  const InfinityStone = ({ color, style }: { color: string, style?: any }) => (
+    <svg viewBox="0 0 100 100" style={{ ...style, filter: `drop-shadow(0 0 10px ${color})` }}>
+      {/* Faceted Gem Shape */}
+      <path d="M50 5 L85 30 L85 70 L50 95 L15 70 L15 30 Z" fill={color} opacity="0.8" />
+      <path d="M50 5 L85 30 L50 40 Z" fill="#fff" opacity="0.4" />
+      <path d="M15 30 L50 5 L50 40 Z" fill="#fff" opacity="0.2" />
+      <path d="M15 30 L50 40 L15 70 Z" fill="#000" opacity="0.1" />
+      <path d="M85 30 L50 40 L85 70 Z" fill="#000" opacity="0.2" />
+      <path d="M50 40 L50 95 L85 70 Z" fill="#000" opacity="0.3" />
+      <path d="M50 40 L50 95 L15 70 Z" fill="#000" opacity="0.1" />
+      <circle cx="50" cy="50" r="10" fill="white" opacity="0.8" filter="blur(5px)" />
+    </svg>
+  );
+
+  // JARVIS HUD RING SVG - Bolder/Darker as requested
+  const JarvisRing = ({ style, color = "#00e5ff" }: { style: any, color?: string }) => (
+    <svg viewBox="0 0 100 100" style={style}>
+      <circle cx="50" cy="50" r="45" stroke={color} strokeWidth="2" fill="none" strokeDasharray="10 5" opacity="0.9" />
+      <circle cx="50" cy="50" r="35" stroke={color} strokeWidth="3" fill="none" strokeDasharray="30 20" opacity="1" />
+      <circle cx="50" cy="50" r="25" stroke={color} strokeWidth="1.5" fill="none" opacity="0.8" />
+      <path d="M50 5 L50 15 M50 95 L50 85 M5 50 L15 50 M95 50 L85 50" stroke={color} strokeWidth="3" />
+      <circle cx="50" cy="50" r="3" fill={color} />
+    </svg>
+  );
+
+  // TIME HEIST DIGIT - RESPONSIVE SIZE
+  const Digit = ({ val, label }: { val: number, label: string }) => (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "0 10px" }}>
+      <div style={{
+        background: "rgba(0,0,0,0.5)", border: "1px solid #b91c1c", color: "#f43f5e",
+        fontFamily: "'Courier New', monospace",
+        fontSize: isMobile ? "16px" : "24px", // SMALLER ON MOBILE
+        fontWeight: "bold",
+        padding: isMobile ? "2px 5px" : "5px 10px",
+        borderRadius: "5px", textShadow: "0 0 5px #f43f5e"
+      }}>
+        {val.toString().padStart(2, '0')}
+      </div>
+      <span style={{ fontSize: isMobile ? "8px" : "10px", color: "#9ca3af", marginTop: "5px", textTransform: "uppercase" }}>{label}</span>
+    </div>
+  );
 
   return (
-    <div style={{ position: "absolute", inset: 0, background: "#000000", overflow: "hidden" }}>
+    <div style={{ position: "absolute", inset: 0, overflow: "hidden", background: "#0f172a" }}>
       <canvas ref={canvasRef} style={{ position: "absolute", inset: 0 }} />
 
-      {/* Radial Glow Behind Title */}
-      <div
+      {/* Halftone Overlay */}
+      <div style={{
+        position: "absolute", inset: 0,
+        backgroundImage: "radial-gradient(circle, #334155 1px, transparent 1px)",
+        backgroundSize: "20px 20px",
+        opacity: 0.1,
+        pointerEvents: "none"
+      }} />
+
+      {/* Top Red Border */}
+      <div style={{
+        position: "absolute", top: 0, left: 0, right: 0, height: "80px",
+        background: "linear-gradient(175deg, #b91c1c 40%, transparent 40%)", // RED TOP
+        zIndex: 5
+      }} />
+
+      {/* Bottom Blue Border (Right Triangle) */}
+      <div style={{
+        position: "absolute", bottom: 0, right: 0,
+        width: "50%", height: "100px",
+        background: "#1d4ed8", // SOLID BLUE
+        clipPath: "polygon(0% 100%, 100% 0%, 100% 100%)",
+        zIndex: 5
+      }} />
+
+      {/* JARVIS HUD ELEMENTS - RESPONSIVE SIZES */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         style={{
           position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "clamp(400px, 80vw, 900px)",
-          height: "clamp(300px, 50vh, 500px)",
-          background: "radial-gradient(ellipse at center, rgba(255,107,157,0.15) 0%, rgba(171,71,188,0.08) 40%, transparent 70%)",
-          pointerEvents: "none",
+          top: "20%", // KEEP USER PREFERENCE
+          left: "2%",
+          width: isMobile ? "80px" : "130px", // SMALLER ON MOBILE
+          height: isMobile ? "80px" : "130px",
+          zIndex: 1, opacity: 1
         }}
-      />
-
-      {/* Twinkling Stars */}
-      {showText && [...Array(20)].map((_, i) => (
-        <motion.div
-          key={`star-${i}`}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{
-            opacity: [0, 1, 0.5, 1, 0],
-            scale: [0.5, 1, 0.8, 1, 0.5],
-          }}
-          transition={{
-            delay: 0.5 + i * 0.1,
-            duration: 3 + Math.random() * 2,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          style={{
-            position: "absolute",
-            top: `${10 + Math.random() * 80}%`,
-            left: `${5 + Math.random() * 90}%`,
-            fontSize: `${8 + Math.random() * 16}px`,
-            color: i % 3 === 0 ? "#ffd700" : i % 3 === 1 ? "#ff6b9d" : "#00ced1",
-            textShadow: `0 0 10px currentColor`,
-            pointerEvents: "none",
-          }}
-        >
-          ✦
-        </motion.div>
-      ))}
-
-      {/* Floating Geometric Shapes */}
-      {showText && (
-        <>
-          {/* Floating Diamond 1 */}
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 180, 360],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "25%",
-              left: "8%",
-              width: "30px",
-              height: "30px",
-              border: "2px solid rgba(255,215,0,0.4)",
-              transform: "rotate(45deg)",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Floating Diamond 2 */}
-          <motion.div
-            animate={{
-              y: [0, 15, 0],
-              rotate: [0, -180, -360],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "30%",
-              right: "10%",
-              width: "25px",
-              height: "25px",
-              border: "2px solid rgba(255,107,157,0.4)",
-              transform: "rotate(45deg)",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Floating Circle 1 */}
-          <motion.div
-            animate={{
-              y: [0, -15, 0],
-              scale: [1, 1.1, 1],
-            }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "65%",
-              left: "12%",
-              width: "20px",
-              height: "20px",
-              border: "2px solid rgba(0,206,209,0.4)",
-              borderRadius: "50%",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Floating Circle 2 */}
-          <motion.div
-            animate={{
-              y: [0, 20, 0],
-              scale: [1, 0.9, 1],
-            }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "70%",
-              right: "8%",
-              width: "35px",
-              height: "35px",
-              border: "2px solid rgba(171,71,188,0.3)",
-              borderRadius: "50%",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Floating Triangle 1 */}
-          <motion.div
-            animate={{
-              y: [0, -10, 0],
-              rotate: [0, 15, 0, -15, 0],
-            }}
-            transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "20%",
-              right: "25%",
-              width: 0,
-              height: 0,
-              borderLeft: "12px solid transparent",
-              borderRight: "12px solid transparent",
-              borderBottom: "20px solid rgba(255,215,0,0.3)",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Floating Triangle 2 */}
-          <motion.div
-            animate={{
-              y: [0, 15, 0],
-              rotate: [180, 195, 180, 165, 180],
-            }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              bottom: "25%",
-              left: "20%",
-              width: 0,
-              height: 0,
-              borderLeft: "10px solid transparent",
-              borderRight: "10px solid transparent",
-              borderBottom: "16px solid rgba(255,107,157,0.3)",
-              pointerEvents: "none",
-            }}
-          />
-        </>
-      )}
-
-      {/* Corner Flourishes */}
-      {showText && (
-        <>
-          {/* Top Left Corner */}
-          <motion.svg
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.6, scale: 1 }}
-            transition={{ delay: 1.2, duration: 0.5 }}
-            width="80" height="80"
-            style={{ position: "absolute", top: "20px", left: "20px", pointerEvents: "none" }}
-          >
-            <path d="M5,75 L5,20 Q5,5 20,5 L75,5" stroke="#edea0bfe" strokeWidth="5" fill="none" />
-            <circle cx="20" cy="20" r="4" fill="#edea0bfe" />
-          </motion.svg>
-          {/* Top Right Corner */}
-          <motion.svg
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.6, scale: 1 }}
-            transition={{ delay: 1.3, duration: 0.5 }}
-            width="80" height="80"
-            style={{ position: "absolute", top: "20px", right: "20px", pointerEvents: "none" }}
-          >
-            <path d="M75,75 L75,20 Q75,5 60,5 L5,5" stroke="#edea0bfe" strokeWidth="5" fill="none" />
-            <circle cx="60" cy="20" r="4" fill="#edea0bfe" />
-          </motion.svg>
-          {/* Bottom Left Corner */}
-          <motion.svg
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.6, scale: 1 }}
-            transition={{ delay: 1.4, duration: 0.5 }}
-            width="80" height="80"
-            style={{ position: "absolute", bottom: "20px", left: "20px", pointerEvents: "none" }}
-          >
-            <path d="M5,5 L5,60 Q5,75 20,75 L75,75" stroke="#edea0bfe" strokeWidth="5" fill="none" />
-            <circle cx="20" cy="60" r="4" fill="#edea0bfe" />
-          </motion.svg>
-          {/* Bottom Right Corner */}
-          <motion.svg
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.6, scale: 1 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
-            width="80" height="80"
-            style={{ position: "absolute", bottom: "20px", right: "20px", pointerEvents: "none" }}
-          >
-            <path d="M75,5 L75,60 Q75,75 60,75 L5,75" stroke="#edea0bfe" strokeWidth="5" fill="none" />
-            <circle cx="60" cy="60" r="4" fill="#edea0bfe" />
-          </motion.svg>
-        </>
-      )}
-
-      {/* Glowing Border Frame */}
-      {showText && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 0.8 }}
-          style={{
-            position: "absolute",
-            inset: "15px",
-            border: "5px solid rgba(255, 251, 0, 0.92)",
-            borderRadius: "8px",
-            pointerEvents: "none",
-            boxShadow: "inset 0 0 50px rgba(255,215,0,0.1), 0 0 20px rgba(255,215,0,0.1)",
-          }}
-        />
-      )}
-
-
-      {/* Additional Animated Shapes - More Visible */}
-      {showText && (
-        <>
-          {/* Large Rotating Diamond - Left */}
-          <motion.div
-            animate={{
-              y: [0, -25, 0],
-              rotate: [45, 225, 405],
-            }}
-            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "40%",
-              left: "3%",
-              width: "40px",
-              height: "40px",
-              border: "3px solid #ff6b9d",
-              boxShadow: "0 0 15px rgba(255,107,157,0.5)",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Large Rotating Diamond - Right */}
-          <motion.div
-            animate={{
-              y: [0, 25, 0],
-              rotate: [45, -135, -315],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "45%",
-              right: "3%",
-              width: "35px",
-              height: "35px",
-              border: "3px solid #00ced1",
-              boxShadow: "0 0 15px rgba(0,206,209,0.5)",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Pulsing Circle - Top Left */}
-          <motion.div
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.8, 1, 0.8],
-            }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "20%",
-              left: "15%",
-              width: "25px",
-              height: "25px",
-              border: "3px solid #ffd700",
-              borderRadius: "50%",
-              boxShadow: "0 0 15px rgba(255,215,0,0.6)",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Pulsing Circle - Bottom Right */}
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.7, 1, 0.7],
-            }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              bottom: "25%",
-              right: "15%",
-              width: "30px",
-              height: "30px",
-              border: "3px solid #ff6b9d",
-              borderRadius: "50%",
-              boxShadow: "0 0 15px rgba(255,107,157,0.6)",
-              pointerEvents: "none",
-            }}
-          />
-          {/* Floating Plus Sign - Left */}
-          <motion.div
-            animate={{
-              y: [0, -15, 0],
-              rotate: [0, 90, 0],
-            }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "60%",
-              left: "5%",
-              fontSize: "30px",
-              color: "#ab47bc",
-              textShadow: "0 0 15px rgba(171,71,188,0.8)",
-              pointerEvents: "none",
-            }}
-          >
-            +
-          </motion.div>
-          {/* Floating Plus Sign - Right */}
-          <motion.div
-            animate={{
-              y: [0, 15, 0],
-              rotate: [0, -90, 0],
-            }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            style={{
-              position: "absolute",
-              top: "35%",
-              right: "5%",
-              fontSize: "25px",
-              color: "#ffd700",
-              textShadow: "0 0 15px rgba(255,215,0,0.8)",
-              pointerEvents: "none",
-            }}
-          >
-            +
-          </motion.div>
-          {/* Small Stars Scattered */}
-          <motion.div
-            animate={{ opacity: [0.5, 1, 0.5], scale: [0.8, 1.2, 0.8] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            style={{ position: "absolute", top: "15%", left: "25%", fontSize: "18px", color: "#00ced1", textShadow: "0 0 10px #00ced1", pointerEvents: "none" }}
-          >★</motion.div>
-          <motion.div
-            animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.3, 1] }}
-            transition={{ duration: 2.5, repeat: Infinity }}
-            style={{ position: "absolute", top: "75%", right: "25%", fontSize: "20px", color: "#ff6b9d", textShadow: "0 0 10px #ff6b9d", pointerEvents: "none" }}
-          >★</motion.div>
-          <motion.div
-            animate={{ opacity: [0.7, 1, 0.7], scale: [0.9, 1.1, 0.9] }}
-            transition={{ duration: 3, repeat: Infinity }}
-            style={{ position: "absolute", bottom: "35%", left: "30%", fontSize: "15px", color: "#ffd700", textShadow: "0 0 10px #ffd700", pointerEvents: "none" }}
-          >★</motion.div>
-        </>
-      )}
-
-      {/* Centered Content */}
-      <div
+      >
+        <JarvisRing style={{ width: "100%", height: "100%" }} />
+      </motion.div>
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         style={{
           position: "absolute",
-          inset: 0,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
+          bottom: isMobile ? "15%" : "12%",
+          right: "2%",
+          width: isMobile ? "100px" : "160px", // SMALLER ON MOBILE
+          height: isMobile ? "100px" : "160px",
+          zIndex: 1, opacity: 1
+        }}
+      >
+        <JarvisRing style={{ width: "100%", height: "100%" }} color="#eab308" />
+      </motion.div>
+
+
+      {/* STATIC CONTAINER FOR FLOATING OBJECTS (Safe Positions) */}
+      {showText && (
+        <div style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 5 }}>
+          {/* Comic Bubbles */}
+          {/* "POW!" */}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1, rotate: [-5, 5, -5] }}
+            transition={{ delay: 1, rotate: { duration: 3, repeat: Infinity } }}
+            style={{
+              position: "absolute",
+              top: isMobile ? "12%" : "15%",
+              right: isMobile ? "5%" : "20%",
+              background: "#ffef00", padding: "10px 15px",
+              clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%)",
+              zIndex: 5, border: "2px solid #000",
+              transform: isMobile ? "rotate(15deg) scale(0.7)" : "rotate(15deg)"
+            }}
+          >
+            <span style={{ fontFamily: "'Bangers', sans-serif", fontSize: "18px", color: "#000" }}>POW!</span>
+          </motion.div>
+
+          {/* "BOOM!" */}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.4 }}
+            style={{
+              position: "absolute", bottom: "10%", left: "5%", zIndex: 5,
+              transform: isMobile ? "scale(0.7)" : "scale(1)"
+            }}
+          >
+            <div style={{
+              background: "#f43f5e", padding: "15px", borderRadius: "50%",
+              border: "3px solid #fff", boxShadow: "0 0 10px rgba(244, 63, 94, 0.5)",
+            }}>
+              <span style={{ fontFamily: "'Bangers', sans-serif", fontSize: "20px", color: "#fff" }}>BOOM!</span>
+            </div>
+          </motion.div>
+
+          {/* STONES CONTAINER - Floating + Interactive (SAFE ZONES) */}
+          {[
+            { color: "#ef4444", top: "20%", left: isMobile ? "5%" : "35%" }, // Reality (Red) -> MOVED TO EDGE ON MOBILE
+            { color: "#3b82f6", top: "85%", left: "20%" }, // Space (Blue)
+            { color: "#a855f7", top: "15%", right: isMobile ? "5%" : "12%" }, // Power (Purple) -> MOVED TO EDGE ON MOBILE
+            { color: "#f59e0b", top: "75%", right: isMobile ? "5%" : "18%" }, // Mind (Yellow)
+            { color: "#22c55e", top: "90%", left: "60%" }, // Time (Green)
+            { color: "#f97316", top: "50%", left: "2%" }, // Soul (Orange)
+          ].map((stone, i) => (
+            <motion.div
+              key={i}
+              animate={{ y: [0, -10, 0], rotate: [0, 10, -10, 0], opacity: [0.8, 1, 0.8] }}
+              whileHover={{ scale: 1.5, filter: `drop-shadow(0 0 20px ${stone.color})`, zIndex: 50, opacity: 1 }}
+              transition={{ duration: 4 + i, repeat: Infinity, ease: "easeInOut" }}
+              style={{
+                position: "absolute", top: stone.top, left: stone.left, right: stone.right,
+                width: isMobile ? "20px" : "30px", height: isMobile ? "20px" : "30px",
+                zIndex: 4, pointerEvents: "auto"
+              }}
+            >
+              <InfinityStone color={stone.color} style={{ width: "100%", height: "100%" }} />
+            </motion.div>
+          ))}
+        </div>
+      )}
+
+      {/* GIANT Background "A" Symbol */}
+      <div style={{
+        position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+        width: isMobile ? "100%" : "90vh", height: isMobile ? "auto" : "90vh", aspectRatio: "1/1",
+        opacity: 0.1, pointerEvents: "none", zIndex: 1
+      }}>
+        <AvengersLogo style={{ width: "100%", height: "100%" }} />
+      </div>
+
+
+      {/* Main Content */}
+      <div
+        style={{
+          position: "absolute", inset: 0,
+          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
           zIndex: 10,
         }}
       >
-        {/* Decorative Line Top */}
+
+        {/* MAIN TITLE: CULFEST '26 */}
         {showText && (
           <motion.div
-            initial={{ scaleX: 0, opacity: 0 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            style={{
-              width: "clamp(250px, 60vw, 600px)",
-              height: "4px",
-              background: "linear-gradient(90deg, transparent, #ffd700, #ffa500, #ffd700, transparent)",
-              marginBottom: "25px",
-              borderRadius: "2px",
-            }}
-          />
+            initial={{ scale: 3, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
+            style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", width: isMobile ? "95%" : "fit-content" }}
+          >
+
+            {/* Encapsulating Brackets */}
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: "110%", opacity: 1 }} // Reduced width for mobile safety
+              transition={{ delay: 0.5, duration: 0.8 }}
+              style={{
+                position: "absolute", top: "-20px", left: "-5%",
+                height: "100%", borderTop: "2px solid #eab308", borderLeft: "2px solid #eab308",
+                zIndex: 0
+              }}
+            />
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: "110%", opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              style={{
+                position: "absolute", bottom: "-20px", right: "-5%",
+                height: "100%", borderBottom: "2px solid #eab308", borderRight: "2px solid #eab308",
+                zIndex: 0
+              }}
+            />
+
+
+            {/* The Text */}
+            <h1 style={{
+              fontSize: "clamp(32px, 12vw, 130px)", // Adjusted clamp min/max
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 900, fontStyle: "italic",
+              textAlign: "center", lineHeight: 0.9, letterSpacing: "-0.02em", margin: 0,
+              background: "linear-gradient(to bottom, #fcd34d 0%, #d97706 40%, #b45309 60%, #78350f 100%)",
+              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+              filter: "drop-shadow(6px 6px 0px #7f1d1d)", position: "relative", zIndex: 2,
+            }}>
+              CULFEST
+              <span style={{
+                fontSize: "0.5em", color: "#fff", WebkitTextFillColor: "#fff",
+                filter: "drop-shadow(4px 4px 0px #000)", marginLeft: "10px"
+              }}>'26</span>
+            </h1>
+          </motion.div>
         )}
 
-        {/* CULFEST - Colorful 3D Gradient Text */}
-        <div style={{ display: "flex", alignItems: "baseline", position: "relative" }}>
-          {showText &&
-            text.split("").map((char, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, y: 80, rotateX: -90 }}
-                animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                transition={{
-                  delay: i * 0.1,
-                  duration: 0.5,
-                  type: "spring",
-                  stiffness: 100,
-                }}
-                style={{
-                  fontSize: "clamp(50px, 13vw, 130px)",
-                  fontWeight: 400,
-                  fontFamily: "'Fredoka One', 'Arial Rounded MT Bold', sans-serif",
-                  background: "linear-gradient(180deg, #ff1493 0%, #ff6347 20%, #ffa500 40%, #ffd700 55%, #00ced1 75%, #4169e1 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  display: "inline-block",
-                  lineHeight: 1,
-                  letterSpacing: "0.04em",
-                  filter: "drop-shadow(8px 8px 0 #b0b0b0)",
-                }}
-              >
-                {char}
-              </motion.span>
-            ))}
-
-          {/* '26 */}
-          {showText && (
-            <motion.span
-              initial={{ opacity: 0, scale: 0, rotate: -20 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ delay: 0.9, duration: 0.4, type: "spring" }}
-              style={{
-                fontSize: "clamp(25px, 6vw, 60px)",
-                fontWeight: 700,
-                fontFamily: "'Bangers', sans-serif",
-                background: "linear-gradient(135deg, #ffd700, #ffb700)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                marginLeft: "10px",
-                filter: "drop-shadow(2px 2px 0 #1a1a2e)",
-              }}
-            >
-            </motion.span>
-          )}
-        </div>
-
-        {/* Decorative Stars/Sparkles */}
-        {showText && (
-          <>
-            <motion.span
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.0, duration: 0.3 }}
-              style={{
-                position: "absolute",
-                top: "35%",
-                left: "15%",
-                fontSize: "24px",
-                color: "#ffd700",
-                textShadow: "0 0 10px #ffd700",
-              }}
-            >
-              ✦
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.1, duration: 0.3 }}
-              style={{
-                position: "absolute",
-                top: "30%",
-                right: "18%",
-                fontSize: "20px",
-                color: "#ff6b9d",
-                textShadow: "0 0 10px #ff6b9d",
-              }}
-            >
-              ✦
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.2, duration: 0.3 }}
-              style={{
-                position: "absolute",
-                bottom: "35%",
-                left: "20%",
-                fontSize: "18px",
-                color: "#26c6da",
-                textShadow: "0 0 10px #26c6da",
-              }}
-            >
-              ✦
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.3, duration: 0.3 }}
-              style={{
-                position: "absolute",
-                bottom: "32%",
-                right: "15%",
-                fontSize: "22px",
-                color: "#ab47bc",
-                textShadow: "0 0 10px #ab47bc",
-              }}
-            >
-              ✦
-            </motion.span>
-          </>
-        )}
-
-        {/* Tagline */}
+        {/* Subtitle */}
         {showText && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.5 }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              marginTop: "30px",
-            }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            style={{ marginTop: "40px", position: "relative", display: "flex", flexDirection: "column", alignItems: "center" }}
           >
-            {/* Tagline Text */}
-            <p
-              style={{
-                fontSize: "clamp(12px, 1.8vw, 24px)",
-                fontWeight: 600,
-                fontFamily: "'Montserrat', sans-serif",
-                color: "#ffd700",
-                letterSpacing: "0.3em",
-                textShadow: "0 0 10px rgba(255,215,0,0.4)",
-                whiteSpace: "nowrap",
-                marginBottom: "15px",
-              }}
-            >
-              WORLD IN MINIATURE
+            <p style={{
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              fontSize: "clamp(14px, 3vw, 32px)", color: "#60a5fa",
+              textTransform: "uppercase", letterSpacing: "4px", margin: 0,
+              textShadow: "0 0 10px rgba(96, 165, 250, 0.6)", textAlign: "center"
+            }}>
+              COMIC CON EDITION
             </p>
-
-            {/* Simple Gold Line Below */}
-            <div
+            {/* Underline */}
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{ delay: 1.2, duration: 0.8 }}
               style={{
-                width: "clamp(300px, 50vw, 600px)",
-                height: "3px",
-                background: "linear-gradient(90deg, transparent, #ffd700, #ffd700, transparent)",
-                borderRadius: "2px",
+                height: "3px", background: "linear-gradient(90deg, transparent, #60a5fa, transparent)",
+                marginTop: "5px"
               }}
             />
+
+            {/* TIME HEIST COMPONENT - Scaled on Mobile */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+              style={{ display: "flex", marginTop: "30px", transform: isMobile ? "scale(0.8)" : "scale(1)" }}
+            >
+              <Digit val={timeLeft.days} label="Days" />
+              <Digit val={timeLeft.hours} label="Hrs" />
+              <Digit val={timeLeft.minutes} label="Mins" />
+              <Digit val={timeLeft.seconds} label="Secs" />
+            </motion.div>
+
           </motion.div>
         )}
 
-
-        {/* Bottom Left - Small Cyan Square */}
-        {showText && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.6, scale: 1 }}
-            transition={{ delay: 1.4, duration: 0.4 }}
-            style={{
-              position: "absolute",
-              bottom: "15%",
-              left: "5%",
-              width: "25px",
-              height: "25px",
-              border: "2px solid #00ced1",
-            }}
-          />
-        )}
-
-        {/* Bottom Right - Small Purple Square */}
-        {showText && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 0.6, scale: 1 }}
-            transition={{ delay: 1.5, duration: 0.4 }}
-            style={{
-              position: "absolute",
-              bottom: "12%",
-              right: "4%",
-              width: "20px",
-              height: "20px",
-              border: "2px solid #ab47bc",
-            }}
-          />
-        )}
-
-        {/* Date Badge */}
-        {showText && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.5, duration: 0.4 }}
-            style={{
-              marginTop: "25px",
-              padding: "12px 40px",
-              background: "linear-gradient(135deg, rgba(255,107,157,0.2), rgba(171,71,188,0.2))",
-              border: "2px solid rgba(255,215,0,0.5)",
-              borderRadius: "50px",
-              fontSize: "clamp(12px, 1.5vw, 20px)",
-              fontWeight: 600,
-              fontFamily: "'Montserrat', sans-serif",
-              color: "#fff",
-              letterSpacing: "0.2em",
-            }}
-          >
-            17 - 19 JANUARY 2026
-          </motion.div>
-        )}
       </div>
     </div>
   );
