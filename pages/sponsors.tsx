@@ -28,10 +28,10 @@ export default function Sponsors() {
     { name: "Beyond temptation ", image: "/sponsors/24Sponsors/BeyondTemptation.png" },
     { name: "Verzeo", image: "/sponsors/24Sponsors/Verzeo.png" },
     // { name: "Chicago Pizza", image: "/sponsors/24Sponsors/" },
-    { name: "Career Launcher" , image: "/sponsors/24Sponsors/CareerLauncher.png" },
-    { name: "VLCC" , image: "/sponsors/24Sponsors/VLCC.png" },
-    { name: "Himalaya Haircare" , image: "/sponsors/24Sponsors/HimalayaHaircare.png" }
-    
+    { name: "Career Launcher", image: "/sponsors/24Sponsors/CareerLauncher.png" },
+    { name: "VLCC", image: "/sponsors/24Sponsors/VLCC.png" },
+    { name: "Himalaya Haircare", image: "/sponsors/24Sponsors/HimalayaHaircare.png" }
+
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function Sponsors() {
         <img
           src="colorLogo.png"
           alt="CULFEST Logo"
-          className="animate-bounce-slow h-auto w-20 rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md md:w-28"
+          className="animate-bounce-slow h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
         />
       </Link>
 
@@ -65,7 +65,7 @@ export default function Sponsors() {
 
       {/* New Sponsor Section */}
       <div className="sponsor-section">
-       
+
         <div className="sponsor-image-box">
           <Image
             src="/titlesp.png" // Replace with the actual path to the title sponsor image
@@ -93,7 +93,7 @@ export default function Sponsors() {
           </div>
         ))}
       </div>
-  
+
       {/* Styles */}
       <style jsx>{`
         /* Rotating Logo */

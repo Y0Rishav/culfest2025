@@ -57,7 +57,7 @@ export default async function handler(
     // Set Cashfree credentials from environment variables
     Cashfree.XClientId = process.env.CASHFREE_APP_ID!;
     Cashfree.XClientSecret = process.env.CASHFREE_SECRET_KEY!;
-    Cashfree.XEnvironment = Cashfree.Environment.PRODUCTION;
+    Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 
     const validAmounts = user.isNITJSR ? [300, 500] : [650, 1250];
 
@@ -67,9 +67,8 @@ export default async function handler(
         success: false,
         msg: `Invalid order amount. Allowed amounts are ${validAmounts.join(
           " or "
-        )} for ${
-          user.isNITJSR ? "NIT Jamshedpur" : "non-NIT Jamshedpur"
-        } participants.`,
+        )} for ${user.isNITJSR ? "NIT Jamshedpur" : "non-NIT Jamshedpur"
+          } participants.`,
       });
     }
     // Configure order request

@@ -60,9 +60,9 @@ export default async function handler(
     }
     const minPart = noofParticipants?.minParticipants;
     const maxPart = noofParticipants?.maxParticipants;
-    // console.log(userEmails.length);
-    // console.log(minPart);
-    // console.log(maxPart);
+    console.log(userEmails.length);
+    console.log(minPart);
+    console.log(maxPart);
     if (userEmails.length > maxPart || userEmails.length < minPart) {
       return res.status(200).json({
         status: 200,
@@ -80,6 +80,7 @@ export default async function handler(
       });
       await eventDoc.save();
     }
+    console.log(eventDoc);
     const isTeamNameTaken = eventDoc.teams.some(
       (team: any) =>
         team.teamName.replace(/\s+/g, "").toLowerCase() ===
@@ -200,14 +201,12 @@ export default async function handler(
       }
 
       // Update users and event if all checks pass
-      const session = await mongoose.startSession();
-      session.startTransaction();
       try {
         // Update all users
         await Promise.all(
           users.map((user) => {
             user.registeredEvents.push(event);
-            return user.save({ session });
+            return user.save();
           })
         );
 
@@ -220,18 +219,13 @@ export default async function handler(
 
         await Event.updateOne(
           { eventName: event.toString().toLowerCase() },
-          { $push: { teams: newTeam } },
-          { session }
+          { $push: { teams: newTeam } }
         );
-
-        await session.commitTransaction();
       } catch (err) {
-        await session.abortTransaction();
+        console.error("Registration error:", err);
         return res
           .status(500)
           .json({ status: 500, message: "something went wrong" });
-      } finally {
-        session.endSession();
       }
 
       return res.status(200).json({

@@ -109,7 +109,7 @@ const ForgotPasswordPage = () => {
         <img
           src="colorLogo.png"
           alt="CULFEST Logo"
-          className="animate-bounce-slow h-auto w-20 rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md md:w-28"
+          className="animate-bounce-slow h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
         />
       </Link>
 
@@ -132,8 +132,8 @@ const ForgotPasswordPage = () => {
             isOtpCorrect
               ? handleUpdatePassword
               : sentOtp
-              ? handleVerifyOtp
-              : handleSendOtp
+                ? handleVerifyOtp
+                : handleSendOtp
           }
         >
           <div>
@@ -145,8 +145,8 @@ const ForgotPasswordPage = () => {
                 isOtpCorrect
                   ? (e) => setPassword(e.target.value)
                   : sentOtp
-                  ? (e) => setOtp(e.target.value)
-                  : (e) => setEmail(e.target.value)
+                    ? (e) => setOtp(e.target.value)
+                    : (e) => setEmail(e.target.value)
               }
               placeholder={
                 isOtpCorrect ? "Password" : sentOtp ? "OTP" : "EMAIL"
@@ -164,10 +164,10 @@ const ForgotPasswordPage = () => {
             {loading
               ? "Loading..."
               : isOtpCorrect
-              ? "Update Password"
-              : sentOtp
-              ? "Verify Otp"
-              : "Send Otp"}
+                ? "Update Password"
+                : sentOtp
+                  ? "Verify Otp"
+                  : "Send Otp"}
           </button>
         </form>
         <p className="mt-4 text-center text-gray-300">

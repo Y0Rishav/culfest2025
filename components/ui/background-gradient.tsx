@@ -30,17 +30,17 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-                duration: 5,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }
+              duration: 5,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }
             : undefined
         }
         style={{
           backgroundSize: animate ? "400% 400%" : undefined,
         }}
         className={cn(
-          "absolute inset-0 z-[1] rounded-3xl opacity-60 blur-xl transition  duration-500 will-change-transform group-hover:opacity-100",
+          "absolute inset-0 z-[1] rounded-3xl opacity-80 blur-xl transition  duration-500 will-change-transform group-hover:opacity-100",
           " bg-[radial-gradient(circle_farthest-side_at_0_100%,#00ccb1,transparent),radial-gradient(circle_farthest-side_at_100%_0,#7b61ff,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#ffc414,transparent),radial-gradient(circle_farthest-side_at_0_0,#1ca0fb,#141316)]"
         )}
       />
@@ -51,10 +51,10 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-                duration: 5,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }
+              duration: 5,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }
             : undefined
         }
         style={{
@@ -68,14 +68,6 @@ export const BackgroundGradient = ({
 
       <div
         className={cn("relative z-10", className)}
-        style={{
-          backgroundImage: "url('/bg120.jpg')", // Add the path to your background image
-          // background:"transparent",
-          backgroundSize: "cover", // Ensures the image covers the full screen
-          backgroundPosition: "center", // Centers the image
-          backgroundAttachment: "fixed", // Keeps the background image fixed when scrolling
-          minHeight: "100vh",
-        }}
       >
         {children}
       </div>

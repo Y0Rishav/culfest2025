@@ -2,6 +2,7 @@ import styles from "@/styles/components/Page1.module.css";
 import { FloatingDockDemo } from "./Header";
 import AnimatedHeroBackground from "./AnimatedHeroBackground";
 import CursorEffect from "./CursorEffect";
+import { motion } from "framer-motion";
 
 export default function Page1() {
   return (
@@ -15,10 +16,12 @@ export default function Page1() {
           <FloatingDockDemo />
         </nav>
         <nav className="top-[50px] h-[3px]">
-          <img
+          <motion.img
             src="/colorLogo.png"
             alt="Culfest Logo"
-            className="absolute left-2 top-2 h-40 animate-pulse"
+            className="absolute left-4 top-4 h-[115px] mix-blend-screen"
+            animate={{ opacity: [0.4, 1, 0.4] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             style={{
               zIndex: 50,
             }}
@@ -28,7 +31,7 @@ export default function Page1() {
 
       {/* Animated Cursor - Yellow with Date */}
       <div id="cursor">
-        <h5>17-19 JAN</h5>
+        <h5>26 Feb <br /> 1 March</h5>
       </div>
       <CursorEffect />
     </div>

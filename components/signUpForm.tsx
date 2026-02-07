@@ -157,7 +157,7 @@ const SignupForm: React.FC = () => {
               className="h-40 w-auto"
               style={{
                 transformStyle: "preserve-3d",
-                animation: "rotateLogo 25s linear infinite",
+                animation: "rotateLogo 8s linear infinite",
               }}
             />
           </div>
@@ -192,8 +192,8 @@ const SignupForm: React.FC = () => {
                 isOtpCorrect
                   ? handleSubmit
                   : sentOtp
-                  ? handleSubmit
-                  : handleSendOtp
+                    ? handleSubmit
+                    : handleSendOtp
               }
             >
               {[
@@ -311,10 +311,10 @@ const SignupForm: React.FC = () => {
                 {loading
                   ? "Loading..."
                   : isOtpCorrect
-                  ? "Register"
-                  : sentOtp
-                  ? "Submit"
-                  : "Send Otp"}
+                    ? "Register"
+                    : sentOtp
+                      ? "Submit"
+                      : "Send Otp"}
 
                 {/* {error && <p>{error}</p>} */}
               </motion.button>

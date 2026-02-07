@@ -75,7 +75,7 @@ const About: React.FC = () => {
               <img
                 src="colorLogo.png"
                 alt="CULFEST Logo"
-                className="animate-bounce-slow h-auto w-20 rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md md:w-28"
+                className="animate-bounce-slow h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
               />
             </Link>
             <section className="mt-16">
