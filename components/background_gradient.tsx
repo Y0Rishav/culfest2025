@@ -16,7 +16,7 @@ import Link from "next/link";
 import { getEventTheme } from "@/utils/eventThemes";
 
 // Component for rendering interactive event details with theme support
-export function BackgroundGradientDemo({ total }: { total: any }) {
+export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: any }) {
   const { data: session, status } = useSession();
   const [teamName, setTeamName] = useState("");
   const [participants, setParticipants] = useState<string[]>([]);
@@ -27,7 +27,7 @@ export function BackgroundGradientDemo({ total }: { total: any }) {
   const [failedupdates, setFailedupdates] = useState<any>([]);
 
   // Get theme based on event name and category, falling back to default if data missing
-  const currentTheme = total?.eventname ? getEventTheme(total.eventname, total.category) : {
+  const currentTheme = theme || (total?.eventname ? getEventTheme(total.eventname, total.category) : {
     primaryColor: "#3b82f6",
     secondaryColor: "#1e40af",
     accentColor: "#60a5fa",
@@ -36,7 +36,7 @@ export function BackgroundGradientDemo({ total }: { total: any }) {
     bodyFont: "font-Quicksand font-bold",
     headingFontFamily: "Piedra, cursive",
     bodyFontFamily: "Quicksand, sans-serif",
-  };
+  });
 
   // Fetch registered events from API
   const fetchRegisteredEvents = async () => {
