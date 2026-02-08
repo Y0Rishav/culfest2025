@@ -59,7 +59,7 @@ export default async function handler(
     Cashfree.XClientSecret = process.env.CASHFREE_SECRET_KEY!;
     Cashfree.XEnvironment = Cashfree.Environment.SANDBOX;
 
-    const validAmounts = user.isNITJSR ? [300, 500] : [650, 1250];
+    const validAmounts = user.isNITJSR ? [200, 450, 2850] : [400, 1250, 2850];
 
     // Validate the order amount
     if (!validAmounts.includes(order_amount)) {

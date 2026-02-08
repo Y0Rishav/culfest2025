@@ -102,15 +102,21 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
     );
   } else {
     if (session.user.isNITJSR) {
-      if (plan === "Culfest 2025 Standard Plan" && numericPrice === 300) {
-        product.price = 300;
+      // NIT Jamshedpur Logic
+      if (plan === "Culfest 2025 Standard Plan" && numericPrice === 200) {
+        product.price = 200;
       } else {
-        product.price = 500;
+        // Multi event or default
+        product.price = 450;
       }
     } else {
-      if (plan === "Culfest 2025 Standard Plan" && numericPrice === 650) {
-        product.price = 650;
+      // Outside College Logic
+      if (plan === "Culfest 2025 Standard Plan" && numericPrice === 400) {
+        product.price = 400;
+      } else if (plan === "Battle Crew Plan" && numericPrice === 2850) {
+        product.price = 2850;
       } else {
+        // Premium / Multi event
         product.price = 1250;
       }
     }
@@ -132,12 +138,18 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
   if (session && session.user?.isNITJSR) {
     orderDetails.items[0].paisa = Number(product.price);
   } else {
-    if (product.price === 650) {
-      orderDetails.items[0].paisa = 350;
+    if (product.price === 400) {
+      orderDetails.items[0].paisa = 400;
       orderDetails.items[1].paisa = 0;
       orderDetails.items[2].paisa = 0;
-      orderDetails.items[3].paisa = 300;
+      orderDetails.items[3].paisa = 0;
+    } else if (product.price === 2850) {
+      orderDetails.items[0].paisa = 2850;
+      orderDetails.items[1].paisa = 0;
+      orderDetails.items[2].paisa = 0;
+      orderDetails.items[3].paisa = 0;
     } else {
+      // 1250 breakdown
       orderDetails.items[0].paisa = 500;
       orderDetails.items[1].paisa = 200;
       orderDetails.items[2].paisa = 250;

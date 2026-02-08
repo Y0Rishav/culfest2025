@@ -141,18 +141,26 @@ export default function Page() {
   const plans = [
     {
       title: "Culfest 2025 Standard Plan",
-      price: session.user.isNITJSR ? 200 : 650,
-      originalPrice: session.user.isNITJSR ? 500 : 1000,
+      price: session.user.isNITJSR ? 200 : 400,
+      originalPrice: session.user.isNITJSR ? 500 : 800,
       description: "Pay for participating in one event only",
       features: [feature[0], feature[1]],
       actionLabel: "Get It",
     },
     {
       title: "Culfest 2025 Premium Plan",
-      price: session.user.isNITJSR ? 400 : 1250,
-      originalPrice: session.user.isNITJSR ? 650 : 1500,
+      price: session.user.isNITJSR ? 450 : 1250,
+      originalPrice: session.user.isNITJSR ? 1000 : 2500,
       description: "Pay for participating in all the events and cultural night",
       features: session.user.isNITJSR ? features_nit : feature_all_more,
+      actionLabel: "Get It",
+    },
+    {
+      title: "Battle Crew Plan",
+      price: 2850,
+      originalPrice: 5000,
+      description: "For Battle of Bands / Battle of Dance (Entire Crew)",
+      features: ["Whole Crew Access", "Event Entry"],
       actionLabel: "Get It",
     },
   ];

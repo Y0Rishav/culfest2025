@@ -157,29 +157,71 @@ const ProfilePage = ({ session, res }: any) => {
                 {res?.data?.status === "success" ? (
                   <div className="rounded border border-green-500/30 bg-green-900/10 p-4 text-center">
                     <h3 className="text-green-400 font-bold uppercase tracking-wider mb-2">ACCESS GRANTED: VERIFIED</h3>
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-bold border-none">
-                      <a href="https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI" className="flex items-center gap-2">
+                    <a href="https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI" target="_blank" rel="noopener noreferrer">
+                      <Button className="bg-green-600 hover:bg-green-700 text-white font-bold border-none">
                         JOIN SECURE COMMS (WHATSAPP)
-                      </a>
-                    </Button>
+                      </Button>
+                    </a>
+                  </div>
+                ) : registeredEvents.some((e) =>
+                  ["battle of bands", "battle of dance"].includes(
+                    e.toLowerCase()
+                  )
+                ) ? (
+                  <div className="rounded border border-yellow-500/30 bg-yellow-900/10 p-3">
+                    <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
+                      <div className="text-center sm:text-left">
+                        <h3 className="mb-0.5 font-bold tracking-wider text-yellow-400 uppercase text-sm">
+                          CREW ACCESS GRANTED
+                        </h3>
+                        <p className="text-[10px] text-gray-400 leading-tight">
+                          Access cleared for Crew Event. Payment required for
+                          other individual events.
+                        </p>
+                      </div>
+                      <div className="flex flex-col gap-2 sm:flex-row">
+                        <a
+                          href="https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button className="w-full border-none bg-green-600 font-bold text-white hover:bg-green-700 sm:w-auto h-8 text-xs px-3">
+                            JOIN WHATSAPP
+                          </Button>
+                        </a>
+                        <Link href="/payme">
+                          <Button className="w-full border-none bg-gradient-to-r from-red-600 to-orange-600 font-bold text-white shadow-lg hover:shadow-red-500/20 sm:w-auto h-8 text-xs px-3">
+                            PAY FOR OTHERS
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 ) : (
-                  <div className="flex flex-col sm:flex-row gap-4 items-center justify-between rounded border border-red-500/30 bg-red-900/10 p-4">
+                  <div className="flex flex-col items-center justify-between gap-4 rounded border border-red-500/30 bg-red-900/10 p-4 sm:flex-row">
                     <div>
-                      <h3 className="text-red-400 font-bold uppercase tracking-wider">PAYMENT REQUIRED</h3>
-                      <p className="text-gray-400 text-xs">Clearance pending verification.</p>
+                      <h3 className="font-bold tracking-wider text-red-400 uppercase">
+                        PAYMENT REQUIRED
+                      </h3>
+                      <p className="text-xs text-gray-400">
+                        Clearance pending verification.
+                      </p>
                     </div>
                     <div className="flex gap-3">
                       <Link href="/payme">
-                        <Button className="bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold border-none shadow-lg hover:shadow-red-500/20">
+                        <Button className="border-none bg-gradient-to-r from-red-600 to-orange-600 font-bold text-white shadow-lg hover:shadow-red-500/20">
                           INITIATE PAYMENT
                         </Button>
                       </Link>
-                      <Button className="bg-gray-700 hover:bg-gray-600 text-white font-bold">
-                        <a href="https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI">
+                      <a
+                        href="https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button className="font-bold text-white hover:bg-gray-600 focus:bg-gray-700">
                           JOIN GROUP
-                        </a>
-                      </Button>
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 )}

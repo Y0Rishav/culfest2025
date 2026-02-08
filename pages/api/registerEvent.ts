@@ -115,65 +115,92 @@ export default async function handler(
           },
         });
       }
+      const eventNameLower = event.toString().toLowerCase();
+      const isCrewEvent = ["battle of bands", "battle of dance"].includes(eventNameLower);
+
+      // Check for team override: If it's a Crew Event and ANY member has paid 2850, everyone qualifies.
+      let teamHasValidCrewPayment = false;
+      if (isCrewEvent) {
+        for (const user of users) {
+          const p = await Payment.findOne({ userId: user._id, status: "success" });
+          if (p && Number(p.amount) === 2850) {
+            teamHasValidCrewPayment = true;
+            break;
+          }
+        }
+      }
+
       for (const user of users) {
         try {
-          // Check if payment exists
-          const paymentStatus = await Payment.findOne({ userId: user._id });
-          if (!paymentStatus) {
-            failedUpdates.push({
-              email: user.email,
-              reason: "No payment made",
-            });
-            continue;
-          }
-
-          // Check registration conditions
-          if (user.isNITJSR) {
-            if (
-              paymentStatus.amount == 200 &&
-              user.registeredEvents.length > 0
-            ) {
-              failedUpdates.push({
-                email: user.email,
-                reason: "Paid 200 but already registered for another event",
-              });
-              continue;
-            } else if (
-              paymentStatus.amount != 200 &&
-              paymentStatus.amount != 400
-            ) {
-              failedUpdates.push({
-                email: user.email,
-                reason: "Invalid payment amount for NITJSR user",
-              });
-              continue;
-            }
-          } else {
-            if (
-              paymentStatus.amount == 650 &&
-              user.registeredEvents.length > 0
-            ) {
-              failedUpdates.push({
-                email: user.email,
-                reason: "Paid 650 but already registered for another event",
-              });
-              continue;
-            } else if (
-              paymentStatus.amount != 650 &&
-              paymentStatus.amount != 1250
-            ) {
-              failedUpdates.push({
-                email: user.email,
-                reason: "Invalid payment amount for non-NITJSR user",
-              });
-              continue;
-            }
-          }
-
           if (user.registeredEvents.includes(event)) {
             failedUpdates.push({
               email: user.email,
               reason: "Already registered for this event",
+            });
+            continue;
+          }
+
+          // Team Override: If valid crew payment exists in team for a crew event, skip individual checks
+          if (isCrewEvent && teamHasValidCrewPayment) {
+            usersForEvent.push({ userId: user._id, name: user.name });
+            continue;
+          }
+
+          // Check if individual payment exists
+          const paymentStatus = await Payment.findOne({ userId: user._id }); // Assuming basic find implies existence check. Better to check status if possible, but keeping consistent with prev code.
+
+          if (!paymentStatus || paymentStatus.status !== "success") {
+            failedUpdates.push({
+              email: user.email,
+              reason: "No successful payment found",
+            });
+            continue;
+          }
+
+          const amount = Number(paymentStatus.amount);
+
+          // Logic for Single Event Plans (200 / 400)
+          if (amount === 200 || amount === 400) {
+            if (user.registeredEvents.length > 0) {
+              failedUpdates.push({
+                email: user.email,
+                reason: "Single event limit reached. Upgrade to register for more.",
+              });
+              continue;
+            }
+            if (isCrewEvent) {
+              failedUpdates.push({
+                email: user.email,
+                reason: "Single event plan covers only standard events, not Battle of Bands/Dance.",
+              });
+              continue;
+            }
+          }
+          // Logic for Multi Event Plans (450 / 1250)
+          else if (amount === 450 || amount === 1250) {
+            if (isCrewEvent) {
+              failedUpdates.push({
+                email: user.email,
+                reason: "Standard multi-event plan does not include Battle of Bands/Dance.",
+              });
+              continue;
+            }
+          }
+          // Logic for Crew Plan (2850)
+          else if (amount === 2850) {
+            if (!isCrewEvent) {
+              failedUpdates.push({
+                email: user.email,
+                reason: "Crew plan is valid ONLY for Battle of Bands/Dance.",
+              });
+              continue;
+            }
+          }
+          // Fallback for invalid amounts or unmatched plans
+          else {
+            failedUpdates.push({
+              email: user.email,
+              reason: "Invalid payment plan.",
             });
             continue;
           }
