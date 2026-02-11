@@ -42,61 +42,68 @@ const data = [
   {
     category: "Dance",
     title: "Get ready to groove! Show off your best moves",
-    src: "/event2025/dance.png",
+    src: "/event2026/Dance.jpeg",
     content: <DummyContent />,
   },
   {
     category: "Dramatics",
     title: "Unleash the actor within! Participate in skits, plays, and more.",
-    src: "/event2025/dramatic.png",
+    src: "/event2026/Dramatics.jpeg",
     content: <DummyContent1 />,
   },
   {
     category: "Fine Arts",
     title:
       "Unleash your creativity! Showcase your paintings and artwork to win recognition!",
-    src: "/event2025/fine_arts.png",
+    src: "/event2026/FineArts.jpeg",
     content: <DummyContent2 />,
   },
 
   {
     category: "Literary",
     title: "Word wizards, assemble!",
-    src: "/event2025/literary.png",
+    src: "/event2026/Literary.jpeg",
     content: <DummyContent3 />,
   },
   {
     category: "Music",
     title:
       "Strike a chord! Sing, play, or compose your way to stardom and win exciting prizes!",
-    src: "/event2025/music.png",
+    src: "/event2026/Music.jpeg",
     content: <DummyContent4 />,
   },
   {
     category: "Quizzing",
     title:
       "Brainiacs, get ready! Test your knowledge, speed, and strategy to win quizzing championships!",
-    src: "/event2025/quiz.png",
+    src: "/event2026/Quizzing.jpeg",
     content: <DummyContent5 />,
   },
   {
     category: "Photography",
     title: "Capture the moment! Showcase your photography skills and win",
-    src: "/event2025/photography.png",
+    src: "/event2026/PhotoGraphy.jpeg",
     content: <DummyContent6 />,
   },
   {
     category: "Informals",
     title:
       "Participate in casual games, activities, and events to win prizes and make memories!",
-    src: "/event2025/informals.png",
+    src: "/event2026/Informals.jpeg",
     content: <DummyContent8 />,
   },
   {
     category: "Fashion",
     title:
       "Walk the ramp! Showcase your style, creativity, and confidence to win fashion contests ",
-    src: "/event2025/fashion.png",
+    src: "/event2026/Fashion.jpeg",
+    content: <DummyContent10 />,
+  },
+   {
+    category: "FlagShipEvent",
+    title:
+      "Walk the ramp! Showcase your style, creativity, and confidence to win fashion contests ",
+    src: "/event2026/FlagshipEvent.jpeg",
     content: <DummyContent10 />,
   },
 ];
