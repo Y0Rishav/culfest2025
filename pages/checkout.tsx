@@ -251,50 +251,75 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
         <meta name="description" content="Explore Contact Us Page" />
         <link rel="icon" href="/culfest_logo.png" />
       </Head>
-      <div className="flex min-h-screen items-center justify-center px-4">
-        <div className="w-full max-w-lg transform rounded-xl border border-cyan-500/30 bg-slate-900/80 backdrop-blur-md p-6 shadow-lg transition-transform duration-500 hover:scale-105">
-          <h1 className="mb-6 text-center text-3xl font-bold text-white">
+      <div className="flex min-h-screen items-center justify-center bg-[#0a0a1a] px-4">
+        <div
+          className="w-full max-w-lg rounded-2xl p-6"
+          style={{
+            border: "2px solid rgba(255, 215, 0, 0.3)",
+            background: "rgba(10, 10, 30, 0.9)",
+            boxShadow: "0 0 20px rgba(255, 215, 0, 0.1)",
+          }}
+        >
+          <h1
+            className="mb-2 text-center font-Bangers text-3xl tracking-wider md:text-4xl"
+            style={{
+              background: "linear-gradient(135deg, #ffd700, #ff4444)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             Checkout
           </h1>
-          <h1 className="mb-6 text-center text-3xl font-bold text-white">
+          <h2
+            className="mb-6 text-center font-Bangers text-xl tracking-wider md:text-2xl"
+            style={{ color: "#00e5ff", textShadow: "0 0 10px rgba(0,229,255,0.3)" }}
+          >
             Order & Billing
-          </h1>
+          </h2>
           <div className="space-y-6">
             {/* <div>
         <p className="text-gray-600">Order ID:</p>
         <p className="font-medium text-gray-900">{idRef.current}</p>
       </div> */}
             <div className="flex-col flex-wrap gap-2">
-              <p className="text-gray-600">Customer Name:</p>
-              <span className="font-medium text-gray-900">
+              <p className="font-Bangers tracking-wide text-gray-400">Customer Name:</p>
+              <span className="font-Bangers tracking-wide text-white">
                 {orderDetails.customerName}
               </span>
-              <p className="text-gray-600">Customer Phone:</p>
-              <p className="font-medium text-gray-900">
+              <p className="font-Bangers tracking-wide text-gray-400">Customer Phone:</p>
+              <p className="font-Bangers tracking-wide text-white">
                 {orderDetails.customerPhone}
               </p>
-              <p className="text-gray-600">Customer Mail:</p>
-              <p className="font-medium text-gray-900">
+              <p className="font-Bangers tracking-wide text-gray-400">Customer Mail:</p>
+              <p className="font-Bangers tracking-wide text-white">
                 {orderDetails.customerMail}
               </p>
             </div>
             <div>
-              <p className="text-gray-600">Items:</p>
+              <p className="font-Bangers tracking-wide text-gray-400">Items:</p>
               <ul className="space-y-3">
                 {orderDetails.items.map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-center justify-between rounded-lg bg-gray-100 p-3 shadow"
+                    className="flex items-center justify-between rounded-lg p-3"
+                    style={{ background: "rgba(255,215,0,0.05)", border: "1px solid rgba(255,215,0,0.15)" }}
                   >
-                    <span className="font-medium">{item.naam}</span>
-                    <span className="text-gray-700">₹{item.paisa}</span>
+                    <span className="font-Bangers tracking-wide text-white">{item.naam}</span>
+                    <span className="font-Bangers tracking-wide text-yellow-400">₹{item.paisa}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <p className="text-gray-600">Total:</p>
-              <p className="text-2xl font-bold text-gray-800">
+              <p className="font-Bangers tracking-wide text-gray-400">Total:</p>
+              <p
+                className="font-Bangers text-3xl tracking-wider"
+                style={{
+                  background: "linear-gradient(135deg, #ffd700, #ff4444)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
                 ₹{product.price}
               </p>
             </div>
@@ -304,12 +329,16 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
               <p>Loading...</p>
             </div>
           ) : (
-            <Button
-              className="mt-8 transform bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 font-semibold text-white shadow-lg hover:scale-105"
+            <button
+              className="mt-8 w-full rounded-xl py-3 font-Bangers text-lg tracking-wider text-black transition-all hover:scale-105"
+              style={{
+                background: "linear-gradient(135deg, #ffd700, #ff4444)",
+                boxShadow: "0 0 20px rgba(255,215,0,0.3)",
+              }}
               onClick={() => handleBuyNow(product.price)}
             >
               Pay Now
-            </Button>
+            </button>
           )}
         </div>
       </div>

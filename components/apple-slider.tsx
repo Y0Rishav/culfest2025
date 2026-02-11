@@ -22,17 +22,29 @@ export function AppleCardsCarouselDemo() {
 
   return (
     <div className="h-full w-full py-20">
-      <h2 className="  relative z-20 text-center font-sans text-5xl  font-bold tracking-tight text-black dark:text-white md:text-5xl lg:text-7xl">
-        {/* What&apos;s cooler than Beams?{" "} */}
-        <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
-          <div className="absolute left-0 top-[1px] bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text bg-no-repeat py-4 text-transparent [text-shadow:0_0_rgba(0,0,0,0.1)]">
-            <span className="font-AnotherFont">Events.</span>
-          </div>
-          <div className="relative bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 bg-clip-text bg-no-repeat py-4 text-transparent">
-            <span className="font-AnotherFont ">Events.</span>
-          </div>
-        </div>
-      </h2>
+      <div className="relative z-20 text-center">
+        <h2
+          className="font-Bangers text-6xl tracking-wider md:text-7xl lg:text-8xl"
+          style={{
+            background: "linear-gradient(135deg, #ffd700, #ff4444, #ffd700)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            textShadow: "0 0 40px rgba(255, 215, 0, 0.3)",
+            letterSpacing: "4px",
+          }}
+        >
+          EVENTS
+        </h2>
+        <p
+          className="mx-auto mt-2 font-Bangers text-lg tracking-[6px] md:text-xl"
+          style={{
+            color: "#00e5ff",
+            textShadow: "0 0 10px rgba(0, 229, 255, 0.5)",
+          }}
+        >
+          COMIC CON EDITION
+        </p>
+      </div>
       <Carousel items={cards} />
     </div>
   );
@@ -99,7 +111,7 @@ const data = [
     src: "/event2026/Fashion.jpeg",
     content: <DummyContent10 />,
   },
-   {
+  {
     category: "FlagShipEvent",
     title:
       "Walk the ramp! Showcase your style, creativity, and confidence to win fashion contests ",

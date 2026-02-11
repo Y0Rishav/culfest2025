@@ -106,10 +106,10 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
-      <h1 className="text-4xl font-bold text-fuchsia-500 md:text-7xl">
+      <h1 className="font-Bangers text-4xl tracking-wider text-yellow-400 md:text-7xl" style={{ textShadow: '0 0 20px rgba(255,215,0,0.3)' }}>
         <TypewriterEffectDemo /> 2026
       </h1>
-      <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
+      <p className="mt-8 max-w-2xl font-Bangers text-base tracking-wide text-gray-300 md:text-xl" style={{ letterSpacing: '1px' }}>
         Welcome to Culfest 2026, the grand cultural extravaganza of the National
         Institute of Technology, Jamshedpur! A dazzling blend of talent,
         creativity, and exuberance awaits you as we embark on a journey of
@@ -139,7 +139,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product relative h-64 w-[18rem] flex-shrink-0 sm:h-64 sm:w-[30rem] " // Responsive sizes
+      className="group/product relative h-52 w-[16rem] flex-shrink-0 sm:h-64 sm:w-[30rem]" // Responsive sizes
     >
       <Link
         href={product.link}

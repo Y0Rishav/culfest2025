@@ -19,10 +19,10 @@ function SponsorCards() {
         backgroundImage: "url('/bg8.jpg')",
       }}
     >
-      <h2 className="md-8 z-10 pb-8 text-center font-AnotherFont text-5xl text-yellow-600 drop-shadow-sm">
+      <h2 className="md-8 z-10 pb-8 text-center font-Bangers text-5xl tracking-wider text-yellow-500 drop-shadow-sm" style={{ textShadow: '0 0 15px rgba(255,215,0,0.3)' }}>
         Our Proud Sponsors
       </h2>
-      <div className="align-center mt-22 mt-31 mt-45 flex w-full justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+      <div className="mt-8 flex w-full items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
         <div className="">
           <InfiniteMovingCards
             items={sponsors}

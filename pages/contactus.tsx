@@ -183,17 +183,17 @@ const ContactUs: React.FC = () => {
                           <p className="text-blue-400 font-mono text-sm mt-1">+91 89571 44430</p>
                         </div>
                         <div className="bg-gray-800/50 p-3 rounded-lg border border-gray-700">
-                          <p className="font-bold text-white">Mayank</p>
+                          <p className="font-bold text-white">Shresth Prasad</p>
                           <p className="text-sm text-gray-400">Events</p>
-                          <p className="text-blue-400 font-mono text-sm mt-1">+91 98018 12045</p>
+                          <p className="text-blue-400 font-mono text-sm mt-1">+91 82269 07863</p>
                         </div>
                         <div className="bg-gray-800/50 p-3 rounded-lg border border-gray-700 md:col-span-2">
                           <div className="flex flex-col gap-1">
                             <div>
-                              <p className="font-bold text-white">Ujjwal</p>
+                              <p className="font-bold text-white">Priyanshu Dev</p>
                               <p className="text-sm text-gray-400">Events</p>
                             </div>
-                            <p className="text-blue-400 font-mono text-sm mt-1">+91 87897 78911</p>
+                            <p className="text-blue-400 font-mono text-sm mt-1">+91 73078 34859</p>
                           </div>
                         </div>
                       </div>

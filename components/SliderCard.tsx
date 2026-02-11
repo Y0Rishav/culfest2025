@@ -42,7 +42,7 @@ function SliderCard({ data }: Props) {
           </motion.p>
           <motion.h1
             layoutId={data.title}
-            className="text-xl leading-6 text-white"
+            className="font-Bangers text-lg leading-6 tracking-wide text-white md:text-xl"
           >
             {data.title}
           </motion.h1>

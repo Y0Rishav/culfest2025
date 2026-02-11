@@ -42,19 +42,7 @@ export default function Sponsors() {
 
       <div className="relative min-h-screen">
 
-        {/* Top Red Border */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: "80px",
-            background: "linear-gradient(175deg, #b91c1c 40%, transparent 40%)",
-            zIndex: 15,
-            pointerEvents: "none",
-          }}
-        />
+
 
         {/* Bottom Blue Border */}
         <div
@@ -72,18 +60,19 @@ export default function Sponsors() {
         />
 
         {/* Content Layer */}
-        <div className="relative z-10 min-h-screen px-4 pt-5 pb-16 sm:px-8">
+        <div className="relative z-10 min-h-screen px-4 pt-2 pb-16 sm:px-8">
           {/* Logo */}
           <Link href="/" className="relative" style={{ zIndex: 50 }}>
             <img
               src="/colorLogo.png"
               alt="CULFEST Logo"
-              className="h-[60px] md:h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
+              className="relative h-[60px] md:h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
+              style={{ zIndex: 20 }}
             />
           </Link>
 
           {/* Main Title */}
-          <div className="container mx-auto mt-4 text-center">
+          <div className="container mx-auto mt-1 text-center">
             <motion.div
               initial={{ scale: 2, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

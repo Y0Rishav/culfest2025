@@ -140,7 +140,7 @@ const EventPage: React.FC = () => {
           <img
             src="/colorLogo.png"
             alt="CULFEST Logo"
-            className="absolute left-10 top-10 z-50 h-[60px] md:fixed md:h-[100px] w-auto rounded-lg bg-black/30 p-2 backdrop-blur-md border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)] cursor-pointer transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.6)]"
+            className="absolute left-4 top-4 z-50 h-[50px] w-auto cursor-pointer rounded-lg border border-cyan-500/30 bg-black/30 p-1.5 shadow-[0_0_15px_rgba(6,182,212,0.3)] backdrop-blur-md transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] md:fixed md:left-10 md:top-10 md:h-[100px] md:p-2"
           />
         </Link>
         <BackgroundGradientDemo

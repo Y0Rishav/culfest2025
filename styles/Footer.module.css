@@ -14,11 +14,13 @@
 }
 
 .welcomeHeading {
+  font-family: 'Bangers', sans-serif;
   font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 25px;
-  color: #fff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  color: #ffd700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.2);
+  letter-spacing: 2px;
 }
 
 .contactBox {
@@ -58,20 +60,24 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 .heading {
+  font-family: 'Bangers', sans-serif;
   font-size: 2.2em;
   font-weight: bold;
   margin-bottom: 25px;
-  color: #fff;
+  color: #ffd700;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
 }
 
 .subheading {
@@ -122,20 +128,24 @@
 }
 
 .contactHeading {
+  font-family: 'Bangers', sans-serif;
   font-weight: bold;
   font-size: 1.6rem;
   margin-bottom: 5px;
   margin-top: 12px;
+  letter-spacing: 1px;
+  color: #00e5ff;
 }
 
 .socialIcons {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
   padding: 0;
-  gap: 15px;
+  gap: 10px;
 }
 
 .iconContent {
@@ -207,25 +217,23 @@
 }
 
 .iconContent a[data-social="facebook"] .filled,
-.iconContent a[data-social="facebook"] ~ .tooltip {
+.iconContent a[data-social="facebook"]~.tooltip {
   background-color: #3b5998;
 }
 
 .iconContent a[data-social="instagram"] .filled,
-.iconContent a[data-social="instagram"] ~ .tooltip {
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5b51db,
-    #b33ab4,
-    #c135b4,
-    #e1306c,
-    #fd1f1f
-  );
+.iconContent a[data-social="instagram"]~.tooltip {
+  background: linear-gradient(45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f);
 }
 
 .iconContent a[data-social="youtube"] .filled,
-.iconContent a[data-social="youtube"] ~ .tooltip {
+.iconContent a[data-social="youtube"]~.tooltip {
   background-color: #ff0000;
 }
 

@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import ComicBackground from "@/components/ComicBackground";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -68,13 +69,13 @@ export default function Checkout() {
     checkUserPaymentStatus();
   }, []);
   // if (session.user.isNITJSR) {
-  //   if (plan === "Culfest 2026 Standard Plan" && numericPrice === 300) {
+  //   if (plan === "Culfest 2025 Standard Plan" && numericPrice === 300) {
   //     product.price = 300;
   //   } else {
   //     product.price = 500;
   //   }
   // } else {
-  //   if (plan === "Culfest 2026 Standard Plan" && numericPrice === 650) {
+  //   if (plan === "Culfest 2025 Standard Plan" && numericPrice === 650) {
   //     product.price = 650;
   //   } else {
   //     product.price = 1250;
@@ -83,14 +84,16 @@ export default function Checkout() {
   // Derived variables
   let productPrice = 1250;
   if (main?.user?.isNITJSR) {
-    if (plan === "Culfest 2026 Standard Plan" && numericPrice === 200) {
+    if (plan === "Culfest 2025 Standard Plan" && numericPrice === 200) {
       productPrice = 200;
     } else {
-      productPrice = 400;
+      productPrice = 450;
     }
   } else {
-    if (plan === "Culfest 2026 Standard Plan" && numericPrice === 650) {
-      productPrice = 650;
+    if (plan === "Culfest 2025 Standard Plan" && numericPrice === 400) {
+      productPrice = 400;
+    } else if (plan === "Battle Crew Plan" && numericPrice === 2850) {
+      productPrice = 2850;
     } else {
       productPrice = 1250;
     }
@@ -112,11 +115,16 @@ export default function Checkout() {
   if (main && main.user?.isNITJSR) {
     orderDetails.items[0].paisa = Number(productPrice);
   } else {
-    if (productPrice === 650) {
-      orderDetails.items[0].paisa = 350;
+    if (productPrice === 400) {
+      orderDetails.items[0].paisa = 400;
       orderDetails.items[1].paisa = 0;
       orderDetails.items[2].paisa = 0;
-      orderDetails.items[3].paisa = 300;
+      orderDetails.items[3].paisa = 0;
+    } else if (productPrice === 2850) {
+      orderDetails.items[0].paisa = 2850;
+      orderDetails.items[1].paisa = 0;
+      orderDetails.items[2].paisa = 0;
+      orderDetails.items[3].paisa = 0;
     } else {
       orderDetails.items[0].paisa = 500;
       orderDetails.items[1].paisa = 200;
@@ -228,66 +236,107 @@ export default function Checkout() {
         <meta name="description" content="Explore Contact Us Page" />
         <link rel="icon" href="/culfest_logo.png" />
       </Head>
-      <div className="flex min-h-screen items-center justify-center px-4">
-        <div className="w-full max-w-lg transform rounded-xl border border-cyan-500/30 bg-slate-900/80 backdrop-blur-md p-6 shadow-lg transition-transform duration-500 hover:scale-105">
-          <h1 className="mb-6 text-center text-3xl font-bold text-white">
+      <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-3 py-4" style={{ background: "#0a0a1a" }}>
+        {/* Comic Con Background - same as homepage */}
+        <ComicBackground backgroundColor="#0a0a1a" />
+
+        {/* Card - compact to fit single screen */}
+        <div
+          className="relative z-10 w-full max-w-md min-h-[85vh] flex flex-col justify-between rounded-2xl p-5 md:max-w-xl md:p-8"
+          style={{
+            border: "2px solid rgba(255, 215, 0, 0.3)",
+            background: "linear-gradient(145deg, rgba(15,15,35,0.95), rgba(10,10,26,0.98))",
+            boxShadow: "0 0 30px rgba(255, 215, 0, 0.08), 0 8px 32px rgba(0,0,0,0.5)",
+          }}
+        >
+          {/* Checkout heading */}
+          <h1
+            className="mb-0 text-center font-Bangers text-2xl tracking-wider md:text-3xl"
+            style={{
+              background: "linear-gradient(135deg, #ffd700, #ff4444, #ffd700)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             Checkout
           </h1>
-          <h1 className="mb-6 text-center text-3xl font-bold text-white">
+          <h2
+            className="mb-4 text-center font-Bangers text-sm tracking-[4px] md:text-base"
+            style={{ color: "#00e5ff", textShadow: "0 0 12px rgba(0,229,255,0.4)" }}
+          >
             Order & Billing
-          </h1>
-          <div className="space-y-6">
-            {/* <div>
-        <p className="text-gray-600">Order ID:</p>
-        <p className="font-medium text-gray-900">{idRef.current}</p>
-      </div> */}
-            <div className="flex-col flex-wrap gap-2">
-              <p className="text-gray-600">Customer Name:</p>
-              <span className="font-medium text-gray-900">
+          </h2>
+
+          <div className="space-y-3">
+            {/* Customer details */}
+            <div className="flex flex-col gap-0.5 rounded-lg p-3" style={{ background: "rgba(255,215,0,0.03)", border: "1px solid rgba(255,215,0,0.1)" }}>
+              <p className="font-Bangers text-[10px] tracking-wider text-gray-500">CUSTOMER NAME</p>
+              <span className="font-Bangers text-sm tracking-wide text-white">
                 {orderDetails.customerName}
               </span>
-              <p className="text-gray-600">Customer Phone:</p>
-              <p className="font-medium text-gray-900">
+              <p className="mt-1 font-Bangers text-[10px] tracking-wider text-gray-500">CUSTOMER PHONE</p>
+              <p className="font-Bangers text-sm tracking-wide text-white">
                 {orderDetails.customerPhone}
               </p>
-              <p className="text-gray-600">Customer Mail:</p>
-              <p className="font-medium text-gray-900">
+              <p className="mt-1 font-Bangers text-[10px] tracking-wider text-gray-500">CUSTOMER MAIL</p>
+              <p className="font-Bangers text-sm tracking-wide text-white">
                 {orderDetails.customerMail}
               </p>
             </div>
+
+            {/* Items */}
             <div>
-              <p className="text-gray-600">Items:</p>
-              <ul className="space-y-3">
+              <p className="mb-1 font-Bangers text-[10px] tracking-wider text-gray-500">ITEMS</p>
+              <ul className="space-y-1.5">
                 {orderDetails.items.map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-center justify-between rounded-lg bg-gray-100 p-3 shadow"
+                    className="flex items-center justify-between rounded-lg px-3 py-2"
+                    style={{
+                      background: "rgba(255,215,0,0.04)",
+                      border: "1px solid rgba(255,215,0,0.12)",
+                    }}
                   >
-                    <span className="font-medium">{item.naam}</span>
-                    <span className="text-gray-700">₹{item.paisa}</span>
+                    <span className="font-Bangers text-sm tracking-wide text-gray-300">{item.naam}</span>
+                    <span className="font-Bangers text-sm tracking-wide text-yellow-400">₹{item.paisa}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div>
-              <p className="text-gray-600">Total:</p>
-              <p className="text-2xl font-bold text-gray-800">
+
+            {/* Total */}
+            <div className="flex items-baseline justify-between rounded-lg px-3 py-2" style={{ background: "rgba(255,215,0,0.06)", border: "1px solid rgba(255,215,0,0.2)" }}>
+              <p className="font-Bangers text-sm tracking-wider text-gray-400">TOTAL</p>
+              <p
+                className="font-Bangers text-2xl tracking-wider md:text-3xl"
+                style={{
+                  background: "linear-gradient(135deg, #ffd700, #ff4444)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
                 ₹{productPrice}
               </p>
             </div>
           </div>
+
+          {/* Pay Button */}
           {loading ? (
-            <div className="mt-8 text-center">
-              <p>Loading...</p>
+            <div className="mt-3 text-center">
+              <p className="animate-pulse font-Bangers tracking-wider text-yellow-400">Processing...</p>
             </div>
           ) : (
             <form onSubmit={processPayment}>
-              <Button
-                className="w-full transform rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 py-3 font-semibold text-white shadow-md transition-transform hover:scale-105 hover:from-indigo-500 hover:to-blue-500 active:scale-95"
+              <button
+                className="mt-4 w-full rounded-xl py-3 font-Bangers text-lg tracking-wider text-black transition-all hover:scale-[1.02] active:scale-95"
+                style={{
+                  background: "linear-gradient(135deg, #ffd700, #ff8c00, #ffd700)",
+                  boxShadow: "0 0 25px rgba(255,215,0,0.25)",
+                }}
                 type="submit"
               >
-                {loading ? "Processing..." : "Pay"}
-              </Button>
+                {loading ? "Processing..." : "⚡ PAY NOW"}
+              </button>
             </form>
           )}
         </div>

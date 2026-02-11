@@ -133,11 +133,17 @@ body {
   border-radius: 50%;
   position: fixed;
   z-index: 100;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   transform: translate(-50%, -50%);
   pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  #cursor {
+    display: flex;
+  }
 }
 
 #cursor h5 {
