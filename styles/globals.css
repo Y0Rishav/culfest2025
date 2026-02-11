@@ -445,3 +445,7 @@ hr {
     @apply bg-background text-foreground;
   }
 }
+
+body.event-card-open #register-now-btn {
+  display: none !important;
+}

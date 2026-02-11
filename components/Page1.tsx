@@ -29,7 +29,8 @@ export default function Page1() {
           />
           <Link href="/login">
             <button
-              className="absolute right-4 top-4 z-50 rounded-lg px-6 py-2 text-xl tracking-wider transition-all hover:scale-110 active:scale-95 md:right-8 md:top-8 md:px-8 md:py-3 md:text-2xl"
+              id="register-now-btn"
+              className="hidden md:block absolute right-4 top-4 z-50 rounded-lg px-6 py-2 text-xl tracking-wider transition-all hover:scale-110 active:scale-95 md:right-8 md:top-8 md:px-8 md:py-3 md:text-2xl"
               style={{
                 fontFamily: "'Bangers', sans-serif",
                 background: "linear-gradient(135deg, #ffd700, #ff4444)",

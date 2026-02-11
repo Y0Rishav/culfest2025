@@ -15,6 +15,9 @@ export default function SlidingEventMenu({ isOpen, onClose }: SlidingEventMenuPr
   useEffect(() => {
     if (!isOpen) {
       setSelectedCategory(null);
+      document.body.classList.remove("event-card-open");
+    } else {
+      document.body.classList.add("event-card-open");
     }
   }, [isOpen]);
 
@@ -35,17 +38,16 @@ export default function SlidingEventMenu({ isOpen, onClose }: SlidingEventMenuPr
     <>
       {/* Backdrop */}
       {isOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-40 bg-black opacity-80"
           onClick={onClose}
         />
       )}
 
       {/* Sliding menu */}
-      <div 
-        className={`fixed inset-y-0 right-0 z-50 w-80 transform bg-black p-4 text-white shadow-xl transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      <div
+        className={`fixed inset-y-0 right-0 z-50 w-80 transform bg-black p-4 text-white shadow-xl transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         {/* Main container with hidden scrollbar */}
         <div className="h-full overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

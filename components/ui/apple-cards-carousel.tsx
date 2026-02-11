@@ -175,8 +175,10 @@ export const Card = ({
 
     if (open) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add("event-card-open");
     } else {
       document.body.style.overflow = "auto";
+      document.body.classList.remove("event-card-open");
     }
 
     window.addEventListener("keydown", onKeyDown);

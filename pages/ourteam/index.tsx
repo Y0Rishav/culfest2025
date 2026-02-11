@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import React from "react";
 // import { Link } from "react-scroll";
 import Head from "next/head";
 import { FloatingDock } from "@/components/ui/floating-dock";
@@ -180,6 +181,17 @@ const fadeItem = {
 
 // Team Component
 const Team: React.FC = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <>
       <Head>
@@ -268,21 +280,21 @@ const Team: React.FC = () => {
               <motion.h2 className="mb-8 mt-7 text-center font-Bangers text-3xl tracking-wider capitalize sm:text-4xl" style={{ color: "#fbbf24", textShadow: "2px 2px 0px #7f1d1d" }}>
                 {section.replace(/([A-Z])/g, " $1").trim()}
               </motion.h2>
-              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
                 {members.map((member: any, index) => (
                   <motion.div
                     key={index}
-                    className="w-11/12 transform overflow-hidden rounded-lg shadow-lg transition-transform duration-100 hover:rotate-1 hover:shadow-2xl"
+                    className="w-11/12 transform overflow-hidden rounded-lg shadow-lg transition-transform duration-100 hover:rotate-1 hover:shadow-2xl mx-auto"
                     style={{
                       background: "linear-gradient(135deg, rgba(255,215,0,0.8), rgba(255,68,68,0.8))",
                       border: "2px solid rgba(255,215,0,0.5)",
                     }}
                     variants={fadeItem}
-                    whileHover={{
+                    whileHover={!isMobile ? {
                       scale: 1.1,
                       rotate: 3,
                       transition: { type: "spring", stiffness: 120 },
-                    }}
+                    } : {}}
                   >
                     <div className="relative h-80 w-full bg-gradient-to-b from-white via-pink-200 to-purple-300">
                       <motion.img
