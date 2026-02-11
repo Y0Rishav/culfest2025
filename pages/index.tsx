@@ -24,17 +24,23 @@ const CursorEffect = dynamic(() => import("@/components/CursorEffect"), {
 });
 
 const pastceleb = [
-  { img: "/titlesponsor.png", location: "", description: "", title: "Culfest 25" },
-  { img: "/back6.png", location: "", description: "", title: "Shirley Shetia" },
-  { img: "/sachin.jpg", title: "Sachin-Jigar", description: "", location: "" },
-  { img: "/aseem1.png", title: "Aseem Sharma", description: "", location: "" },
-  { img: "/DJ-Rhea1.png", title: "DJ-Rhea", description: "", location: "" },
-  { img: "/3.png", title: "Lost Stories", description: "", location: "" },
-  { img: "/4.png", title: "Julia Bliss", description: "", location: "" },
-  { img: "/5.png", title: "TRAP", description: "", location: "" },
-  { img: "/6.png", title: "Mukesh Srivastava", description: "", location: "" },
-  { img: "/9.png", title: "Rahat Indori", description: "", location: "" },
-  { img: "/8.png", title: "Jubin Nautiyal", description: "", location: "" },
+  // { img: "/titlesponsor.png", location: "", description: "", title: "Culfest 25" },
+  // { img: "/back6.png", location: "", description: "", title: "Shirley Shetia" },
+  // { img: "/sachin.jpg", title: "Sachin-Jigar", description: "", location: "" },
+  // { img: "/aseem1.png", title: "Aseem Sharma", description: "", location: "" },
+  // { img: "/DJ-Rhea1.png", title: "DJ-Rhea", description: "", location: "" },
+  // { img: "/3.png", title: "Lost Stories", description: "", location: "" },
+  // { img: "/4.png", title: "Julia Bliss", description: "", location: "" },
+  // { img: "/5.png", title: "TRAP", description: "", location: "" },
+  // { img: "/6.png", title: "Mukesh Srivastava", description: "", location: "" },
+  // { img: "/9.png", title: "Rahat Indori", description: "", location: "" },
+  // { img: "/8.png", title: "Jubin Nautiyal", description: "", location: "" },
+  { img: "/MohammadIrfan.png", title: "Mohammad Irfan", description: "", location: "" },
+  { img: "/DjSwizel.png", title: "DJ Swizel", description: "", location: "" },
+  { img: "/RauhanMalik.png", title: "Rauhan Malik", description: "", location: "" },
+  { img: "/Euphony.png", title: "Euphony", description: "", location: "" },
+  { img: "/ArshMohammad.png", title: "Arsh Mohammad", description: "", location: "" },
+  { img: "/PratibhaSinghBaghel.png", title: "Pratibha Singh Baghel", description: "", location: "" },
 ];
 
 export default function Home() {

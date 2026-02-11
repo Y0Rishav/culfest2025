@@ -202,7 +202,7 @@ export const mockData: EventData[] = [
           </p>
         </div>
         <p
-          className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
@@ -1922,6 +1922,19 @@ export const mockData: EventData[] = [
     image: "/invicta3.jpg",
     rules: (
       <>
+        <div
+          title="ELIGIBILITY"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">ELIGIBILITY : </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            The event is open to individual male and female participants registered for Culfest.
+          </p>
+        </div>
+
         <div
           title="ELIGIBILITY"
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
