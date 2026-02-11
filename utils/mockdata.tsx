@@ -702,7 +702,7 @@ export const mockData: EventData[] = [
     ),
   },
 
-  {
+  /* {
     id: "panch parmeshwar",
     eventname: "PANCH PARMESHWAR",
     category: "Dramatics",
@@ -783,9 +783,9 @@ export const mockData: EventData[] = [
         </p>
       </>
     ),
-  },
+  }, */
 
-  {
+  /* {
     id: "choreo nights",
     eventname: "CHOREO NIGHTS",
     category: "Dance",
@@ -862,9 +862,9 @@ export const mockData: EventData[] = [
         </p>
       </>
     ),
-  },
+  }, */
 
-  {
+  /* {
     id: "foot loose",
     eventname: "FOOT LOOSE",
     category: "Dance",
@@ -987,7 +987,7 @@ export const mockData: EventData[] = [
         </p>
       </>
     ),
-  },
+  }, */
 
   {
     id: "battle of dance",
