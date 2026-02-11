@@ -16,6 +16,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
+import { getEventTheme } from "@/utils/eventThemes";
+
 interface CarouselProps {
   items: JSX.Element[];
   initialScroll?: number;
@@ -92,7 +94,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     >
       <div className="relative w-full">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-16"
+          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:pt-16 md:pb-4 snap-x snap-mandatory"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -125,16 +127,16 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="shrink-0 rounded-3xl last:pr-[5%] md:last:pr-[33%]"
+                className="shrink-0 rounded-3xl last:pr-[5%] md:last:pr-[33%] snap-center"
               >
                 {item}
               </motion.div>
             ))}
           </div>
         </div>
-        <div className="mr-10 flex justify-end gap-3">
+        <div className="mr-10 flex justify-end gap-3 -mt-2 mb-10 relative z-40">
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full border border-yellow-500/50 bg-black/60 transition-all hover:border-yellow-400 hover:shadow-[0_0_12px_rgba(255,215,0,0.4)] disabled:opacity-30"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-yellow-500/50 bg-black/60 transition-all hover:border-yellow-400 hover:shadow-[0_0_12px_rgba(255,215,0,0.4)] disabled:opacity-30"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
@@ -165,6 +167,9 @@ export const Card = ({
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
+
+  // Get theme based on card data
+  const theme = getEventTheme(card.title, card.category);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -219,35 +224,52 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-[60] mx-auto my-4 h-fit max-w-5xl rounded-3xl bg-black p-4 font-Bangers dark:bg-neutral-900 md:my-10 md:p-10"
+              className={`relative z-[60] mx-auto my-4 h-fit max-w-5xl rounded-3xl p-4 md:my-10 md:p-10 ${theme.bodyFont}`}
               style={{
-                backgroundImage: "url('/Background4.jpg')", // Add the path to your background image
-                backgroundSize: "cover", // Ensures the image covers the full screen
-                backgroundPosition: "center", // Centers the image
-                backgroundAttachment: "fixed", // Keeps the background image fixed when scrolling
+                backgroundImage: `url('${theme.backgroundImage}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundAttachment: "fixed",
                 minHeight: "100vh",
+                color: theme.textColor,
+                boxShadow: `0 0 40px ${theme.primaryColor}80` // Add a subtle glow matching the theme
               }}
             >
-              <button
-                className="sticky right-0 top-4 ml-auto flex h-10 w-10 items-center justify-center rounded-full border border-yellow-500/50 bg-black/80 transition-all hover:border-yellow-400 hover:shadow-[0_0_12px_rgba(255,215,0,0.4)]"
-                onClick={handleClose}
-              >
-                <IconX className="h-6 w-6 text-yellow-400" />
-              </button>
+              {/* Dark Overlay for readability */}
+              <div
+                className="absolute inset-0 z-0 rounded-3xl"
+                style={{ background: theme.overlayGradient }}
+              />
 
-              <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="font-Bangers text-base font-medium tracking-wider text-yellow-400"
-              >
-                {card.category}
-              </motion.p>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 font-Bangers text-3xl tracking-wide text-white md:text-5xl"
-              >
-                {card.title}
-              </motion.p>
-              <div className="py-10">{card.content}</div>
+              <div className="relative z-10">
+                <button
+                  className="sticky right-0 top-4 ml-auto flex h-10 w-10 items-center justify-center rounded-full bg-black/50 transition-all hover:shadow-[0_0_12px_rgba(255,255,255,0.4)]"
+                  style={{
+                    borderColor: theme.accentColor,
+                    borderWidth: '1px',
+                    color: theme.accentColor
+                  }}
+                  onClick={handleClose}
+                >
+                  <IconX className="h-6 w-6" />
+                </button>
+
+                <motion.p
+                  layoutId={layout ? `category-${card.title}` : undefined}
+                  className={`text-base font-medium tracking-wider ${theme.headingFont}`}
+                  style={{ color: theme.accentColor }}
+                >
+                  {card.category}
+                </motion.p>
+                <motion.p
+                  layoutId={layout ? `title-${card.title}` : undefined}
+                  className={`mt-4 text-3xl tracking-wide md:text-5xl ${theme.headingFont}`}
+                  style={{ color: theme.textColor }}
+                >
+                  {card.title}
+                </motion.p>
+                <div className="py-10">{card.content}</div>
+              </div>
             </motion.div>
           </div>
         )}

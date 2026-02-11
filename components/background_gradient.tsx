@@ -151,7 +151,10 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
 
   return (
     <div className="p-4">
-      <BackgroundGradient className="rounded-[22px] bg-zinc-900/90 backdrop-blur-md p-2 sm:p-6 lg:p-10 border border-white/10">
+      <BackgroundGradient
+        className="rounded-[22px] bg-zinc-900/90 backdrop-blur-md p-2 sm:p-6 lg:p-10 border border-white/10"
+        gradientColors={[currentTheme.primaryColor, currentTheme.secondaryColor, currentTheme.accentColor]}
+      >
         <motion.div
           initial="hidden"
           animate="visible"
@@ -162,7 +165,7 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
 
             <motion.div variants={itemVariants} className="text-center z-10">
               <div
-                className={`mb-2 mt-20 sm:mt-4 text-3xl sm:text-4xl lg:text-6xl text-white drop-shadow-[0_0_5px_rgba(0,0,0,0.8)] ${currentTheme.headingFont}`}
+                className={`mb-2 text-3xl sm:text-4xl lg:text-6xl text-white drop-shadow-[0_0_5px_rgba(0,0,0,0.8)] ${currentTheme.headingFont} ${event?.eventname.toLowerCase().includes("unsung wonders") ? "mt-32 sm:mt-40" : "mt-20 sm:mt-4"}`}
                 style={{ color: currentTheme.accentColor }}
               >
                 {event?.eventname}
@@ -205,14 +208,12 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
           backgroundColor: "rgba(0, 0, 0, 0.8)", // Darker background for contrast
           backdropFilter: "blur(10px)",
           borderColor: currentTheme.accentColor,
-          fontFamily: "'Montserrat', sans-serif" // Enforcing Montserrat for body
         }}
       >
         <div
-          className={`mb-6 mt-6 text-center text-3xl sm:text-4xl lg:text-5xl drop-shadow-lg`}
+          className={`mb-6 mt-6 text-center text-3xl sm:text-4xl lg:text-5xl drop-shadow-lg ${currentTheme.headingFont}`}
           style={{
             color: currentTheme.accentColor,
-            fontFamily: "'Bangers', cursive", // Enforcing Bangers for this heading
             letterSpacing: "2px"
           }}
         >
@@ -238,10 +239,7 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
             [&_p:nth-of-type(4n+3)_span]:!text-green-400
             [&_p:nth-of-type(4n+4)_span]:!text-pink-400
             [&_div_span]:!text-red-400"
-          style={{
-            "--body-font": "'Montserrat', sans-serif",
-            "--heading-font": "'Bangers', cursive",
-          } as React.CSSProperties}
+
         >
           {total?.rules ? total?.rules : "No rules available."}
         </div>
@@ -379,8 +377,8 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
             </>
           )}
         </div>
-      </motion.div>
-    </div>
+      </motion.div >
+    </div >
   );
 }
 

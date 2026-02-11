@@ -86,12 +86,12 @@ const ProfilePage = ({ session, res }: any) => {
       />
 
       {/* 2. Navigation Layer */}
-      <div className="relative flex justify-center pt-[90px]" style={{ zIndex: 50 }}>
+      <div className="relative flex justify-center pt-[20px]" style={{ zIndex: 50 }}>
         <FloatingDockDemo />
       </div>
 
       {/* 3. Main Content Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center p-2 sm:p-4">
+      <div className="relative z-20 flex flex-col items-center justify-center p-2 sm:p-4">
 
         {/* Logo - Static (no animation) */}
         <div className="mb-4">

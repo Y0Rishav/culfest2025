@@ -27,7 +27,11 @@ const LoginForm = () => {
     setLoading(false);
 
     if (result?.error) {
-      setError(result.error);
+      if (result.error === "CredentialsSignin") {
+        setError("Invalid Credentials");
+      } else {
+        setError(result.error);
+      }
     } else {
       const session = await getSession();
       router.push("/profile");
