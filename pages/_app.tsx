@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
             >
               <ComicBackground
                 backgroundColor="#0f172a"
-                topRingOffset={router.pathname === "/about" || router.pathname === "/contactus" ? "30%" : "10%"}
+                topRingOffset="30%"
               />
             </div>
           )}

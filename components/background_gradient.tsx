@@ -162,7 +162,7 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
 
             <motion.div variants={itemVariants} className="text-center z-10">
               <div
-                className={`mb-2 mt-4 text-3xl sm:text-4xl lg:text-6xl text-white drop-shadow-[0_0_5px_rgba(0,0,0,0.8)] ${currentTheme.headingFont}`}
+                className={`mb-2 mt-20 sm:mt-4 text-3xl sm:text-4xl lg:text-6xl text-white drop-shadow-[0_0_5px_rgba(0,0,0,0.8)] ${currentTheme.headingFont}`}
                 style={{ color: currentTheme.accentColor }}
               >
                 {event?.eventname}

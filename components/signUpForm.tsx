@@ -138,7 +138,7 @@ const SignupForm: React.FC = () => {
       </Link>
 
       {/* Registration Form Container */}
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-20 sm:px-[10%] lg:px-[20%] font-Quicksand">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-28 sm:px-[10%] lg:px-[20%] font-Quicksand">
 
         <div className="relative flex w-full max-w-5xl flex-col rounded-xl border border-cyan-500/30 bg-slate-900/80 shadow-[0_0_40px_rgba(6,182,212,0.15)] backdrop-blur-xl lg:flex-row overflow-hidden">
 
