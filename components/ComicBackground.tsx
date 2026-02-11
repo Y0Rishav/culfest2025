@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function ComicBackground({ backgroundColor = "#0f172a" }: { backgroundColor?: string }) {
+export default function ComicBackground({ backgroundColor = "#0f172a", topRingOffset = "10%" }: { backgroundColor?: string; topRingOffset?: string }) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [isMobile, setIsMobile] = useState(false);
 
@@ -175,7 +175,7 @@ export default function ComicBackground({ backgroundColor = "#0f172a" }: { backg
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 style={{
                     position: "absolute",
-                    top: "10%",
+                    top: topRingOffset,
                     left: "2%",
                     width: isMobile ? "80px" : "130px",
                     height: isMobile ? "80px" : "130px",

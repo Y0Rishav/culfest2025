@@ -103,7 +103,7 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
   } else {
     if (session.user.isNITJSR) {
       // NIT Jamshedpur Logic
-      if (plan === "Culfest 2025 Standard Plan" && numericPrice === 200) {
+      if (plan === "Culfest 2026 Standard Plan" && numericPrice === 200) {
         product.price = 200;
       } else {
         // Multi event or default
@@ -111,7 +111,7 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
       }
     } else {
       // Outside College Logic
-      if (plan === "Culfest 2025 Standard Plan" && numericPrice === 400) {
+      if (plan === "Culfest 2026 Standard Plan" && numericPrice === 400) {
         product.price = 400;
       } else if (plan === "Battle Crew Plan" && numericPrice === 2850) {
         product.price = 2850;
@@ -251,12 +251,12 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
         <meta name="description" content="Explore Contact Us Page" />
         <link rel="icon" href="/culfest_logo.png" />
       </Head>
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 px-4">
-        <div className="w-full max-w-lg transform rounded-xl bg-white p-6 shadow-lg transition-transform duration-500 hover:scale-105">
-          <h1 className="mb-6 text-center text-3xl font-bold text-gray-800">
+      <div className="flex min-h-screen items-center justify-center px-4">
+        <div className="w-full max-w-lg transform rounded-xl border border-cyan-500/30 bg-slate-900/80 backdrop-blur-md p-6 shadow-lg transition-transform duration-500 hover:scale-105">
+          <h1 className="mb-6 text-center text-3xl font-bold text-white">
             Checkout
           </h1>
-          <h1 className="mb-6 text-center text-3xl font-bold text-gray-800">
+          <h1 className="mb-6 text-center text-3xl font-bold text-white">
             Order & Billing
           </h1>
           <div className="space-y-6">

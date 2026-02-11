@@ -7,7 +7,7 @@ const ContactUs: React.FC = () => {
   return (
     <div className={styles.contactContainer}>
       <div className={styles.welcomeSection}>
-        <h1 className={styles.welcomeHeading}>Welcome to CULFEST' 2025!</h1>
+        <h1 className={styles.welcomeHeading}>Welcome to CULFEST' 2026!</h1>
         <p className={styles.welcomeText}>
           Join us for an unforgettable experience at <br /> NIT Jamshedpur.
           Celebrate culture, creativity, and <br />

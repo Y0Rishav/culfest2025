@@ -158,16 +158,7 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
           variants={containerVariants}
           className="flex flex-col gap-6"
         >
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-8">
-            <Link href="/">
-              <motion.div whileHover={{ scale: 1.1 }}>
-                <img
-                  src="/colorLogo.png"
-                  alt="Logo"
-                  className="absolute left-5 top-5 h-[80px] sm:h-[115px] w-auto animate-pulse drop-shadow-md"
-                />
-              </motion.div>
-            </Link>
+          <div className="flex items-center justify-center gap-4 sm:gap-8">
 
             <motion.div variants={itemVariants} className="text-center sm:text-left z-10">
               <div

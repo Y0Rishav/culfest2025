@@ -23,7 +23,7 @@ export const products = [
     thumbnail: "/cursor.jpg",
   },
   {
-    title: "2025",
+    title: "2026",
     link: "/",
     thumbnail: "/3.png",
   },
@@ -34,7 +34,7 @@ export const products = [
     thumbnail: "/4.png",
   },
   {
-    title: "CULFEST 2025",
+    title: "CULFEST 2026",
     link: "/",
     thumbnail: "/5.png",  // not visible
   },
@@ -65,7 +65,7 @@ export const products = [
     thumbnail: "/back6.png", //not visible
   },
   {
-    title: "CULFEST 2025",
+    title: "CULFEST 2026",
     link: "/",
     thumbnail: "/TRAP.jpg", // not visible
   },
@@ -83,9 +83,9 @@ export const products = [
       "/moonbeam.jpg",
   },
   {
-    title:"TITLE SPONSOR",
-    link:'/',
-    thumbnail:"/titlesponsor.png",
+    title: "TITLE SPONSOR",
+    link: '/',
+    thumbnail: "/titlesponsor.png",
   },
   {
     title: "CULFEST",

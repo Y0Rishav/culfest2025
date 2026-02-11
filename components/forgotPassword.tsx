@@ -96,20 +96,14 @@ const ForgotPasswordPage = () => {
   };
   return (
     <div
-      className="relative flex min-h-screen items-center justify-center"
-      style={{
-        backgroundImage: `url('party3.png'), radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8))`,
-        backgroundBlendMode: "overlay",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative z-10 flex min-h-screen items-center justify-center"
     >
       {/* Logo */}
       <Link href="/" className="absolute left-5 top-5">
         <img
           src="colorLogo.png"
           alt="CULFEST Logo"
-          className="animate-bounce-slow h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
+          className="animate-bounce-slow h-[60px] md:h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
         />
       </Link>
 

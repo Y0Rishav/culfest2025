@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { mockData, EventData } from "../../utils/mockdata";
 import { BackgroundGradientDemo } from "@/components/background_gradient";
 import Head from "next/head";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useSession } from "next-auth/react";
 import axios from "axios";
@@ -42,27 +43,11 @@ const EventPage: React.FC = () => {
     } else if (session.status === "unauthenticated") {
       setStatus("unauthenticated");
     }
-  }, [session]);
+  }, [session.status]);
   const router = useRouter();
   const { eventname } = router.query;
 
-  useEffect(() => {
-    if (!router.isReady) return; // Wait for router to be ready
 
-    // Check if the page has been visited before in the current session
-    const visitedBefore = sessionStorage.getItem("hasVisitedEventPage");
-
-    if (!visitedBefore) {
-      // Set a flag to mark this page as visited in the session
-      sessionStorage.setItem("hasVisitedEventPage", "true");
-
-      // Force reload the page
-      window.location.reload();
-    } else {
-      // After the reload, clear the session storage flag
-      sessionStorage.removeItem("hasVisitedEventPage");
-    }
-  }, [router.isReady]);
 
   if (!router.isReady || !eventname) {
     return (
@@ -150,6 +135,14 @@ const EventPage: React.FC = () => {
       />
 
       <div className="relative z-10 w-full">
+        {/* Top-left Logo */}
+        <Link href="/">
+          <img
+            src="/colorLogo.png"
+            alt="CULFEST Logo"
+            className="fixed left-5 top-5 z-50 h-[60px] md:h-[100px] w-auto rounded-lg bg-black/30 p-2 backdrop-blur-md border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)] cursor-pointer transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.6)]"
+          />
+        </Link>
         <BackgroundGradientDemo
           total={{ event, rules, message, status, eventname, session }}
           theme={theme}

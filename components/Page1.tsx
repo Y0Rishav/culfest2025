@@ -19,7 +19,7 @@ export default function Page1() {
           <motion.img
             src="/colorLogo.png"
             alt="Culfest Logo"
-            className="absolute left-4 top-4 h-[115px] mix-blend-screen"
+            className="absolute left-4 top-4 h-[60px] md:h-[115px] mix-blend-screen"
             animate={{ opacity: [0.4, 1, 0.4] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             style={{

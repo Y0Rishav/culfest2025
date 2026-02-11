@@ -410,20 +410,14 @@ const Team: React.FC = () => {
       </Head>
 
       <div
-        className="flex min-h-screen flex-col bg-gradient-to-b from-purple-800 via-pink-600 to-red-500 text-white"
-        style={{
-          backgroundImage: "url('/Background4.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="flex min-h-screen flex-col text-white"
       >
         {" "}
         <Link href="/" className="absolute left-5 top-5">
           <img
             src="colorLogo.png"
             alt="CULFEST Logo"
-            className="animate-bounce-slow h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
+            className="animate-bounce-slow h-[60px] md:h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
           />
         </Link>
         {/* Navigation Menu */}

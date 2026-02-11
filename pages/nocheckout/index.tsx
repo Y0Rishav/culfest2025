@@ -68,13 +68,13 @@ export default function Checkout() {
     checkUserPaymentStatus();
   }, []);
   // if (session.user.isNITJSR) {
-  //   if (plan === "Culfest 2025 Standard Plan" && numericPrice === 300) {
+  //   if (plan === "Culfest 2026 Standard Plan" && numericPrice === 300) {
   //     product.price = 300;
   //   } else {
   //     product.price = 500;
   //   }
   // } else {
-  //   if (plan === "Culfest 2025 Standard Plan" && numericPrice === 650) {
+  //   if (plan === "Culfest 2026 Standard Plan" && numericPrice === 650) {
   //     product.price = 650;
   //   } else {
   //     product.price = 1250;
@@ -83,13 +83,13 @@ export default function Checkout() {
   // Derived variables
   let productPrice = 1250;
   if (main?.user?.isNITJSR) {
-    if (plan === "Culfest 2025 Standard Plan" && numericPrice === 200) {
+    if (plan === "Culfest 2026 Standard Plan" && numericPrice === 200) {
       productPrice = 200;
     } else {
       productPrice = 400;
     }
   } else {
-    if (plan === "Culfest 2025 Standard Plan" && numericPrice === 650) {
+    if (plan === "Culfest 2026 Standard Plan" && numericPrice === 650) {
       productPrice = 650;
     } else {
       productPrice = 1250;
@@ -228,12 +228,12 @@ export default function Checkout() {
         <meta name="description" content="Explore Contact Us Page" />
         <link rel="icon" href="/culfest_logo.png" />
       </Head>
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 px-4">
-        <div className="w-full max-w-lg transform rounded-xl bg-white p-6 shadow-lg transition-transform duration-500 hover:scale-105">
-          <h1 className="mb-6 text-center text-3xl font-bold text-gray-800">
+      <div className="flex min-h-screen items-center justify-center px-4">
+        <div className="w-full max-w-lg transform rounded-xl border border-cyan-500/30 bg-slate-900/80 backdrop-blur-md p-6 shadow-lg transition-transform duration-500 hover:scale-105">
+          <h1 className="mb-6 text-center text-3xl font-bold text-white">
             Checkout
           </h1>
-          <h1 className="mb-6 text-center text-3xl font-bold text-gray-800">
+          <h1 className="mb-6 text-center text-3xl font-bold text-white">
             Order & Billing
           </h1>
           <div className="space-y-6">

@@ -3,7 +3,7 @@ import { NextPage } from "next";
 import Link from "next/link";
 const PrivacyPolicy: NextPage = () => {
   return (
-    <div className="mx-auto max-w-4xl p-6">
+    <div className="relative z-10 mx-auto max-w-4xl p-6 text-white">
       <h1 className="mb-6 text-center text-3xl font-bold">Privacy Policy</h1>
       <div className="space-y-6">
         <section>
@@ -31,7 +31,7 @@ const PrivacyPolicy: NextPage = () => {
           <p>
             <strong>a. Event Registration:</strong> Your personal information is
             used to process event registrations, provide tickets, and
-            communicate important updates related to Culfest 2025.
+            communicate important updates related to Culfest 2026.
           </p>
           <p>
             <strong>b. Communication:</strong> We may use your email address or
@@ -86,7 +86,7 @@ const PrivacyPolicy: NextPage = () => {
             6. Links to Third-Party Websites
           </h2>
           <p>
-            Our website may contain links to external websites. Culfest 2025 is
+            Our website may contain links to external websites. Culfest 2026 is
             not responsible for the privacy practices or content of these
             websites. We recommend reviewing their privacy policies before
             providing any personal information.
@@ -98,7 +98,7 @@ const PrivacyPolicy: NextPage = () => {
             7. Changes to this Privacy Policy
           </h2>
           <p>
-            Culfest 2025 reserves the right to modify or update this Privacy
+            Culfest 2026 reserves the right to modify or update this Privacy
             Policy at any time. Changes will take effect immediately upon
             posting. We encourage you to review this policy periodically for
             updates.

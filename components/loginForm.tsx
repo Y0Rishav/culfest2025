@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { getSession, signIn } from "next-auth/react";
-import ComicBackground from "./ComicBackground";
+
 
 import { useRouter } from "next/router";
 // import { authOptions } from "next-auth";
@@ -36,17 +36,14 @@ const LoginForm = () => {
 
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Dynamic Comic Background */}
-      <div className="absolute inset-0 z-0">
-        <ComicBackground />
-      </div>
+
 
       {/* Logo */}
       <Link href="/" className="absolute left-5 top-5 z-20">
         <img
           src="colorLogo.png"
           alt="CULFEST Logo"
-          className="animate-bounce-slow h-[80px] md:h-[115px] w-auto rounded-lg bg-black/30 p-2 backdrop-blur-md border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.6)]"
+          className="animate-bounce-slow h-[60px] md:h-[115px] w-auto rounded-lg bg-black/30 p-2 backdrop-blur-md border border-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.6)]"
         />
       </Link>
 

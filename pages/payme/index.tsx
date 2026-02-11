@@ -140,7 +140,7 @@ export default function Page() {
 
   const plans = [
     {
-      title: "Culfest 2025 Standard Plan",
+      title: "Culfest 2026 Standard Plan",
       price: session.user.isNITJSR ? 200 : 400,
       originalPrice: session.user.isNITJSR ? 500 : 800,
       description: "Pay for participating in one event only",
@@ -148,7 +148,7 @@ export default function Page() {
       actionLabel: "Get It",
     },
     {
-      title: "Culfest 2025 Premium Plan",
+      title: "Culfest 2026 Premium Plan",
       price: session.user.isNITJSR ? 450 : 1250,
       originalPrice: session.user.isNITJSR ? 1000 : 2500,
       description: "Pay for participating in all the events and cultural night",
@@ -166,7 +166,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="container flex flex-col items-center justify-center py-8 text-center">
+    <div className="relative z-10 container flex flex-col items-center justify-center py-8 text-center text-white">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

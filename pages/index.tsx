@@ -41,8 +41,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Welcome to Culfest 2025</title>
-        <meta name="description" content="Welcome to Culfest 2025" />
+        <title>Welcome to Culfest 2026</title>
+        <meta name="description" content="Welcome to Culfest 2026" />
         <link rel="icon" href="/culfest_logo.png" />
       </Head>
       <div id="main">

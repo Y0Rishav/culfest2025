@@ -20,7 +20,7 @@ export const FloatingDock = ({
   mobileClassName,
   initial = false, // Set default value for initial
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: React.ReactNode; href: string; onclick?: () => void }[];
   desktopClassName?: string;
   mobileClassName?: string;
   initial?: boolean; // Pass initial prop here to control the state
@@ -46,7 +46,7 @@ const FloatingDockMobile = ({
   className,
   initial = false, // default value for initial is false
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: React.ReactNode; href: string; onclick?: () => void }[];
   className?: string;
   initial?: boolean; // Use initial prop for setting the open state
 }) => {
@@ -79,16 +79,28 @@ const FloatingDockMobile = ({
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
                 {item.title !== "Events" && (
-                  <Link
-                    href={item.href}
-                    key={item.title}
-                    className="flex items-center gap-3 rounded-lg bg-gray-50 p-2 dark:bg-neutral-900"
-                  >
-                    <div className="h-5 w-5">{item.icon}</div>
-                    <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-lg text-transparent">
-                      {item.title}
-                    </span>
-                  </Link>
+                  item.onclick ? (
+                    <div
+                      onClick={(e) => { e.preventDefault(); item.onclick?.(); }}
+                      className="flex items-center gap-3 rounded-lg bg-gray-50 p-2 dark:bg-neutral-900 cursor-pointer"
+                    >
+                      <div className="h-5 w-5">{item.icon}</div>
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-lg text-transparent">
+                        {item.title}
+                      </span>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      key={item.title}
+                      className="flex items-center gap-3 rounded-lg bg-gray-50 p-2 dark:bg-neutral-900"
+                    >
+                      <div className="h-5 w-5">{item.icon}</div>
+                      <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-lg text-transparent">
+                        {item.title}
+                      </span>
+                    </Link>
+                  )
                 )}
                 {item.title === "Events" && (
                   <div>
@@ -123,7 +135,7 @@ const FloatingDockDesktop = ({
   className,
   initial = false, // default value for initial is false
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: React.ReactNode; href: string; onclick?: () => void }[];
   className?: string;
   initial?: boolean; // Use initial prop here for setting initial state
 }) => {
@@ -149,11 +161,13 @@ function IconContainer({
   title,
   icon,
   href,
+  onclick,
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
   href: string;
+  onclick?: () => void;
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
@@ -197,34 +211,46 @@ function IconContainer({
   const [eventList, setEventList] = useState<boolean>(false);
   const [hovered, setHovered] = useState(false);
   if (title !== "Events") {
+    const content = (
+      <motion.div
+        ref={ref}
+        style={{ width, height }}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
+      >
+        <AnimatePresence>
+          {hovered && (
+            <motion.div
+              initial={{ opacity: 0, y: 10, x: "-50%" }}
+              animate={{ opacity: 1, y: 0, x: "-50%" }}
+              exit={{ opacity: 0, y: 2, x: "-50%" }}
+              className="absolute -top-8 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white"
+            >
+              {title}
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <motion.div
+          style={{ width: widthIcon, height: heightIcon }}
+          className="flex items-center justify-center"
+        >
+          {icon}
+        </motion.div>
+      </motion.div>
+    );
+
+    if (onclick) {
+      return (
+        <div onClick={(e) => { e.preventDefault(); onclick(); }} className="cursor-pointer">
+          {content}
+        </div>
+      );
+    }
+
     return (
       <Link href={href}>
-        <motion.div
-          ref={ref}
-          style={{ width, height }}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800"
-        >
-          <AnimatePresence>
-            {hovered && (
-              <motion.div
-                initial={{ opacity: 0, y: 10, x: "-50%" }}
-                animate={{ opacity: 1, y: 0, x: "-50%" }}
-                exit={{ opacity: 0, y: 2, x: "-50%" }}
-                className="absolute -top-8 left-1/2 w-fit -translate-x-1/2 whitespace-pre rounded-md border border-gray-200 bg-gray-100 px-2 py-0.5 text-xs text-neutral-700 dark:border-neutral-900 dark:bg-neutral-800 dark:text-white"
-              >
-                {title}
-              </motion.div>
-            )}
-          </AnimatePresence>
-          <motion.div
-            style={{ width: widthIcon, height: heightIcon }}
-            className="flex items-center justify-center"
-          >
-            {icon}
-          </motion.div>
-        </motion.div>
+        {content}
       </Link>
     );
   } else {

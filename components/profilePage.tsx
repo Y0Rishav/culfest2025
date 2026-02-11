@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import {
   FaUserCircle,
   FaEnvelope,
@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import axios from "axios";
 import { Button } from "./ui/button";
-import ComicBackground from "./ComicBackground"; // Import the new background
+
 import { FloatingDockDemo } from "./Header";
 import { motion } from "framer-motion";
 
@@ -52,33 +52,57 @@ const ProfilePage = ({ session, res }: any) => {
   }
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#0f172a] text-white font-sans">
+    <div className="relative min-h-screen overflow-hidden text-white font-sans">
 
-      {/* 1. Background Layer */}
-      <ComicBackground />
+
+
+      {/* Top Red Border */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: "80px",
+          background: "linear-gradient(175deg, #b91c1c 40%, transparent 40%)",
+          zIndex: 15,
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* Bottom Blue Border */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          width: "50%",
+          height: "100px",
+          background: "#1d4ed8",
+          clipPath: "polygon(0% 100%, 100% 0%, 100% 100%)",
+          zIndex: 15,
+          pointerEvents: "none",
+        }}
+      />
 
       {/* 2. Navigation Layer */}
-      <div className="relative z-50 flex justify-center pt-4">
+      <div className="relative flex justify-center pt-[90px]" style={{ zIndex: 50 }}>
         <FloatingDockDemo />
       </div>
 
       {/* 3. Main Content Content */}
       <div className="relative z-10 flex flex-col items-center justify-center p-2 sm:p-4">
 
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-4"
-        >
+        {/* Logo - Static (no animation) */}
+        <div className="mb-4">
           <Link href="/">
             <img
               src="/colorLogo.png"
               alt="CULFEST Logo"
-              className="h-[85px] w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+              className="h-[60px] md:h-[85px] w-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
             />
           </Link>
-        </motion.div>
+        </div>
 
         {/* HERO DOSSIER CARD */}
         <motion.div
@@ -231,8 +255,16 @@ const ProfilePage = ({ session, res }: any) => {
           </div>
 
           {/* Footer Strip */}
-          <div className="bg-gray-900 p-2 text-center text-[10px] text-gray-500 font-mono tracking-widest">
-            CONFIDENTIAL // FOR OFFICIAL USE ONLY // CULFEST 2026
+          <div className="bg-gray-900 p-2 flex items-center justify-between px-4">
+            <span className="text-[10px] text-gray-500 font-mono tracking-widest">
+              CONFIDENTIAL // FOR OFFICIAL USE ONLY // CULFEST 2026
+            </span>
+            <button
+              onClick={() => signOut({ callbackUrl: "/" })}
+              className="rounded border border-red-500/50 bg-red-900/20 px-3 py-1 font-mono text-xs font-bold text-red-400 tracking-wider transition-all hover:bg-red-900/40 hover:border-red-400"
+            >
+              LOGOUT
+            </button>
           </div>
         </motion.div>
       </div>
