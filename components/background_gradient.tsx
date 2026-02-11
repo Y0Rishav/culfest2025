@@ -158,11 +158,11 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
           variants={containerVariants}
           className="flex flex-col gap-6"
         >
-          <div className="flex items-center justify-center gap-4 sm:gap-8">
+          <div className="flex flex-col items-center justify-center gap-6">
 
-            <motion.div variants={itemVariants} className="text-center sm:text-left z-10">
+            <motion.div variants={itemVariants} className="text-center z-10">
               <div
-                className={`mb-4 mt-6 text-3xl sm:text-4xl lg:text-6xl text-white drop-shadow-[0_0_5px_rgba(0,0,0,0.8)] ${currentTheme.headingFont}`}
+                className={`mb-2 mt-4 text-3xl sm:text-4xl lg:text-6xl text-white drop-shadow-[0_0_5px_rgba(0,0,0,0.8)] ${currentTheme.headingFont}`}
                 style={{ color: currentTheme.accentColor }}
               >
                 {event?.eventname}
@@ -172,7 +172,7 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
 
             <motion.div
               variants={itemVariants}
-              className="w-full max-w-[350px] p-1 sm:max-w-[400px] lg:max-w-[500px] rounded-lg"
+              className="w-full max-w-[250px] p-1 sm:max-w-[300px] lg:max-w-[400px] rounded-lg"
               style={{ background: `linear-gradient(to right, ${currentTheme.primaryColor}, ${currentTheme.accentColor})` }}
             >
               <Image
@@ -200,16 +200,21 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className={`mt-6 rounded-[22px] border-2 p-4 text-sm font-bold text-white shadow-lg sm:p-6 sm:text-base lg:text-lg ${currentTheme.bodyFont}`}
+        className={`mt-6 rounded-[22px] border-4 p-4 text-sm font-bold text-white shadow-lg sm:p-6 sm:text-base lg:text-lg ${currentTheme.bodyFont}`}
         style={{
-          backgroundColor: "rgba(0, 0, 0, 0.6)", // Transparent dark background
+          backgroundColor: "rgba(0, 0, 0, 0.8)", // Darker background for contrast
           backdropFilter: "blur(10px)",
-          borderColor: currentTheme.accentColor
+          borderColor: currentTheme.accentColor,
+          fontFamily: "'Montserrat', sans-serif" // Enforcing Montserrat for body
         }}
       >
         <div
-          className={`mb-6 mt-6 text-center text-3xl sm:text-4xl lg:text-5xl drop-shadow-lg ${currentTheme.headingFont}`}
-          style={{ color: currentTheme.accentColor }}
+          className={`mb-6 mt-6 text-center text-3xl sm:text-4xl lg:text-5xl drop-shadow-lg`}
+          style={{
+            color: currentTheme.accentColor,
+            fontFamily: "'Bangers', cursive", // Enforcing Bangers for this heading
+            letterSpacing: "2px"
+          }}
         >
           {`DETAILS OF THE EVENT`}
         </div>
@@ -217,13 +222,25 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
         {/* Dynamic Rules Container with creative styling, solid borders, and hover effects */}
         <div
           className="prose prose-invert max-w-none text-left 
-            [&_p]:!font-[var(--body-font)] [&_p]:!text-sm [&_p]:sm:!text-base [&_p]:lg:!text-lg [&_p]:!leading-relaxed 
-            [&_span]:!font-[var(--heading-font)] [&_span]:!text-xl [&_span]:sm:!text-2xl [&_span]:!font-bold [&_span]:!block [&_span]:!mb-2 [&_span]:!mt-4 
-            [&_div]:!border-2 [&_div]:!border-white/90 [&_div]:!rounded-xl [&_div]:!bg-white/5 [&_div]:!backdrop-blur-sm [&_div]:!shadow-[0_0_15px_rgba(255,255,255,0.1)] 
-            [&_div]:!transition-all [&_div]:!duration-300 [&_div]:hover:!scale-[1.01] [&_div]:hover:!shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+            [&_p]:!font-sans [&_p]:!text-sm [&_p]:sm:!text-base [&_p]:lg:!text-lg [&_p]:!leading-relaxed [&_p]:!text-white [&_p]:!mb-6
+            [&_span]:!font-['Bangers'] [&_span]:!text-xl [&_span]:sm:!text-2xl [&_span]:!tracking-wide [&_span]:!inline [&_span]:!mr-2 
+            
+            /* Apply box styling to both divs AND direct paragraphs to catch all sections */
+            [&_div]:!border-2 [&_div]:!border-dashed [&_div]:!border-white/50 [&_div]:!rounded-xl [&_div]:!bg-white/5 [&_div]:!backdrop-blur-sm [&_div]:!shadow-[0_0_15px_rgba(255,255,255,0.1)] [&_div]:!mb-6 [&_div]:!mt-4
+            [&_div]:!transition-all [&_div]:!duration-300 [&_div]:hover:!scale-[1.01] [&_div]:hover:!shadow-[0_0_25px_rgba(255,255,255,0.2)]
+            
+            [&>p]:!border-2 [&>p]:!border-dashed [&>p]:!border-white/50 [&>p]:!rounded-xl [&>p]:!bg-white/5 [&>p]:!backdrop-blur-sm [&>p]:!shadow-[0_0_15px_rgba(255,255,255,0.1)] [&>p]:!p-4 [&>p]:!mt-4
+            [&>p]:!transition-all [&>p]:!duration-300 [&>p]:hover:!scale-[1.01] [&>p]:hover:!shadow-[0_0_25px_rgba(255,255,255,0.2)]
+
+            /* Alternating Heading Colors for visual variety */
+            [&_p:nth-of-type(4n+1)_span]:!text-yellow-400
+            [&_p:nth-of-type(4n+2)_span]:!text-cyan-400
+            [&_p:nth-of-type(4n+3)_span]:!text-green-400
+            [&_p:nth-of-type(4n+4)_span]:!text-pink-400
+            [&_div_span]:!text-red-400"
           style={{
-            "--body-font": currentTheme.bodyFontFamily,
-            "--heading-font": currentTheme.headingFontFamily,
+            "--body-font": "'Montserrat', sans-serif",
+            "--heading-font": "'Bangers', cursive",
           } as React.CSSProperties}
         >
           {total?.rules ? total?.rules : "No rules available."}

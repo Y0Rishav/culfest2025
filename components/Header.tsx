@@ -99,7 +99,7 @@ export function FloatingDockDemo() {
         <IconBrandWhatsapp className="text-green-500" />
       ),
 
-      href: "https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI",
+      href: "https://chat.whatsapp.com/EOEcrnamcXA1715j3jrdJ6",
     },
     ...(isAuthenticated
       ? [

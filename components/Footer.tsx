@@ -70,7 +70,7 @@ const ContactUs: React.FC = () => {
           </li>
           <li>
             <Button>
-              <Link href={"https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI"}>
+              <Link href={"https://chat.whatsapp.com/EOEcrnamcXA1715j3jrdJ6"}>
                 <span className={styles.tooltip}></span>
                 <span className={styles.filled}></span>
                 Whatsapp Community

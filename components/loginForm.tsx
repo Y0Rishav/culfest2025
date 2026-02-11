@@ -82,10 +82,10 @@ const LoginForm = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder=" "
-              className="peer w-full rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-white placeholder-transparent outline-none transition-all focus:border-yellow-400 focus:bg-slate-800 focus:shadow-[0_0_10px_rgba(250,204,21,0.3)]"
+              className="peer w-full rounded-lg border border-slate-700 bg-slate-800/50 p-4 text-white placeholder-transparent outline-none transition-all focus:border-yellow-400 focus:bg-slate-800 focus:shadow-[0_0_10px_rgba(250,204,21,0.3)]"
               required
             />
-            <label className="absolute left-3 -top-2.5 bg-slate-900/90 px-1 text-xs text-cyan-400 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-yellow-400">
+            <label className="pointer-events-none absolute left-3 -top-2.5 bg-slate-900/90 px-1 text-xs text-cyan-400 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-yellow-400">
               USER EMAIL
             </label>
           </div>
@@ -97,10 +97,10 @@ const LoginForm = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder=" "
-              className="peer w-full rounded-lg border border-slate-700 bg-slate-800/50 p-3 text-white placeholder-transparent outline-none transition-all focus:border-yellow-400 focus:bg-slate-800 focus:shadow-[0_0_10px_rgba(250,204,21,0.3)]"
+              className="peer w-full rounded-lg border border-slate-700 bg-slate-800/50 p-4 text-white placeholder-transparent outline-none transition-all focus:border-yellow-400 focus:bg-slate-800 focus:shadow-[0_0_10px_rgba(250,204,21,0.3)]"
               required
             />
-            <label className="absolute left-3 -top-2.5 bg-slate-900/90 px-1 text-xs text-cyan-400 transition-all peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-yellow-400">
+            <label className="pointer-events-none absolute left-3 -top-2.5 bg-slate-900/90 px-1 text-xs text-cyan-400 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:text-yellow-400">
               PASSWORD
             </label>
           </div>

@@ -117,7 +117,15 @@ const ProfilePage = ({ session, res }: any) => {
               <h2 className="font-mono text-xl font-bold tracking-widest text-white uppercase">
                 CLASSIFIED // AGENT PROFILE
               </h2>
-              <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_#22c55e]" />
+              <div className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_#22c55e]" />
+                <button
+                  onClick={() => signOut({ callbackUrl: "/" })}
+                  className="rounded border border-red-500/50 bg-red-900/20 px-2 py-0.5 font-mono text-[10px] font-bold text-red-400 tracking-wider transition-all hover:bg-red-900/40 hover:border-red-400"
+                >
+                  LOGOUT
+                </button>
+              </div>
             </div>
           </div>
 
@@ -181,7 +189,7 @@ const ProfilePage = ({ session, res }: any) => {
                 {res?.data?.status === "success" ? (
                   <div className="rounded border border-green-500/30 bg-green-900/10 p-4 text-center">
                     <h3 className="text-green-400 font-bold uppercase tracking-wider mb-2">ACCESS GRANTED: VERIFIED</h3>
-                    <a href="https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI" target="_blank" rel="noopener noreferrer">
+                    <a href="https://chat.whatsapp.com/EOEcrnamcXA1715j3jrdJ6" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-green-600 hover:bg-green-700 text-white font-bold border-none">
                         JOIN SECURE COMMS (WHATSAPP)
                       </Button>
@@ -205,7 +213,7 @@ const ProfilePage = ({ session, res }: any) => {
                       </div>
                       <div className="flex flex-col gap-2 sm:flex-row">
                         <a
-                          href="https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI"
+                          href="https://chat.whatsapp.com/EOEcrnamcXA1715j3jrdJ6"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -238,7 +246,7 @@ const ProfilePage = ({ session, res }: any) => {
                         </Button>
                       </Link>
                       <a
-                        href="https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI"
+                        href="https://chat.whatsapp.com/EOEcrnamcXA1715j3jrdJ6"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -259,12 +267,6 @@ const ProfilePage = ({ session, res }: any) => {
             <span className="text-[10px] text-gray-500 font-mono tracking-widest">
               CONFIDENTIAL // FOR OFFICIAL USE ONLY // CULFEST 2026
             </span>
-            <button
-              onClick={() => signOut({ callbackUrl: "/" })}
-              className="rounded border border-red-500/50 bg-red-900/20 px-3 py-1 font-mono text-xs font-bold text-red-400 tracking-wider transition-all hover:bg-red-900/40 hover:border-red-400"
-            >
-              LOGOUT
-            </button>
           </div>
         </motion.div>
       </div>
