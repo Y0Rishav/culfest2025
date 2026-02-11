@@ -75,7 +75,7 @@ const ContactUs: React.FC = () => {
           {/* Brochure Button */}
           <div className="absolute right-5 top-5 z-20 flex justify-end">
             <a
-              href="/brochure.pdf"
+              href="/Culfest.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg px-5 py-3 font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
