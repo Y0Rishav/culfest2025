@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import ComicBackground from "@/components/ComicBackground";
 
 const ContactUs: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -58,6 +59,7 @@ const ContactUs: React.FC = () => {
       </Head>
 
       <div className="relative min-h-screen">
+        <ComicBackground backgroundColor="#0a0a1a" />
         {/* Content Layer */}
         <div className="relative z-10 min-h-screen px-4 pt-[90px] pb-12 text-gray-100 sm:px-8">
 
@@ -313,18 +315,7 @@ const ContactUs: React.FC = () => {
         </div>
 
         {/* Decorative Borders */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: "80px",
-            background: "linear-gradient(175deg, #b91c1c 40%, transparent 40%)",
-            zIndex: 5,
-            pointerEvents: "none",
-          }}
-        />
+
         <div
           style={{
             position: "absolute",

@@ -11,6 +11,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
+import ComicBackground from "@/components/ComicBackground";
 
 const About: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const About: React.FC = () => {
       </Head>
 
       <div className="relative min-h-screen">
+        <ComicBackground backgroundColor="#0a0a1a" />
 
 
         {/* Content Layer */}
@@ -373,18 +375,7 @@ const About: React.FC = () => {
         </div>
 
         {/* Top Red Border - matching home page */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            height: "80px",
-            background: "linear-gradient(175deg, #b91c1c 40%, transparent 40%)",
-            zIndex: 5,
-            pointerEvents: "none",
-          }}
-        />
+
 
         {/* Bottom Blue Border - matching home page */}
         <div
