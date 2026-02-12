@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+langchain
+langchain-core
+langchain-google-vertexai
+langchain-community
+langgraph
+langgraph-checkpoint
+langgraph-prebuilt
+python-dotenv
+pydantic
+requests
+httpx
+google-cloud-aiplatform
+pymongo[srv]
