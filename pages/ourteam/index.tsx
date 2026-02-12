@@ -123,11 +123,6 @@ const teamMembers = {
       img: "/our team photos/Maynak_Jcs.jpg",
     },
     {
-      name: "Priyanshu Dev",
-      post: "General Secretary",
-      img: "/our team photos/Priyanshu_Dev.jpg",
-    },
-    {
       name: "Shresth Prasad",
       post: "Cultural Secretary Incharge",
       img: "/our team photos/Shresth_Prasad.jpg",
@@ -141,6 +136,11 @@ const teamMembers = {
       name: "Shreya Sharma",
       post: "Joint Cultural Secretary",
       img: "/our team photos/Shreya_Sharma.jpg",
+    },
+    {
+      name: "Priyanshu Dev",
+      post: "General Secretary",
+      img: "/our team photos/Priyanshu_Dev.jpg",
     },
   ],
   webteam: [
