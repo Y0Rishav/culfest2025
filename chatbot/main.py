@@ -111,16 +111,15 @@ async def response_generator(request: ChatRequest, conversation_id: str):
                 
                 # Save to MongoDB
                 chat_db = get_chat_history_db()
-                if chat_db:
-                    chat_db.save_chat(
-                        conversation_id=conversation_id,
-                        user_message=user_message,
-                        bot_response=bot_response,
-                        user_email=user_email,
-                        user_name=user_name,
-                        user_phone=user_phone,
-                        user_id=user_id
-                    )
+                chat_db.save_chat(
+                    conversation_id=conversation_id,
+                    user_message=user_message,
+                    bot_response=bot_response,
+                    user_email=user_email,
+                    user_name=user_name,
+                    user_phone=user_phone,
+                    user_id=user_id
+                )
             except Exception as db_error:
                 print(f"Error saving chat to MongoDB: {db_error}")
                 # Don't fail the response if DB save fails

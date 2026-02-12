@@ -45,7 +45,7 @@ class ChatHistoryDB:
         user_id: Optional[str] = None,
     ) -> bool:
         """Save a chat exchange to MongoDB"""
-        if not self.collection:
+        if self.collection is None:
             return False
         
         try:
@@ -70,7 +70,7 @@ class ChatHistoryDB:
     
     def get_conversation_history(self, conversation_id: str) -> list:
         """Retrieve all messages from a conversation"""
-        if not self.collection:
+        if self.collection is None:
             return []
         
         try:
@@ -85,7 +85,7 @@ class ChatHistoryDB:
     
     def get_user_conversations(self, user_email: str) -> list:
         """Get all conversations for a user"""
-        if not self.collection:
+        if self.collection is None:
             return []
         
         try:
