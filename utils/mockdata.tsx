@@ -16,7 +16,7 @@ export const mockData: EventData[] = [
     category: "FLAGSHIP EVENTS",
     description:
       "Battle of the Bands is a competitive musical showdown where registered bands perform live on stage. The event aims to celebrate talent, creativity, teamwork, and stage presence.",
-    image: "",
+    image: "/music1.jpg",
     rules: (
       <>
         <div
@@ -89,7 +89,7 @@ export const mockData: EventData[] = [
     category: "Dance",
     description:
       "Move Mayhem is CULFEST's ultimate high-octane dance battle designed to test spontaneity, creativity, stage confidence, and adaptability. The competition progresses through intense face-offs and a prop-based solo challenge, pushing dancers to deliver their best under pressure.",
-    image: "",
+    image: "/dance1.webp",
     rules: (
       <>
         <div
@@ -166,7 +166,7 @@ export const mockData: EventData[] = [
     category: "Dance",
     description:
       "Style Shuffle is a dynamic dance competition that challenges performers to first showcase their strongest style and then test their versatility through an unexpected style twist. The event celebrates adaptability, creativity, expressions, and the ability to own any dance form with confidence.",
-    image: "",
+    image: "/dance1.webp",
     rules: (
       <>
         <div
@@ -1153,7 +1153,7 @@ export const mockData: EventData[] = [
               creativity, teams must conceptualize and construct a
               masterpiece on the spot. It's not just about fashion; it's about
               precision, speed, and the art of the unexpected.`,
-    image: "",
+    image: "/facePaint.jpg",
     rules: (
       <>
         <div
@@ -1256,7 +1256,7 @@ export const mockData: EventData[] = [
                   masterpiece that leaps off the canvas. Whether it's the
                   ruggedness of mountains or the delicate ripples of water,
                   show us how you bring depth to your imagination.`,
-    image: "",
+    image: "/potpaint.jpg",
     rules: (
       <>
         <div
@@ -2235,7 +2235,7 @@ export const mockData: EventData[] = [
       confidently exaggerate, and defend absurd stances with
       humor, flair, and basic logic.
       "`,
-    image: "",
+    image: "/journalism.jpg",
     rules: (
       <>
         <div
@@ -2700,7 +2700,7 @@ export const mockData: EventData[] = [
                 testing participants' pop-culture knowledge, observation
                 skills, teamwork, and problem-solving abilities.
     "`,
-    image: "",
+    image: "/informal3.webp",
     rules: (
       <>
         <div
@@ -2859,7 +2859,7 @@ export const mockData: EventData[] = [
                 features multiple entertaining rounds that are both
                 challenging and humorous.
     "`,
-    image: "",
+    image: "/informal5.jpg",
     rules: (
       <>
         <div
@@ -3032,7 +3032,7 @@ export const mockData: EventData[] = [
                 participants must uncover imposters and solve a thrilling
                 murder mystery through logical reasoning and teamwork.
     "`,
-    image: "",
+    image: "/informal1.jpg",
     rules: (
       <>
         <div
@@ -3179,7 +3179,7 @@ export const mockData: EventData[] = [
                 structured judging ensure fairness, safety, and enjoyment
                 for all participants.
     "`,
-    image: "",
+    image: "/informal4.jpg",
     rules: (
       <>
         <div
@@ -3287,7 +3287,7 @@ export const mockData: EventData[] = [
                 next level. The objective of the game is to unlock the
                 maximum number of phones within the given time.
     "`,
-    image: "",
+    image: "/informal2.avif",
     rules: (
       <>
         <div
