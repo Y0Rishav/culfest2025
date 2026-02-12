@@ -4,6 +4,9 @@ import { useSession } from "next-auth/react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+const CHATBOT_API =
+  process.env.NEXT_PUBLIC_CHATBOT_API_URL || "http://localhost:8000";
+
 interface Message {
   id: string;
   text: string;
@@ -181,7 +184,7 @@ export default function ChatBot() {
     try {
       abortControllerRef.current = new AbortController();
 
-      const response = await fetch("/api/chatbot/chat", {
+      const response = await fetch(`${CHATBOT_API}/chat/stream`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -315,7 +318,7 @@ export default function ChatBot() {
     try {
       abortControllerRef.current = new AbortController();
 
-      const response = await fetch("/api/chatbot/chat", {
+      const response = await fetch(`${CHATBOT_API}/chat/stream`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
