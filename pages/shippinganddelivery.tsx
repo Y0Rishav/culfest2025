@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ShippingAndDelivery: NextPage = () => {
   return (
-    <div className="mx-auto max-w-4xl p-6">
+    <div className="relative z-10 mx-auto max-w-4xl p-6 text-white">
       <h1 className="mb-6 text-center text-3xl font-bold">
         Shipping and Delivery Policy
       </h1>

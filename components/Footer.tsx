@@ -7,7 +7,7 @@ const ContactUs: React.FC = () => {
   return (
     <div className={styles.contactContainer}>
       <div className={styles.welcomeSection}>
-        <h1 className={styles.welcomeHeading}>Welcome to CULFEST' 2025!</h1>
+        <h1 className={styles.welcomeHeading}>Welcome to CULFEST' 2026!</h1>
         <p className={styles.welcomeText}>
           Join us for an unforgettable experience at <br /> NIT Jamshedpur.
           Celebrate culture, creativity, and <br />
@@ -70,7 +70,7 @@ const ContactUs: React.FC = () => {
           </li>
           <li>
             <Button>
-              <Link href={"https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI"}>
+              <Link href={"https://chat.whatsapp.com/EOEcrnamcXA1715j3jrdJ6"}>
                 <span className={styles.tooltip}></span>
                 <span className={styles.filled}></span>
                 Whatsapp Community

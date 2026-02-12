@@ -11,7 +11,7 @@ const TermsAndConditions: React.FC = () => {
           content="Terms and conditions for using the Culfest website and availing its services."
         />
       </Head>
-      <div className="container mx-auto p-6">
+      <div className="relative z-10 container mx-auto p-6 text-white">
         <h1 className="mb-4 text-3xl font-bold">Terms and Conditions</h1>
 
         <section className="mb-6">

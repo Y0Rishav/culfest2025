@@ -2,21 +2,21 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandFacebook,
-  IconBrandGithub,
   IconBrandInstagram,
-  IconCalendarEvent,
-  IconExchange,
+  IconBolt,
+  IconShieldFilled,
   IconInfoCircle,
   IconLayoutNavbarCollapse,
-  IconBrandTeams,
-  IconTerminal2,
-  IconUser, // Profile icon
-  IconUserPlus, // Registration icon
+  IconStarFilled,
+  IconUser,
+  IconUserPlus,
   IconPhone,
   IconBrandWhatsapp,
+  IconMask,
+  IconLogout,
 } from "@tabler/icons-react";
 import { BiNews } from "react-icons/bi";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import {
   Sheet,
   SheetContent,
@@ -34,23 +34,23 @@ export function FloatingDockDemo() {
     {
       title: "Our Team",
       icon: (
-        <IconBrandTeams className="text-neutral-500 dark:text-neutral-300" />
+        <IconStarFilled className="text-yellow-400" />
       ),
       href: "/ourteam",
     },
     {
       title: isAuthenticated ? "Profile" : "Registration",
       icon: isAuthenticated ? (
-        <IconUser className="text-neutral-500 dark:text-neutral-300" />
+        <IconUser className="text-red-400" />
       ) : (
-        <IconUserPlus className="text-neutral-500 dark:text-neutral-300" />
+        <IconUserPlus className="text-red-400" />
       ),
       href: isAuthenticated ? "/profile" : "/signup",
     },
     {
       title: "Events",
       icon: (
-        <IconCalendarEvent className="text-neutral-500 dark:text-neutral-300" />
+        <IconBolt className="text-blue-400" />
       ),
       href: "/",
       onclick: () => {
@@ -59,53 +59,65 @@ export function FloatingDockDemo() {
     },
     {
       title: "Sponsors",
-      icon: <IconExchange className="text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconShieldFilled className="text-green-400" />,
       href: "/sponsors",
     },
     {
       title: "Facebook",
       icon: (
-        <IconBrandFacebook className="text-neutral-500 dark:text-neutral-300" />
+        <IconBrandFacebook className="text-blue-500" />
       ),
       href: "https://www.facebook.com/utk.nitjsr",
     },
     {
       title: "Instagram",
       icon: (
-        <IconBrandInstagram className="text-neutral-500 dark:text-neutral-300" />
+        <IconBrandInstagram className="text-pink-400" />
       ),
       href: "https://www.instagram.com/culfest.nitjsr/",
     },
     {
       title: "About",
       icon: (
-        <IconInfoCircle className="text-neutral-500 dark:text-neutral-300" />
+        <IconMask className="text-purple-400" />
       ),
       href: "/about",
     },
     {
       title: "Media Coverage",
-      icon: <BiNews className="text-neutral-500 dark:text-neutral-300" />,
+      icon: <BiNews className="text-orange-400" />,
       href: "/media",
     },
     {
       title: "Contact Us",
-      icon: <IconPhone className="text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconPhone className="text-cyan-400" />,
       href: "/contactus",
     },
     {
       title: "Whatsapp Community Link",
       icon: (
-        <IconBrandWhatsapp className="text-neutral-500 dark:text-neutral-300" />
+        <IconBrandWhatsapp className="text-green-500" />
       ),
 
-      href: "https://chat.whatsapp.com/BrSY4wkLLGSD4udSOXKpgI",
+      href: "https://chat.whatsapp.com/EOEcrnamcXA1715j3jrdJ6",
     },
+    ...(isAuthenticated
+      ? [
+        {
+          title: "Logout",
+          icon: <IconLogout className="text-red-500" />,
+          href: "#",
+          onclick: () => {
+            signOut({ callbackUrl: "/" });
+          },
+        },
+      ]
+      : []),
   ];
 
   return (
     <>
-      <div className="m-4 hidden h-[3rem] items-center justify-center md:block">
+      <div className="mt-[-1rem] hidden h-[3rem] items-center justify-center md:block">
         <FloatingDock
           desktopClassName="bg-transparent transition-all duration-300"
           mobileClassName="translate-y-20 bg-transparent transition-all duration-300"

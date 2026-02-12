@@ -3,9 +3,12 @@ import { useRouter } from "next/router";
 import { mockData, EventData } from "../../utils/mockdata";
 import { BackgroundGradientDemo } from "@/components/background_gradient";
 import Head from "next/head";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useSession } from "next-auth/react";
 import axios from "axios";
+import { getEventTheme } from '../../utils/eventThemes';
+
 
 const EventPage: React.FC = () => {
   const session = useSession();
@@ -40,27 +43,11 @@ const EventPage: React.FC = () => {
     } else if (session.status === "unauthenticated") {
       setStatus("unauthenticated");
     }
-  }, [session]);
+  }, [session.status]);
   const router = useRouter();
   const { eventname } = router.query;
 
-  useEffect(() => {
-    if (!router.isReady) return; // Wait for router to be ready
 
-    // Check if the page has been visited before in the current session
-    const visitedBefore = sessionStorage.getItem("hasVisitedEventPage");
-
-    if (!visitedBefore) {
-      // Set a flag to mark this page as visited in the session
-      sessionStorage.setItem("hasVisitedEventPage", "true");
-
-      // Force reload the page
-      window.location.reload();
-    } else {
-      // After the reload, clear the session storage flag
-      sessionStorage.removeItem("hasVisitedEventPage");
-    }
-  }, [router.isReady]);
 
   if (!router.isReady || !eventname) {
     return (
@@ -120,25 +107,47 @@ const EventPage: React.FC = () => {
   }
 
   const { rules } = event;
+  const theme = getEventTheme(event.eventname, event.category);
 
   return (
     <div
-      className="flex items-center justify-center "
+      className="relative min-h-screen overflow-hidden flex items-center justify-center"
       style={{
-        backgroundImage: "url('/bg122.jpg')", // Add the path to your background image
-        backgroundSize: "cover", // Ensures the image covers the full screen
-        backgroundPosition: "center", // Centers the image
-        backgroundAttachment: "fixed", // Keeps the background image fixed when scrolling
-        minHeight: "100vh",
+        backgroundImage: `url('${theme.backgroundImage}')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
       }}
     >
       <Head>
         <title>{eventname}</title>
         <meta name="description" content="Explore Event Page" />
       </Head>
-      <BackgroundGradientDemo
-        total={{ event, rules, message, status, eventname, session }}
+
+      {/* Overlay for readability if image is too bright, using theme gradient */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: theme.overlayGradient,
+          zIndex: 0,
+        }}
       />
+
+      <div className="relative z-10 w-full">
+        {/* Top-left Logo */}
+        <Link href="/">
+          <img
+            src="/colorLogo.png"
+            alt="CULFEST Logo"
+            className="absolute left-4 top-4 z-50 h-[50px] w-auto cursor-pointer rounded-lg border border-cyan-500/30 bg-black/30 p-1.5 shadow-[0_0_15px_rgba(6,182,212,0.3)] backdrop-blur-md transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] md:fixed md:left-10 md:top-10 md:h-[100px] md:p-2"
+          />
+        </Link>
+        <BackgroundGradientDemo
+          total={{ event, rules, message, status, eventname, session }}
+          theme={theme}
+        />
+      </div>
     </div>
   );
 };

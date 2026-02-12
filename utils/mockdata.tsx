@@ -11,12 +11,12 @@ export interface EventData {
 
 export const mockData: EventData[] = [
   {
-    id: "flagship events",
+    id: "battle of bands",
     eventname: "Battle of Bands",
     category: "FLAGSHIP EVENTS",
     description:
       "Battle of the Bands is a competitive musical showdown where registered bands perform live on stage. The event aims to celebrate talent, creativity, teamwork, and stage presence.",
-      image: "",
+    image: "/music1.jpg",
     rules: (
       <>
         <div
@@ -215,14 +215,85 @@ export const mockData: EventData[] = [
       </>
     ),
   },
+  // {
+  //   id: "battle of dance",
+  //   eventname: "Battle of Dance",
+  //   category: "FLAGSHIP EVENTS",
+  //   description:
+  //     "Battle of Dance is the ultimate dance showdown where solo performers and groups compete for glory. Show off your best moves, creativity, and rhythm to win hearts and prizes.",
+  //   image: "",
+  //   rules: (
+  //     <>
+  //       <div
+  //         title="Rules of Battle of Dance"
+  //         style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+  //         className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
+  //       >
+  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //             RULE 1 :{" "}
+  //           </span>{" "}
+  //           Solo and Group performances allowed.
+  //         </p>
+  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //             RULE 2 :{" "}
+  //           </span>{" "}
+  //           Time limit: 3-5 minutes per performance.
+  //         </p>
+  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //             RULE 3 :{" "}
+  //           </span>{" "}
+  //           Props are allowed but must be cleared by the team immediately after the performance.
+  //         </p>
+  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //             RULE 4 :{" "}
+  //           </span>{" "}
+  //           Judges decision is final and binding.
+  //         </p>
+  //       </div>
+  //       <p
+  //         className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+  //       >
+  //         <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
+  //           PRIZE MONEY :{" "}
+  //         </span>{" "}
+  //         To Be Announced
+  //       </p>
+  //       <p
+  //         className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+  //       >
+  //         <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //           VENUE :{" "}
+  //         </span>{" "}
+  //         Open Air Theatre.
+  //       </p>
+  //       <p
+  //         className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+  //       >
+  //         <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //           CONTACT :{" "}
+  //         </span>{" "}
+  //         <div className="pl-5">
+  //           Event Coordinators
+  //         </div>
+  //       </p>
+  //     </>
+  //   ),
+  // },
 
   {
     id: "move mayhem",
     eventname: "MOVE MAYHEM",
     category: "Dance",
     description:
-    "Move Mayhem is CULFEST's ultimate high-octane dance battle designed to test spontaneity, creativity, stage confidence, and adaptability. The competition progresses through intense face-offs and a prop-based solo challenge, pushing dancers to deliver their best under pressure.",
-      image: "",
+      "Move Mayhem is CULFEST's ultimate high-octane dance battle designed to test spontaneity, creativity, stage confidence, and adaptability. The competition progresses through intense face-offs and a prop-based solo challenge, pushing dancers to deliver their best under pressure.",
+    image: "/dance1.webp",
     rules: (
       <>
         <div
@@ -236,7 +307,7 @@ export const mockData: EventData[] = [
             </span>{" "}
             Round 1 - Team Face-Off
             <div className="pl-5">
-              All registered dancers assemble on stage. <br/>
+              All registered dancers assemble on stage. <br />
               Two teams, Team A and Team B, are formed by designated team leaders. <br />
               A song is played, and within five seconds, each team must send one dancer for a face-off. <br />
               Each dancer is allowed to perform only once in this round. <br />
@@ -253,7 +324,7 @@ export const mockData: EventData[] = [
             <div className="pl-5">
               Selected dancers perform solo. <br />
               A random prop is provided by the organizers. <br />
-              The prop must be incorporated creatively into the performance. <br/>
+              The prop must be incorporated creatively into the performance. <br />
               Any dance style is allowed. <br />
               Performance time for each dancer in this round is one to two minutes.
             </div>
@@ -377,7 +448,7 @@ export const mockData: EventData[] = [
     category: "Dance",
     description:
       "Style Shuffle is a dynamic dance competition that challenges performers to first showcase their strongest style and then test their versatility through an unexpected style twist. The event celebrates adaptability, creativity, expressions, and the ability to own any dance form with confidence.",
-      image: "",
+    image: "/dance1.webp",
     rules: (
       <>
         <div
@@ -391,10 +462,10 @@ export const mockData: EventData[] = [
             </span>{" "}
             Round 1 - Free-Style Performance
             <div className="pl-5">
-              Participants may perform solo, duo, trio, or as a team. <br/>
-              Any dance form and music of the participant’s choice is allowed. <br/>
-              Performers must present their best skills, originality, and stage confidence. <br/>
-              Judges will shortlist participants for Round 2. <br/>
+              Participants may perform solo, duo, trio, or as a team. <br />
+              Any dance form and music of the participant’s choice is allowed. <br />
+              Performers must present their best skills, originality, and stage confidence. <br />
+              Judges will shortlist participants for Round 2. <br />
               The performance time for each performance is two to three minutes.
             </div>
           </p>
@@ -404,10 +475,10 @@ export const mockData: EventData[] = [
             </span>{" "}
             Round 2 - Style Twist Challenge (Final Round)
             <div className="pl-5">
-              Only shortlisted participants from Round 1 will compete in this round. <br/>
-              A common song will be provided by the organizers. <br/>
-              Each dancer will pick a chit containing a random dance style such as Hip-Hop, Contemporary, Locking, Bharatanatyam, Bollywood, or others.<br/>
-              The dancer must perform the assigned style on the given song using creativity and personal interpretation. <br/>
+              Only shortlisted participants from Round 1 will compete in this round. <br />
+              A common song will be provided by the organizers. <br />
+              Each dancer will pick a chit containing a random dance style such as Hip-Hop, Contemporary, Locking, Bharatanatyam, Bollywood, or others.<br />
+              The dancer must perform the assigned style on the given song using creativity and personal interpretation. <br />
               The performance time for each dancer in this round is one to two minutes.
             </div>
           </p>
@@ -467,7 +538,7 @@ export const mockData: EventData[] = [
           </p>
         </div>
         <p
-          className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
@@ -661,16 +732,16 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "Unsung Womders of the World",
+    id: "unsung wonders of the world",
     eventname: "UNSUNG WONDERS OF THE WORLD",
     category: "Quizzing",
-    description:`"
+    description: `"
               Unsung Wonders of the World is a theme-based academic
               quiz that explores lesser-known architectural marvels,
               natural formations, ancient engineering feats, and
               culturally significant sites beyond the conventional “Seven
               Wonders” lists.
-    "`, 
+    "`,
     image: "/qor.jpg",
     rules: (
       <>
@@ -711,7 +782,7 @@ export const mockData: EventData[] = [
             </span>{" "}
             The competition consists of two rounds.
             <div className="pl-5">
-              The Preliminary Round is a written quiz consisting of 20 questions with a duration of 30 minutes. There is no negative marking, and the top eight teams qualify for the finals. <br/>
+              The Preliminary Round is a written quiz consisting of 20 questions with a duration of 30 minutes. There is no negative marking, and the top eight teams qualify for the finals. <br />
               The On-Stage Finals is a live quiz conducted on stage and includes pounce-and-bounce and buzzer-based rounds. Questions may involve visuals, clues, and direct questioning. Detailed scoring rules will be announced before the finals.
             </div>
           </p>
@@ -725,9 +796,9 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               QUIZ RULES AND REGULATIONS:{" "}
             </span>{" "}
-            1. The use of electronic devices during the quiz is strictly prohibited. <br/>
-            2. Answers, once submitted or spoken, cannot be changed. <br/>
-            3. Only the team member who buzzes is allowed to answer. <br/>
+            1. The use of electronic devices during the quiz is strictly prohibited. <br />
+            2. Answers, once submitted or spoken, cannot be changed. <br />
+            3. Only the team member who buzzes is allowed to answer. <br />
             4. Teams must strictly adhere to the given time limits.
           </p>
         </div>
@@ -805,10 +876,10 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "india quiz",
+    id: "india quiz - a journey through the nation",
     eventname: "INDIA QUIZ - A JOURNEY THROUGH THE NATION",
     category: "Quizzing",
-    description:`"
+    description: `"
               India Quiz - A Journey Through the Nation is a competitive
               quiz designed to explore the country beyond conventional
               timelines and geography. The quiz examines India through its
@@ -862,7 +933,7 @@ export const mockData: EventData[] = [
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
-              Preliminary Round: 30 minutes <br/> Final Round: 45 minutes
+              Preliminary Round: 30 minutes <br /> Final Round: 45 minutes
             </span>{" "}
           </p>
         </div>
@@ -879,8 +950,8 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Round 1 - Preliminary Round
               <div className="pl-5">
-                1. Written elimination round consisting of 20 questions. <br/>
-                2. Questions cover ancient to modern India, including mainstream narratives and lesser-known stories. <br/>
+                1. Written elimination round consisting of 20 questions. <br />
+                2. Questions cover ancient to modern India, including mainstream narratives and lesser-known stories. <br />
                 3. The top 8 highest-scoring teams qualify for the finals.
               </div>
             </span>{" "}
@@ -889,8 +960,8 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Round 2 - On-Stage Finals
               <div className="pl-5">
-                1. Live quiz conducted before an audience. <br/>
-                2. Includes pounce-and-bounce rounds and recall-based formats. <br/>
+                1. Live quiz conducted before an audience. <br />
+                2. Includes pounce-and-bounce rounds and recall-based formats. <br />
                 3. Final scoring and round formats will be explained prior to commencement.
               </div>
             </span>{" "}
@@ -953,7 +1024,7 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "Jagruti",
+    id: "jagruti",
     eventname: "JAGRUTI",
     category: "Dramatics",
     description:
@@ -1080,8 +1151,8 @@ export const mockData: EventData[] = [
     ),
   },
 
-  {
-    id: "Panch Parmeshwar",
+  /* {
+    id: "panch parmeshwar",
     eventname: "PANCH PARMESHWAR",
     category: "Dramatics",
     description:
@@ -1161,10 +1232,10 @@ export const mockData: EventData[] = [
         </p>
       </>
     ),
-  },
+  }, */
 
-  {
-    id: "Choreo Nights",
+  /* {
+    id: "choreo nights",
     eventname: "CHOREO NIGHTS",
     category: "Dance",
     description:
@@ -1240,10 +1311,10 @@ export const mockData: EventData[] = [
         </p>
       </>
     ),
-  },
+  }, */
 
-  {
-    id: "Foot loose",
+  /* {
+    id: "foot loose",
     eventname: "FOOT LOOSE",
     category: "Dance",
     description: `"GREAT DANCERS ARE NOT GREAT BECAUSE OF THEIR TECHNIQUE,IT'S BECAUSE OF THEIR PASSION." It doesn't matter if you are a jazz dancer or a "Chak de Phatte" bhangra specialist.Put your dancing shoes on and compete in the solo dance competiton to prove that you are a connoisseur when it comes to grooving to beats.`,
@@ -1365,12 +1436,12 @@ export const mockData: EventData[] = [
         </p>
       </>
     ),
-  },
+  }, */
 
   {
-    id: "Battle of Dance",
+    id: "battle of dance",
     eventname: "BATTLE OF DANCE",
-    category: "Dance",
+    category: "FLAGSHIP EVENTS",
     description: `To dance is to be out of your self.If you think you have that "Dance ka Keeda" in you, our stage awaits your "Dhamakedaar Entry". Be it classical , contemporary,hip hop, or the like; if you think you can dance anytime,anywhere , in any dance form show us what you've got and set the stage ablaze with your dance moves in one of the most exciting and fun filled events of culfest 25.`,
     image: "/dance1.webp",
     rules: (
@@ -1417,8 +1488,8 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1 :{" "}
             </span>
-              Performance time: 4 to 6 minutes (as per music track
-              length).
+            Performance time: 4 to 6 minutes (as per music track
+            length).
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1430,14 +1501,14 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>
-              Teams are expected to showcase diversity in style,
-              formation, transitions, and teamwork.
+            Teams are expected to showcase diversity in style,
+            formation, transitions, and teamwork.
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 4 :{" "}
             </span>
-              This performance cannot be repeated in later rounds.
+            This performance cannot be repeated in later rounds.
           </p>
         </div>
 
@@ -1469,8 +1540,8 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>
-              Final Battle:
-              Winner of Battle 1 vs. Winner of Battle 2.
+            Final Battle:
+            Winner of Battle 1 vs. Winner of Battle 2.
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1543,7 +1614,7 @@ export const mockData: EventData[] = [
             Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Priyanshu Dev(7307834859) <br/> Avani Gupta(9234642470)
+            Priyanshu Dev(7307834859) <br /> Avani Gupta(9234642470)
           </div>
         </p>
       </>
@@ -1561,7 +1632,7 @@ export const mockData: EventData[] = [
               creativity, teams must conceptualize and construct a
               masterpiece on the spot. It's not just about fashion; it's about
               precision, speed, and the art of the unexpected.`,
-    image: "",
+    image: "/facePaint.jpg",
     rules: (
       <>
         <div
@@ -1590,8 +1661,8 @@ export const mockData: EventData[] = [
               MATERIALS :{" "}
             </span>
             <div className="pl-5">
-              Only materials provided by Team FACES, such as newspapers, chart paper, tape, glue, cutters, and similar supplies, may be used. <br/>
-              No pre-made accessories or pre-folded paper elements are allowed. <br/>
+              Only materials provided by Team FACES, such as newspapers, chart paper, tape, glue, cutters, and similar supplies, may be used. <br />
+              No pre-made accessories or pre-folded paper elements are allowed. <br />
               Participants are strictly forbidden from using any outside decorative materials.
             </div>
           </p>
@@ -1612,8 +1683,8 @@ export const mockData: EventData[] = [
               JUDGING :{" "}
             </span>
             <div className="pl-5">
-              Entries will be evaluated based on creativity and originality. <br/>
-              Interpretation of the theme will be assessed. <br/>
+              Entries will be evaluated based on creativity and originality. <br />
+              Interpretation of the theme will be assessed. <br />
               Presentation and explanation of the design will also be considered.
             </div>
           </p>
@@ -1653,7 +1724,7 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "3D scapes",
+    id: "3d scapes",
     eventname: "3D SCAPES",
     category: "Fine Arts",
     description: `Why just see art when you can feel it? Team FACES invites
@@ -1664,7 +1735,7 @@ export const mockData: EventData[] = [
                   masterpiece that leaps off the canvas. Whether it's the
                   ruggedness of mountains or the delicate ripples of water,
                   show us how you bring depth to your imagination.`,
-    image: "",
+    image: "/potpaint.jpg",
     rules: (
       <>
         <div
@@ -1689,7 +1760,7 @@ export const mockData: EventData[] = [
               MATERIALS :{" "}
             </span>
             <div className="pl-5">
-              All materials will be provided by Team FACES. <br/>
+              All materials will be provided by Team FACES. <br />
               It is mandatory for participants to create a raised texture in their artwork.
             </div>
           </p>
@@ -1710,8 +1781,8 @@ export const mockData: EventData[] = [
               JUDGING :{" "}
             </span>
             <div className="pl-5">
-              Entries will be judged based on structural integrity. <br/>
-              Tactile creativity will be evaluated, focusing on innovation in creating depth.<br/>
+              Entries will be judged based on structural integrity. <br />
+              Tactile creativity will be evaluated, focusing on innovation in creating depth.<br />
               Thematic execution will be assessed on how effectively the three-dimensional elements represent the spot theme.
             </div>
           </p>
@@ -1754,7 +1825,7 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "Frame by Frame",
+    id: "frame by frame",
     eventname: "FRAME BY FRAME",
     category: "Photography",
     description: `Frame by Frame invites participants to showcase their
@@ -1887,7 +1958,7 @@ export const mockData: EventData[] = [
             Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Rimo Roy (7763930044) <br/> Ayush (9628738923)
+            Rimo Roy (7763930044) <br /> Ayush (9628738923)
           </div>
         </p>
       </>
@@ -1895,7 +1966,7 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "Echoes of Emotion",
+    id: "echoes of emotion",
     eventname: "ECHOES OF EMOTION",
     category: "Photography",
     description: "Echoes of Emotion is a creative photography event designed to capture the raw and authentic expressions of human emotions during the vibrant atmosphere of CULFEST 26. Participants are required to closely observe their surroundings and document moments that truly resonate with seven specified emotions. The event focuses on storytelling, emotional depth, and photographic aesthetics.",
@@ -1915,7 +1986,7 @@ export const mockData: EventData[] = [
           </p>
         </div>
 
-         <div
+        <div
           title="Format"
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
@@ -1941,22 +2012,22 @@ export const mockData: EventData[] = [
               PHOTOGRAPHY CHALLENGE :{" "}
             </span>
             <div className="pl-5">
-              Participants must capture exactly seven photographs, with each photograph representing a distinct emotion. All photographs must be taken strictly during the official timeline of CULFEST 26 and compiled into a single PDF file for submission. <br/>
+              Participants must capture exactly seven photographs, with each photograph representing a distinct emotion. All photographs must be taken strictly during the official timeline of CULFEST 26 and compiled into a single PDF file for submission. <br />
               The seven emotions to be captured are Happiness, Sadness, Anger, Surprise, Calm or Serenity, Fear, and Disgust.
             </div>
           </p>
-          <br/>
+          <br />
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               SUBMISSION GUIDELINES :{" "}
             </span>
             <div className="pl-5">
-              Exactly seven photographs must be submitted. <br/>
-              All photographs must be combined into a single PDF file. <br/>
-              Each image must be clearly labeled with the emotion it represents. <br/>
-              All photographs must be original and clicked only during CULFEST 26. <br/>
-              Minor color correction is allowed, but heavy editing or manipulation is strictly prohibited. <br/>
-              Image metadata may be verified by the organizing team. <br/>
+              Exactly seven photographs must be submitted. <br />
+              All photographs must be combined into a single PDF file. <br />
+              Each image must be clearly labeled with the emotion it represents. <br />
+              All photographs must be original and clicked only during CULFEST 26. <br />
+              Minor color correction is allowed, but heavy editing or manipulation is strictly prohibited. <br />
+              Image metadata may be verified by the organizing team. <br />
               Late or incomplete submissions will not be considered.
             </div>
           </p>
@@ -2075,7 +2146,7 @@ export const mockData: EventData[] = [
             Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Uday Kesarwani (8470948486) <br/> Siddharth Roy (6200552175)
+            Uday Kesarwani (8470948486) <br /> Siddharth Roy (6200552175)
           </div>
         </p>
       </>
@@ -2083,12 +2154,12 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "Adventure",
+    id: "adventure",
     eventname: "ADVENTURE",
     category: "Photography",
     description:
       "Battle of the Bands is a competitive musical showdown where registered bands perform live on stage. The event aims to celebrate talent, creativity, teamwork, and stage presence.",
-      image: "/candid.webp",
+    image: "/candid.webp",
     rules: (
       <>
         <div
@@ -2215,7 +2286,7 @@ export const mockData: EventData[] = [
             CONTACT :{" "}
           </span>{" "}
           <div className="pl-5">
-            Avani Gupta (9234642470) <br/>
+            Avani Gupta (9234642470) <br />
             Ansh (7632904999)
           </div>
         </p>
@@ -2224,7 +2295,7 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "PANACHE",
+    id: "panache",
     eventname: "PANACHE",
     category: "Fashion",
     description: "Panache is a high-energy fashion showcase where creativity, confidence, and storytelling take center stage. When the lights hit the ramp and the music sets the rhythm, participants transform the stage with powerful walks, striking outfits, and cohesive themes. This event celebrates fashion as an art form—blending design, attitude, and performance into one unforgettable spectacle.",
@@ -2341,7 +2412,7 @@ export const mockData: EventData[] = [
             For any Query , Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Srijan Swapnil (9162780885) <br/> Kanishka (8579098733)
+            Srijan Swapnil (9162780885) <br /> Kanishka (8579098733)
           </div>
         </p>
       </>
@@ -2457,7 +2528,7 @@ export const mockData: EventData[] = [
           </p>
         </div>
 
-         <div
+        <div
           title="Judging criteria"
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
@@ -2509,7 +2580,7 @@ export const mockData: EventData[] = [
             Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Kartik Tigga (9508517345) <br/> Srijan Swapnil (9162780885)
+            Kartik Tigga (9508517345) <br /> Srijan Swapnil (9162780885)
           </div>
         </p>
       </>
@@ -2539,8 +2610,8 @@ export const mockData: EventData[] = [
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
-              This is an individual event. <br/ >
-              Committees and agendas will be announced prior to the conference. <br/> 
+              This is an individual event. <br />
+              Committees and agendas will be announced prior to the conference. <br />
               Country allocations are done by the organizers.
             </span>
           </p>
@@ -2656,7 +2727,7 @@ export const mockData: EventData[] = [
             Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Sweksha Misra (7808265778) <br/> Sankarshan Rastogi (8081252928)
+            Sweksha Misra (7808265778) <br /> Sankarshan Rastogi (8081252928)
           </div>
         </p>
       </>
@@ -2677,7 +2748,7 @@ export const mockData: EventData[] = [
       confidently exaggerate, and defend absurd stances with
       humor, flair, and basic logic.
       "`,
-    image: "",
+    image: "/journalism.jpg",
     rules: (
       <>
         <div
@@ -2713,10 +2784,10 @@ export const mockData: EventData[] = [
             <span className="font-Piedra text-4xl">Rules :</span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. Arguments must remain light-hearted and humorous at all times. <br/>
-            2. The use of offensive, discriminatory, or explicit language is strictly prohibited. <br/> 
-            3. Personal attacks on individuals or groups are not allowed. <br/> 
-            4. While exaggeration is encouraged, arguments must maintain a basic logical structure. <br/>
+            1. Arguments must remain light-hearted and humorous at all times. <br />
+            2. The use of offensive, discriminatory, or explicit language is strictly prohibited. <br />
+            3. Personal attacks on individuals or groups are not allowed. <br />
+            4. While exaggeration is encouraged, arguments must maintain a basic logical structure. <br />
             5. Participants must respect the moderator's decisions, and exceeding time limits may result in point deductions.
           </p>
         </div>
@@ -2784,12 +2855,12 @@ export const mockData: EventData[] = [
             <span className="font-Piedra text-4xl">RULES :</span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. Participation is on a solo basis. <br/> 
-            2. Each participant receives the story at the venue and is given a 5-minute preparation window. <br/>
-            3. Only one speaker presents at a time. <br/>
-            4. The event begins with the assignment of a topic or story, followed by a 5-minute preparation period. <br/> 
-            5. The participant then presents the rewritten ending for 120 seconds. <br/>
-            6. This is followed by a 120-second question-and-answer session, with a maximum of two questions from the audience.<br/>  
+            1. Participation is on a solo basis. <br />
+            2. Each participant receives the story at the venue and is given a 5-minute preparation window. <br />
+            3. Only one speaker presents at a time. <br />
+            4. The event begins with the assignment of a topic or story, followed by a 5-minute preparation period. <br />
+            5. The participant then presents the rewritten ending for 120 seconds. <br />
+            6. This is followed by a 120-second question-and-answer session, with a maximum of two questions from the audience.<br />
             7. Questions may focus on characters, plot decisions, or genre consistency. <br />
           </p>
         </div>
@@ -2833,7 +2904,7 @@ export const mockData: EventData[] = [
             For any Query, Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Aameya Devansh (9234102388) <br/> Sara Singh (9555361043)
+            Aameya Devansh (9234102388) <br /> Sara Singh (9555361043)
           </div>
         </p>
       </>
@@ -2980,7 +3051,7 @@ export const mockData: EventData[] = [
             Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Arsh Mishra (8171349941) <br/> Anshul (8602677215)
+            Arsh Mishra (8171349941) <br /> Anshul (8602677215)
           </div>
         </p>
       </>
@@ -2999,7 +3070,7 @@ export const mockData: EventData[] = [
     image: "/music2.jpg",
     rules: (
       <>
-      <div
+        <div
           title="eligibility"
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
@@ -3124,7 +3195,7 @@ export const mockData: EventData[] = [
             Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Pratyush Singh (8789073003) <br/> Supriyo Dhani (7384641664)
+            Pratyush Singh (8789073003) <br /> Supriyo Dhani (7384641664)
           </div>
         </p>
       </>
@@ -3142,7 +3213,7 @@ export const mockData: EventData[] = [
                 testing participants' pop-culture knowledge, observation
                 skills, teamwork, and problem-solving abilities.
     "`,
-    image: "",
+    image: "/informal3.webp",
     rules: (
       <>
         <div
@@ -3172,12 +3243,12 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Round 1 - Superhero Shadow Quiz (Eliminator Round)
               <div className="pl-5">
-                1. Shadow silhouettes of superheroes will be displayed on screen. <br/>
-                2. Each question may include one or two hints. <br/>
-                3. Teams must identify the superhero within the allotted time. <br/>
-                4. Answers must be submitted as instructed during the event. <br/>
-                5. Scoring is based on accuracy, and top teams will qualify for the Final Round. <br/>
-                6. The number of qualifying teams will be decided by the organizers. 
+                1. Shadow silhouettes of superheroes will be displayed on screen. <br />
+                2. Each question may include one or two hints. <br />
+                3. Teams must identify the superhero within the allotted time. <br />
+                4. Answers must be submitted as instructed during the event. <br />
+                5. Scoring is based on accuracy, and top teams will qualify for the Final Round. <br />
+                6. The number of qualifying teams will be decided by the organizers.
               </div>
             </span>
           </p>
@@ -3185,11 +3256,11 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Round 2 -  Infinity Stone Treasure Hunt (Final Round)
               <div className="pl-5">
-                1. Qualified teams participate in a campus-wide treasure hunt. <br/>
-                2. Infinity Stones will be hidden at various locations across campus. <br/>
-                3. Teams receive clues and hints to locate each stone and must follow the sequence of clues provided. <br/>
-                4. The objective is to collect all required Infinity Stones in the shortest possible time. <br/>
-                5. The team that completes the hunt first, while following all rules, will be declared the winner. <br/>
+                1. Qualified teams participate in a campus-wide treasure hunt. <br />
+                2. Infinity Stones will be hidden at various locations across campus. <br />
+                3. Teams receive clues and hints to locate each stone and must follow the sequence of clues provided. <br />
+                4. The objective is to collect all required Infinity Stones in the shortest possible time. <br />
+                5. The team that completes the hunt first, while following all rules, will be declared the winner. <br />
               </div>
             </span>
           </p>
@@ -3205,17 +3276,17 @@ export const mockData: EventData[] = [
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
-                Participants must carry their college ID cards.
-                <div className="pl-5">
-                  1. Teams must follow the instructions of volunteers and coordinators at all times. <br/>
-                  2. Any form of misconduct, cheating, or indiscipline will lead to immediate disqualification. <br/>
-                  3. Damage to college property will result in disqualification and possible disciplinary action. <br/>
-                  4. Round-Specific Rules <br/>
-                  5. Use of mobile phones is not allowed in Round specified. <br/>
-                  6. In Round 2, mobile phones may only be used when permitted by organizers. <br/>
-                  7. Teams must not run inside academic buildings. <br/>
-                  8. Clues, props, or stones must not be tampered with or removed from designated areas. <br/>
-                  9. Teams must complete the hunt only through official clues; shortcuts are not allowed.
+              Participants must carry their college ID cards.
+              <div className="pl-5">
+                1. Teams must follow the instructions of volunteers and coordinators at all times. <br />
+                2. Any form of misconduct, cheating, or indiscipline will lead to immediate disqualification. <br />
+                3. Damage to college property will result in disqualification and possible disciplinary action. <br />
+                4. Round-Specific Rules <br />
+                5. Use of mobile phones is not allowed in Round specified. <br />
+                6. In Round 2, mobile phones may only be used when permitted by organizers. <br />
+                7. Teams must not run inside academic buildings. <br />
+                8. Clues, props, or stones must not be tampered with or removed from designated areas. <br />
+                9. Teams must complete the hunt only through official clues; shortcuts are not allowed.
               </div>
             </span>
           </p>
@@ -3231,13 +3302,13 @@ export const mockData: EventData[] = [
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
-              1. Round 1 scores determine qualification for Round 2. <br/>
+              1. Round 1 scores determine qualification for Round 2. <br />
               2. Round 2 is evaluated based on:
               <div className="pl-5">
-                Completion of the treasure hunt<br/>
+                Completion of the treasure hunt<br />
                 Time taken
               </div>
-              3. Adherence to rules <br/>
+              3. Adherence to rules <br />
               4. In case of a tie, the decision of the event coordinators will be final and binding.
             </span>
           </p>
@@ -3301,7 +3372,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             For any Query , Contact :{" "}
           </span>{" "}
-          Prachi Priyadarshini (9142961340) <br/> Shrishti (8797480013)
+          Prachi Priyadarshini (9142961340) <br /> Shrishti (8797480013)
         </p>
       </>
     ),
@@ -3319,7 +3390,7 @@ export const mockData: EventData[] = [
                 features multiple entertaining rounds that are both
                 challenging and humorous.
     "`,
-    image: "",
+    image: "/informal5.jpg",
     rules: (
       <>
         <div
@@ -3353,27 +3424,27 @@ export const mockData: EventData[] = [
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             Round 1 - Two Truths & a Lie (Elimination Round)
             <div className="pl-5">
-              1. A superhero description with two true statements and one false statement will be shown. <br/>
-              2. Teams must identify the correct superhero using the clues. <br/>
-              3. Accuracy and quick thinking are important. <br/>
+              1. A superhero description with two true statements and one false statement will be shown. <br />
+              2. Teams must identify the correct superhero using the clues. <br />
+              3. Accuracy and quick thinking are important. <br />
               4. Top 10-15 teams will qualify for the next round.
             </div>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             Round 2 - Chinese Whisper
             <div className="pl-5">
-              1. Teams compete in pairs. <br/>
-              2. One member wears headphones with loud music while the other whispers a given phrase. <br/>
-              3. The headphone-wearing member guesses the phrase aloud. <br/>
+              1. Teams compete in pairs. <br />
+              2. One member wears headphones with loud music while the other whispers a given phrase. <br />
+              3. The headphone-wearing member guesses the phrase aloud. <br />
               4. Scoring is based on accuracy.
             </div>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             Round 3 - Universe Swapping (Final Round)
             <div className="pl-5">
-              1. Teams pick one character chit and one movie/universe chit. <br/>
-              2. Participants act out the character in the selected universe (e.g., Babu Rao in Endgame). <br/>
-              3. Judging is based on creativity, acting, entertainment, and overall performance. <br/>
+              1. Teams pick one character chit and one movie/universe chit. <br />
+              2. Participants act out the character in the selected universe (e.g., Babu Rao in Endgame). <br />
+              3. Judging is based on creativity, acting, entertainment, and overall performance. <br />
             </div>
           </p>
         </div>
@@ -3474,7 +3545,7 @@ export const mockData: EventData[] = [
             For any Query , Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Shristi Shreya (7320876807) <br/> Shubhangi (9708109306)
+            Shristi Shreya (7320876807) <br /> Shubhangi (9708109306)
           </div>
         </p>
       </>
@@ -3482,7 +3553,7 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "heroes on trial",
+    id: "heroes on trial: a knives out mystery",
     eventname: "HEROES ON TRIAL: A KNIVES OUT MYSTERY",
     category: "Informals",
     description: `"
@@ -3492,7 +3563,7 @@ export const mockData: EventData[] = [
                 participants must uncover imposters and solve a thrilling
                 murder mystery through logical reasoning and teamwork.
     "`,
-    image: "",
+    image: "/informal1.jpg",
     rules: (
       <>
         <div
@@ -3503,9 +3574,9 @@ export const mockData: EventData[] = [
             <span className="font-Piedra text-3xl">PARTICIPATION GUIDELINES : </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. Team-based event <br/>
-            2. Each team consists of 4 members <br/>
-            3. Open to all registered participants <br/>
+            1. Team-based event <br />
+            2. Each team consists of 4 members <br />
+            3. Open to all registered participants <br />
             4. Teams must participate in all rounds to remain eligible
           </p>
         </div>
@@ -3520,20 +3591,20 @@ export const mockData: EventData[] = [
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             Round 1 - Imposter Word Challenge (Elimination Round)
             <div className="pl-5">
-              1. Played head-to-head between two teams: an Imposter Team and a Challenger Team.<br/>
-              2. In the Imposter Team, three members receive the same word, while one member receives a different word (the imposter).<br/>
-              3. Each member describes their assigned word one by one in rotation. <br/>
-              4. Each participant gets two chances to describe their word (two rotations). <br/>
-              5. After all descriptions, the Challenger Team gets 2 minutes to identify the imposter.<br/>
+              1. Played head-to-head between two teams: an Imposter Team and a Challenger Team.<br />
+              2. In the Imposter Team, three members receive the same word, while one member receives a different word (the imposter).<br />
+              3. Each member describes their assigned word one by one in rotation. <br />
+              4. Each participant gets two chances to describe their word (two rotations). <br />
+              5. After all descriptions, the Challenger Team gets 2 minutes to identify the imposter.<br />
               6. If the Challenger Team succeeds, they advance to Round 2; if not, the Imposter Team advances.
             </div>
             Round 2 - Murder Mystery (Final Round)
             <div className="pl-5">
-              1. A legendary superhero has been murdered, and all suspects are superheroes.<br/>
-              2. Teams act as investigators to uncover the truth behind the crime. <br/>
+              1. A legendary superhero has been murdered, and all suspects are superheroes.<br />
+              2. Teams act as investigators to uncover the truth behind the crime. <br />
               3. Each team is given 100 tokens at the start of the round to purchase clues such as:
               <div className="pl-5">
-                Autopsy report <br /> Crime scene layout <br/> Suspect interrogation reports <br/> Forensic findings
+                Autopsy report <br /> Crime scene layout <br /> Suspect interrogation reports <br /> Forensic findings
               </div>
               4. Each team initially receives a basic case description (who was murdered, where the body was found, and the condition of the body).
             </div>
@@ -3548,9 +3619,9 @@ export const mockData: EventData[] = [
             <span className="font-Piedra text-3xl">TEAMS MUST DETERMINE : </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. Who committed the murder <br/>
-            2. Why the murder was committed <br/>
-            3. How the murder was carried out <br/>
+            1. Who committed the murder <br />
+            2. Why the murder was committed <br />
+            3. How the murder was carried out <br />
             4. The team that solves the case using the least number of tokens wins. In case of a tie, the team that submits their report first will be declared the winner.
           </p>
         </div>
@@ -3563,10 +3634,10 @@ export const mockData: EventData[] = [
             <span className="font-Piedra text-3xl">RULES AND REGULATIONS : </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. Participants must follow all instructions given by coordinators.<br/>
-            2. Any form of cheating, misconduct, or misbehavior will lead to disqualification. <br/>
-            3. Use of offensive or inappropriate language is strictly prohibited. <br/>
-            4. Judges' and organizers' decisions are final and binding. <br/>
+            1. Participants must follow all instructions given by coordinators.<br />
+            2. Any form of cheating, misconduct, or misbehavior will lead to disqualification. <br />
+            3. Use of offensive or inappropriate language is strictly prohibited. <br />
+            4. Judges' and organizers' decisions are final and binding. <br />
             5. Time limits must be strictly followed in all rounds.
           </p>
         </div>
@@ -3579,10 +3650,10 @@ export const mockData: EventData[] = [
             <span className="font-Piedra text-3xl">JUDGING CRITERIA : </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. Observation and deduction skills <br/>
-            2. Logical reasoning and analysis <br/>
-            3. Teamwork and communication <br/>
-            4. Efficient use of tokens <br/>
+            1. Observation and deduction skills <br />
+            2. Logical reasoning and analysis <br />
+            3. Teamwork and communication <br />
+            4. Efficient use of tokens <br />
             5. Accuracy and completeness of the final solution
           </p>
         </div>
@@ -3612,14 +3683,14 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             Contact :{" "}
           </span>{" "}
-          Anubhav Maheshwari (8303607708) <br/> Ankita Bhattacharjee (8252582486)
+          Anubhav Maheshwari (8303607708) <br /> Ankita Bhattacharjee (8252582486)
         </p>
       </>
     ),
   },
 
   {
-    id: "blind and dumb",
+    id: "blind and dumb: the couple challenge",
     eventname: "BLIND AND DUMB: THE COUPLE CHALLENGE",
     category: "Informals",
     description: `"
@@ -3639,7 +3710,7 @@ export const mockData: EventData[] = [
                 structured judging ensure fairness, safety, and enjoyment
                 for all participants.
     "`,
-    image: "",
+    image: "/informal4.jpg",
     rules: (
       <>
         <div
@@ -3667,8 +3738,8 @@ export const mockData: EventData[] = [
             </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. One partner acts as the  performer and the other as the guesser.<br/>
-            2. The performer is given a word, phrase, movie title, or situational prompt by the organizers and must convey it using only gestures, expressions, and body language.<br/>
+            1. One partner acts as the  performer and the other as the guesser.<br />
+            2. The performer is given a word, phrase, movie title, or situational prompt by the organizers and must convey it using only gestures, expressions, and body language.<br />
             3. The guessing partner must identify the correct answer within the allotted time.
           </p>
 
@@ -3735,7 +3806,7 @@ export const mockData: EventData[] = [
   },
 
   {
-    id: "mindlock",
+    id: "mindlock: the multiverse code",
     eventname: "MINDLOCK: THE MULTIVERSE CODE",
     category: "Informals",
     description: `"
@@ -3747,7 +3818,7 @@ export const mockData: EventData[] = [
                 next level. The objective of the game is to unlock the
                 maximum number of phones within the given time.
     "`,
-    image: "",
+    image: "/informal2.avif",
     rules: (
       <>
         <div
@@ -3756,13 +3827,13 @@ export const mockData: EventData[] = [
         >
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra text-3xl">
-              PARTICIPATION GUIDELINES: 
+              PARTICIPATION GUIDELINES:
             </span>
-            1. The event is open to all students of the institute. <br/>
-            2. Participants must register only in teams. <br/> 
-            3. Each team must consist of exactly four members. <br/> 
-            4. Solo participation is not allowed. <br/> 
-            5. Cross-year teams are allowed unless stated otherwise. <br/> 
+            1. The event is open to all students of the institute. <br />
+            2. Participants must register only in teams. <br />
+            3. Each team must consist of exactly four members. <br />
+            4. Solo participation is not allowed. <br />
+            5. Cross-year teams are allowed unless stated otherwise. <br />
             6. Once registered, team members cannot be changed.
           </p>
         </div>
@@ -3799,25 +3870,25 @@ export const mockData: EventData[] = [
         >
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra text-3xl">
-              RULES & REGULATIONS: 
+              RULES & REGULATIONS:
             </span>
             <div className="pl-5">
               GENERAL RULES
               <div className="pl-5">
-                1. Participants must carry their college ID cards. <br/>
-                2. Instructionsgiven by coordinators and volunteers must be followed at all times. <br/>
-                3. Any form of cheating, misconduct, or indiscipline will lead to disqualification.<br/>
-                4. Teams must not interfere with other teams or access tasks not assigned to them. 
-            </div>
-            <br/>
-            GAME-SPECIFIC RULES
-            <div className="pl-5">
-              1. Personal mobile phones are not allowed. <br/>
-              2. Task swapping during a level is not permitted. <br/>
-              3. Communication is allowed unless restricted in a particular level. <br/>
-              4. Excessive wrong attempts may lead to penalties.<br/>
-              5.  Tampering with event materials will result in immediate disqualification.
-            </div>
+                1. Participants must carry their college ID cards. <br />
+                2. Instructionsgiven by coordinators and volunteers must be followed at all times. <br />
+                3. Any form of cheating, misconduct, or indiscipline will lead to disqualification.<br />
+                4. Teams must not interfere with other teams or access tasks not assigned to them.
+              </div>
+              <br />
+              GAME-SPECIFIC RULES
+              <div className="pl-5">
+                1. Personal mobile phones are not allowed. <br />
+                2. Task swapping during a level is not permitted. <br />
+                3. Communication is allowed unless restricted in a particular level. <br />
+                4. Excessive wrong attempts may lead to penalties.<br />
+                5.  Tampering with event materials will result in immediate disqualification.
+              </div>
             </div>
           </p>
         </div>
@@ -3828,21 +3899,21 @@ export const mockData: EventData[] = [
         >
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra text-3xl">
-              SCORING AND RANKING<br/>
+              SCORING AND RANKING<br />
             </span>
-            1. Teams will be ranked based on the number of phones unlocked. <br/>
-            2. Total time taken will be considered next. <br/> 
-            3. In case of a tie, fewer wrong attempts will be used as the tie-breaker. <br/> 
+            1. Teams will be ranked based on the number of phones unlocked. <br />
+            2. Total time taken will be considered next. <br />
+            3. In case of a tie, fewer wrong attempts will be used as the tie-breaker. <br />
           </p>
         </div>
 
-         <div
+        <div
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra text-3xl">
-              DISQUALIFICATION CRITERIA<br/>
+              DISQUALIFICATION CRITERIA<br />
             </span>
             Teams may be disqualified for violating rules, using unfair means, showing disrespect toward organizers, or interfering with other teams.
           </p>

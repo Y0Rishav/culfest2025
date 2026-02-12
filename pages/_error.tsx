@@ -3,8 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image"; // For logo image import
 
-// Logo path
-import logo from "../public/colorLogo.png"; // Replace with your actual logo path
 // import { black } from "tailwindcss/colors";
 
 const Custom404: React.FC = () => {
@@ -32,7 +30,7 @@ const Custom404: React.FC = () => {
         style={{ marginBottom: "2rem" }}
       >
         <Image
-          src={logo}
+          src="/colorLogo.png"
           alt="Company Logo"
           width={150}
           height={150}

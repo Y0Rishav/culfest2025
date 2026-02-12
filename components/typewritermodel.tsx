@@ -6,7 +6,7 @@ export function TypewriterEffectDemo() {
   const words = [
     {
       text: "CULFEST .",
-      className: "text-orange-500 dark:text-white text-7xl font-AnotherFont",
+      className: "text-orange-500 dark:text-white text-7xl font-Bangers tracking-wider",
     },
   ];
   return <TypewriterEffect words={words} />;

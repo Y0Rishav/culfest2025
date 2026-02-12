@@ -7,7 +7,7 @@ export default function Signup() {
     <>
       <Head>
         <title>Signup Page</title>
-        <meta name="description" content="Register on the Culfest 2025" />
+        <meta name="description" content="Register on the Culfest 2026" />
         <link rel="icon" href="/culfest_logo.png" />
       </Head>
       <div>

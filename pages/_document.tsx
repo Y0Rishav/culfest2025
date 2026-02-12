@@ -9,7 +9,7 @@ class MyDocument extends Document {
           {/* Add Google Fonts link */}
 
           <link
-            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&family=Baloo+2&family=Fredoka+One&family=Bangers&family=Lobster&family=Amatic+SC&family=Piedra&family=Rock+Salt&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Pacifico&family=Quicksand&family=Baloo+2&family=Fredoka+One&family=Bangers&family=Lobster&family=Amatic+SC&family=Piedra&family=Rock+Salt&display=swap"
             rel="stylesheet"
           />
           <link rel="icon" href="/culfest_logo.png" />

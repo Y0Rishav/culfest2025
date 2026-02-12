@@ -19,7 +19,7 @@ const razorpay = new Razorpay({
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" }); // Reject non-POST methods
@@ -86,21 +86,8 @@ export default async function handler(
     // });
 
     // console.log(`Creating order with Amount: ${amount}, Currency: ${currency}`);
-    const validAmounts = session.user.isNITJSR
-      ? [20000, 40000]
-      : [65000, 125000];
 
-    // Validate the order amount
-    if (!validAmounts.includes(Number(amount))) {
-      return res.status(401).json({
-        success: false,
-        msg: `Invalid order amount. Allowed amounts are ${validAmounts.join(
-          " or "
-        )} for ${
-          session.user.isNITJSR ? "NIT Jamshedpur" : "non-NIT Jamshedpur"
-        } participants.`,
-      });
-    }
+    // Amount validation removed - allow any amount selected by user
     const options = {
       amount: amount,
       currency: currency,

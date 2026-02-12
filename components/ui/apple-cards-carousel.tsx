@@ -15,6 +15,10 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { createPortal } from "react-dom";
+
+import { getEventTheme } from "@/utils/eventThemes";
+import ComicBackground from "../ComicBackground";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -32,7 +36,7 @@ export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
   currentIndex: number;
 }>({
-  onCardClose: () => {},
+  onCardClose: () => { },
   currentIndex: 0,
 });
 
@@ -92,7 +96,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     >
       <div className="relative w-full">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-20"
+          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:pt-16 md:pb-4 snap-x snap-mandatory"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -104,8 +108,8 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
           <div
             className={cn(
-              "flex flex-row justify-start gap-4 pl-4",
-              "mx-auto max-w-7xl" // remove max-w-4xl if you want the carousel to span the full width of its container
+              "flex flex-row justify-start gap-6 pl-4 md:gap-8",
+              "mx-auto w-full max-w-[90rem]" // Wider container so cards start from further left
             )}
           >
             {items.map((item, index) => (
@@ -125,27 +129,27 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="rounded-3xl last:pr-[5%] md:last:pr-[33%]"
+                className="shrink-0 rounded-3xl last:pr-[5%] md:last:pr-[33%] snap-center"
               >
                 {item}
               </motion.div>
             ))}
           </div>
         </div>
-        <div className="mr-10 flex justify-end gap-2">
+        <div className="mr-10 flex justify-end gap-3 -mt-2 mb-10 relative z-40">
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-yellow-500/50 bg-black/60 transition-all hover:border-yellow-400 hover:shadow-[0_0_12px_rgba(255,215,0,0.4)] disabled:opacity-30"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
-            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+            <IconArrowNarrowLeft className="h-6 w-6 text-yellow-400" />
           </button>
           <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
+            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full border border-yellow-500/50 bg-black/60 transition-all hover:border-yellow-400 hover:shadow-[0_0_12px_rgba(255,215,0,0.4)] disabled:opacity-30"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
-            <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+            <IconArrowNarrowRight className="h-6 w-6 text-yellow-400" />
           </button>
         </div>
       </div>
@@ -166,6 +170,9 @@ export const Card = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
 
+  // Get theme based on card data
+  const theme = getEventTheme(card.title, card.category);
+
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -175,8 +182,10 @@ export const Card = ({
 
     if (open) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add("event-card-open");
     } else {
       document.body.style.overflow = "auto";
+      document.body.classList.remove("event-card-open");
     }
 
     window.addEventListener("keydown", onKeyDown);
@@ -194,88 +203,132 @@ export const Card = ({
     onCardClose(index);
   };
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
-      <AnimatePresence>
-        {open && (
-          <div
-            className="fixed inset-0 z-50 h-screen overflow-auto"
-            style={{
-              minHeight: "100vh", // Ensure the background covers the full viewport height
-            }}
-          >
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
-            />
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              ref={containerRef}
-              layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-black p-4 font-sans dark:bg-neutral-900 md:p-10"
+      {mounted && createPortal(
+        <AnimatePresence>
+          {open && (
+            <div
+              className="fixed inset-0 z-[9999] h-screen overflow-auto"
               style={{
-                backgroundImage: "url('/Background4.jpg')", // Add the path to your background image
-                backgroundSize: "cover", // Ensures the image covers the full screen
-                backgroundPosition: "center", // Centers the image
-                backgroundAttachment: "fixed", // Keeps the background image fixed when scrolling
-                minHeight: "100vh",
+                minHeight: "100vh", // Ensure the background covers the full viewport height
               }}
             >
-              <button
-                className="sticky right-0 top-4 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white"
-                onClick={handleClose}
-              >
-                <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
-              </button>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
+              />
 
-              <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-white dark:text-white"
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                ref={containerRef}
+                layoutId={layout ? `card-${card.title}` : undefined}
+                className={`relative z-[10000] mx-auto my-4 h-fit max-w-5xl overflow-hidden rounded-3xl p-4 md:my-10 md:p-10 ${theme.bodyFont}`}
+                style={{
+                  minHeight: "100vh",
+                  color: theme.textColor,
+                  boxShadow: `0 0 40px ${theme.primaryColor}80` // Add a subtle glow matching the theme
+                }}
               >
-                {card.category}
-              </motion.p>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 font-AnotherFont text-4xl text-white dark:text-white md:text-5xl"
-              >
-                {card.title}
-              </motion.p>
-              <div className="py-10">{card.content}</div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+                <ComicBackground backgroundColor="#0a0a1a" />
+                {/* Dark Overlay for readability */}
+                <div
+                  className="absolute inset-0 z-0 rounded-3xl"
+                  style={{ background: theme.overlayGradient }}
+                />
+
+                <div className="relative z-10">
+                  <button
+                    className="sticky right-0 top-4 ml-auto flex h-10 w-10 items-center justify-center rounded-full bg-black/50 transition-all hover:shadow-[0_0_12px_rgba(255,255,255,0.4)]"
+                    style={{
+                      borderColor: theme.accentColor,
+                      borderWidth: '1px',
+                      color: theme.accentColor
+                    }}
+                    onClick={handleClose}
+                  >
+                    <IconX className="h-6 w-6" />
+                  </button>
+
+                  <motion.p
+                    layoutId={layout ? `category-${card.title}` : undefined}
+                    className={`text-base font-medium tracking-wider ${theme.headingFont}`}
+                    style={{ color: theme.accentColor }}
+                  >
+                    {card.category}
+                  </motion.p>
+                  <motion.p
+                    layoutId={layout ? `title-${card.title}` : undefined}
+                    className={`mt-4 text-3xl tracking-wide md:text-5xl ${theme.headingFont}`}
+                    style={{ color: theme.textColor }}
+                  >
+                    {card.title}
+                  </motion.p>
+                  <div className="py-10">{card.content}</div>
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
 
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-[30rem] w-[20rem] flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 dark:bg-neutral-900 md:h-[40rem] md:w-96"
+        className="group relative z-10 flex h-[30rem] w-[20rem] flex-col items-start justify-start overflow-hidden rounded-2xl md:h-[40rem] md:w-96"
+        style={{
+          border: "2px solid rgba(255, 215, 0, 0.3)",
+          boxShadow: "0 0 15px rgba(255, 215, 0, 0.1), inset 0 0 15px rgba(0, 0, 0, 0.5)",
+        }}
+        whileHover={{
+          boxShadow: "0 0 25px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.3)",
+          borderColor: "rgba(255, 215, 0, 0.6)",
+        }}
       >
-        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
-        <div className="relative z-40 p-8">
-          {/* <motion.p
-      layoutId={layout ? `category-${card.category}` : undefined}
-      className="text-left font-AnotherFont  text-sm text-white md:text-base"
-    >
-      {card.category}
-    </motion.p> */}
-          {/* <motion.p
-      layoutId={layout ? `category-${card.category}` : undefined}
-      className="mt-2 max-w-xs text-left font-AnotherFont text-xl font-semibold text-white [text-wrap:balance] md:text-3xl"
-    >
-      {card.category}
-    </motion.p> */}
+        {/* Top gradient overlay */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/60 via-transparent to-black/70" />
+
+        {/* Category Badge */}
+        <div className="relative z-40 p-6">
+          <motion.span
+            layoutId={layout ? `category-${card.title}` : undefined}
+            className="inline-block rounded-md px-3 py-1 font-Bangers text-sm tracking-wider text-white md:text-base"
+            style={{
+              background: "linear-gradient(135deg, rgba(255,68,68,0.8), rgba(255,215,0,0.8))",
+              border: "1px solid rgba(255,255,255,0.2)",
+              textShadow: "0 1px 2px rgba(0,0,0,0.5)",
+            }}
+          >
+            {card.category}
+          </motion.span>
         </div>
+
+        {/* Title at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 z-40 p-6">
+          <motion.p
+            className="font-Bangers text-lg tracking-wide text-white md:text-xl"
+            style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}
+          >
+            {card.title}
+          </motion.p>
+        </div>
+
         <BlurImage
           src={card.src}
           alt={card.title}
           fill
-          className="absolute inset-0 z-10"
+          className="absolute inset-0 z-10 transition-transform duration-500 group-hover:scale-110"
         />
       </motion.button>
     </>

@@ -106,16 +106,16 @@ export default function MediaPage() {
         flexDirection: "column",
         alignItems: "center",
         padding: "5vh",
-        backgroundColor: "rgb(2 2 33)",
         minHeight: "100vh",
-        backgroundImage: "url('/andy-holmes-rCbdp8VCYhQ-unsplash.jpg')",
+        position: "relative",
+        zIndex: 10,
       }}
     >
       <Link href="/" className="absolute left-5 top-5">
         <img
           src="colorLogo.png"
           alt="CULFEST Logo"
-          className="animate-bounce-slow h-auto w-20 rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md md:w-28"
+          className="animate-bounce-slow h-[60px] md:h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
         />
       </Link>
       {/* <div className="flex"> */}

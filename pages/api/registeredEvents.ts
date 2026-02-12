@@ -9,7 +9,7 @@ import EventPart from "./models/EventPart.model";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<any>
+  res: NextApiResponse<any>,
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ status: 405, message: "Method Not Allowed" });
@@ -34,6 +34,7 @@ export default async function handler(
       return res.status(401).json({ status: 401, message: "User not found" });
     }
     const registered = response.registeredEvents;
+    console.log(registered);
     return res.status(200).json({
       status: 200,
       message: "Event registration processed",
