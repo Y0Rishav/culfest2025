@@ -20,10 +20,121 @@ export const mockData: EventData[] = [
     rules: (
       <>
         <div
+          title="Eligibility and Registration"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+            ELIGIBILITY AND REGISTRATION :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. The competition is open to all college bands (internal and external).
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Each band must register before the deadline via the official Culfest'26 form.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. A band must consist of a minimum of 3 and a maximum of 8 members.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Cross-college teams are allowed.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            5. Any change in team members after registration must be informed at least 2 hours before the event.
+          </p>
+        </div>
+
+        <div
+          title="Equipment And Setup"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              EQUIPMENT AND SETUP :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            Provided by Organizers:
+            <div className="pl-5">
+                <li>Drum kit (without cymbals)</li>
+                <li>Basic PA system</li>
+                <li>Microphones and stage monitors</li>
+                <li>DI boxes</li>
+                <li>Bands Must Bring:
+                  <div className="pl-5">
+                    Guitars, bass, keyboards <br/>
+                    Cymbals, drumsticks, and any special gear <br/>
+                  </div>
+                </li>
+            </div>
+            Soundcheck will be available before the event start.<br/>
+            Analog mixer will be provided. <br/>
+          </p>
+        </div>
+
+        <div
+          title="Performance Guidelines"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              PERFORMANCE GUIDELINES :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Each band will get 15-20 minutes of stage time (including setup and exit).
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Bands must perform 1-2 songs (originals or covers).
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Songs must be free from offensive themes.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Time limit violations will lead to point deductions.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            5. Bands must report backstage 30 minutes before their slot; failure may result in disqualification.
+          </p>
+        </div>
+
+        <div
+          title="Judgement Criteria"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              JUDGEMENT CRITERIA :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            Each performance will be judged on:
+            <div className="pl-5">
+              <li>Musical Quality (rhythm, vocals, harmonies, tightness)</li>
+              <li>Stage Presence & Energy</li>
+              <li>Originality / Creativity</li>
+              <li>Band Coordination & Synergy</li>
+              <li>Audience Engagement</li>
+              <li>Judges' decisions are final and binding.</li>
+            </div> 
+          </p>
+        </div>
+
+        <div
           title="Rules of Battle of Bands"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
-          className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300"
         >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              RULES & CONDUCT :{" "}
+            </span>
+          </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 1 :{" "}
@@ -49,6 +160,28 @@ export const mockData: EventData[] = [
             Use of pre-recorded backing tracks is allowed only for ambient effects, not for replacing core instruments or vocals.
           </p>
         </div>
+
+        <div
+          title="Disqualification Criteria"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              DISQUALIFICATION CRITERIA :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            A band may be disqualified if:
+            <div className="pl-5">
+              <li>They exceed the time limit significantly.</li>
+              <li>They use vulgar or abusive content.</li>
+              <li>They fail to appear at their allotted slot.</li>
+              <li>They engage in indiscipline or violate event rules.</li>
+            </div>
+          </p>
+        </div>
+
         <p
           className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
@@ -56,7 +189,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-
+          Rs 65,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -75,7 +208,7 @@ export const mockData: EventData[] = [
             CONTACT :{" "}
           </span>{" "}
           <div className="pl-5">
-            Priyanshu Dev (7307834859),
+            Priyanshu Dev (7307834859) <br/>
             Shreya Sharma (7033618603)
           </div>
         </p>
@@ -197,6 +330,84 @@ export const mockData: EventData[] = [
             </div>
           </p>
         </div>
+
+        <div
+          title="Judgement Criteria"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              JUDGEMENT CRITERIA :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Judging will be based on creativity and choreography.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Energy, expressions, and confidence will be evaluated.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Musicality and rhythm will be considered.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Innovative and effective use of the prop will be judged in Round 2.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            5. Overall impact and stage presence will also be assessed.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            6. Judges' scores and decisions are final and non-negotiable.
+          </p>
+        </div>
+
+        <div
+          title="Music And Technical Guidelines"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              MUSIC AND TECHNICAL GUIDELINES :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Music will be controlled and played by the organizers.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Participants must be ready backstage when called.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Personal music systems or external devices are not allowed.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Props for Round 2 will be provided on stage, and personal props are not permitted.
+          </p>
+        </div>
+
+        <div
+          title="Disqualification Policy"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              DISQUALIFICATION POLICY:{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Participants may be disqualified for violating event rules or time limits.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Use of unauthorized props or music may result in disqualification.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Displaying inappropriate behavior or content is not permitted.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Ignoring instructions from organizers or stage crew can lead to disqualification.
+          </p>
+        </div>
         <p
           className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
@@ -204,7 +415,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 14,000
+          Rs 14,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -223,7 +434,7 @@ export const mockData: EventData[] = [
             CONTACT :{" "}
           </span>{" "}
           <div className="pl-5">
-            Bhumika(8219158503),
+            Bhumika(8219158503) <br/>
             Divya Pratap(9244099734)
           </div>
         </p>
@@ -262,7 +473,7 @@ export const mockData: EventData[] = [
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 2 :{" "}
             </span>{" "}
-            Round 2 – Style Twist Challenge (Final Round)
+            Round 2 - Style Twist Challenge (Final Round)
             <div className="pl-5">
               Only shortlisted participants from Round 1 will compete in this round. <br />
               A common song will be provided by the organizers. <br />
@@ -272,6 +483,60 @@ export const mockData: EventData[] = [
             </div>
           </p>
         </div>
+
+        <div
+          title="Judgement Criteria"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              JUDGEMENT CRITERIA :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Judging will be based on style execution and technique.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Creativity and versatility will be evaluated.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Expressions and musicality will be considered.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Adaptability to the assigned style will be assessed.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            5. Overall stage impact will also be taken into account.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            6. Duo, trio, and team performances will receive bonus consideration for coordination, synchronization, and teamwork when compared to solo performances.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            7. Judges' decisions are final and non-negotiable.
+          </p>
+        </div>
+
+        <div
+          title="Time Regulations"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              TIME REGULATIONS :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Strict adherence to time limits is mandatory.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Exceeding the allotted time may lead to point deduction or disqualification.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Entry, exit, and setup time, if any, are included within the performance time.
+          </p>
+        </div>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
@@ -279,7 +544,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 21,000
+          Rs 21,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -369,6 +634,70 @@ export const mockData: EventData[] = [
             Teams must be present backstage at least 15 minutes before their scheduled performance.
           </p>
         </div>
+
+        <div
+          title="Time Limit"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+            TIME LIMIT :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            Total performance time per team is 20 to 30 minutes, including setup and clearance.
+          </p>
+        </div>
+
+        <div
+          title="Judgement Criteria"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              JUDGEMENT CRITERIA :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Storyline and script quality.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Acting and emotional expression.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Direction and coordination.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Use of stage, props, and movement.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            5. Overall impact and audience engagement.
+          </p>
+        </div>
+
+         <div
+          title="Technical Requirements"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+              TECHNICAL REQUIREMENTS :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Teams must bring their own props, costumes, and audio tracks if required.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. A standard stage, sound system, and basic lighting will be provided by the organizers.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Any special technical requirement must be informed to the organizers in advance.
+          </p>
+        </div>
+
         <p
           className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
@@ -376,7 +705,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 18,000
+          Rs 18,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -395,7 +724,7 @@ export const mockData: EventData[] = [
             CONTACT :{" "}
           </span>{" "}
           <div className="pl-5">
-            Pranav Vishal-9279995985
+            Pranav Vishal (9279995985)
           </div>
         </p>
       </>
@@ -521,7 +850,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 13,000.
+          Rs 13,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -563,8 +892,25 @@ export const mockData: EventData[] = [
     rules: (
       <>
         <div
+          title="Eligibility and Team Composition"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+            ELIGIBILITY AND TEAM COMPOSITION :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. The event is open to students currently enrolled in undergraduate or postgraduate programs across institutions.<br/>
+            2. Participation is strictly limited to teams of two members only. <br/>
+            3. A participant may be part of only one team.
+          </p>
+        </div>
+
+        <div
           title="Event genre"
-          className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <p className="font-serif text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
@@ -572,7 +918,7 @@ export const mockData: EventData[] = [
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
-              The quiz focuses on India’s history, culture, society, governance, economy, science, and popular culture.
+              The quiz focuses on India's history, culture, society, governance, economy, science, and popular culture.
             </span>{" "}
           </p>
         </div>
@@ -653,7 +999,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 12,000.
+          Rs 20,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -740,6 +1086,38 @@ export const mockData: EventData[] = [
             Exceeding the time limit may result in point deduction or disqualification.
           </p>
         </div>
+
+        <div
+          title="Time Limit"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+            TIME LIMIT :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            The total performance time per team is 25 to 30 minutes.
+          </p>
+        </div>
+
+        <div
+          title="Technical Requirements"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+            TECHNICAL REQUIREMENTS :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Teams must bring their own props, costumes, and instruments if required. <br/>
+            2. No elaborate stage setup will be provided as this is a street theatre event.
+          </p>
+        </div>
+
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
@@ -747,7 +1125,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
             PRIZE MONEY :{" "}
           </span>
-          Rs 22,000.
+          Rs 22,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -766,7 +1144,7 @@ export const mockData: EventData[] = [
             CONTACT :{" "}
           </span>
           <div className="pl-5">
-            Subham Panigrahi-8260343089
+            Subham Panigrahi (8260343089)
           </div>
         </p>
       </>
@@ -1069,8 +1447,38 @@ export const mockData: EventData[] = [
     rules: (
       <>
         <div
+          title="General Guidelines"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+            GENERAL GUIDELINES :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Team Size: Minimum 4 and maximum 10 members.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Props are strictly prohibited.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Participants must adhere only to the listed dance styles.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Music content used must be appropriate and free of offensive language.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            5. Teams must follow all instructions provided by organizers during the event.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            6. Any violation of rules may result in penalties or disqualification.
+          </p>
+        </div>
+
+        <div
           title="Details of Prelims"
-          className="space-y-2  rounded-md border-2 p-4 transition-all duration-300 "
+          className="mt-4 space-y-2  rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
@@ -1187,7 +1595,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 8,000.
+          Rs 65,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -1289,7 +1697,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 15,000.
+          Rs 15,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -1308,7 +1716,7 @@ export const mockData: EventData[] = [
             For any Query , Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Shaily (9234268855), Sachin (7633822736), Swetha (9866649939)
+            Shaily (9234268855) <br/> Sachin (7633822736) <br/> Swetha (9866649939)
           </div>
         </p>
       </>
@@ -1390,7 +1798,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 10,000.
+          Rs 10,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -1409,7 +1817,7 @@ export const mockData: EventData[] = [
             For any Query , Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Varnika Bharalia (6396333537)<br /> Aditya Raj Tewary (9142143387),<br /> Yaswitha (6302150133)
+            Varnika Bharalia (6396333537)<br/> Aditya Raj Tewary (9142143387)<br/> Yaswitha (6302150133)
           </div>
         </p>
       </>
@@ -1540,7 +1948,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 14,000.
+          Rs 14,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -1728,7 +2136,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 9,000.
+          Rs 9,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -1859,7 +2267,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 12,000
+          Rs 12,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -1946,11 +2354,37 @@ export const mockData: EventData[] = [
             <span className="font-Piedra text-4xl">ELIGIBILITY : </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            This is a team event open to groups of 10–18 participants.<br />
+            This is a team event open to groups of 10-18 participants.<br/>
             Teams must ensure consistency in theme, attire, and presentation.
           </p>
         </div>
 
+        <div
+          title="Judging Criteria"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+            JUDGING CRITERIA:{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. Originality and creativity will be evaluated.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Theme relevance and clarity will be assessed.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Confidence and ramp presence will be considered.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            4. Costume design and visual impact will be judged.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            5. Music synchronization and choreography will also be evaluated.
+          </p>
+        </div>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
@@ -1968,7 +2402,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 38,000.
+          Rs 38,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -1994,15 +2428,23 @@ export const mockData: EventData[] = [
     rules: (
       <>
         <div
-          title="ELIGIBILITY"
+          title="Participation Guidelines"
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            <span className="font-Piedra text-4xl">ELIGIBILITY : </span>
+            <span className="font-Piedra text-4xl">
+              PARTICIPATION GUIDELINES :{" "}
+            </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            The event is open to individual male and female participants registered for Culfest.
+            1. Participation is on an individual basis for male and female participants.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. Participants may be paired by the organizers for the Couple Round.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            3. Pairing is strictly for the purpose of the competition and does not imply any real-life relationship.
           </p>
         </div>
 
@@ -2128,7 +2570,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 17,000.
+          Rs 17,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -2186,7 +2628,7 @@ export const mockData: EventData[] = [
             </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            Opening speeches should be 60–90 seconds. GSL speeches are limited to 60 seconds. Moderated caucus speeches are limited to 30 seconds per speaker. A maximum of one Point of Information (POI) is allowed per speech.
+            Opening speeches should be 60-90 seconds. GSL speeches are limited to 60 seconds. Moderated caucus speeches are limited to 30 seconds per speaker. A maximum of one Point of Information (POI) is allowed per speech.
           </p>
 
         </div>
@@ -2266,7 +2708,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 14,000.
+          Rs 14,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -2370,7 +2812,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 8,000.
+          Rs 8,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -2443,7 +2885,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 8,000.
+          Rs 8,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -2590,7 +3032,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 20,000.
+          Rs 20,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -2699,7 +3141,7 @@ export const mockData: EventData[] = [
             <span className="font-Piedra text-3xl">ELIMINATION AND ROUNDS : </span>
           </p>
           <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            Preliminary and final rounds may be conducted depending on the number of entries. The judges’ decision will be final.
+            Preliminary and final rounds may be conducted depending on the number of entries. The judges' decision will be final.
           </p>
         </div>
 
@@ -2734,7 +3176,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 25,000.
+          Rs 25,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -2873,6 +3315,24 @@ export const mockData: EventData[] = [
         </div>
 
         <div
+          title="Organizers Rights"
+          className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+        >
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            <span className="font-Piedra text-4xl">
+            ORGANIZERS' RIGHTS :{" "}
+            </span>
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            1. The organizers reserve the right to modify rules, rounds, or event flow if required.
+          </p>
+          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+            2. All decisions made by the organizing team and PnD committee will be final.
+          </p>
+        </div>
+
+        <div
           title="organiser's rigtht"
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
@@ -2894,7 +3354,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 20,000.
+          Rs 20,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -2903,7 +3363,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             VENUE:{" "}
           </span>{" "}
-
+          Campus.
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -3066,7 +3526,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 14,000.
+          Rs 14,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -3205,14 +3665,14 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 14,000.
+          Rs 14,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
-            LOCATION:{" "}
+            LOCATION:{" "} Campus.
           </span>{" "}
 
         </p>
@@ -3321,7 +3781,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 18,000.
+          Rs 18,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
@@ -3467,7 +3927,7 @@ export const mockData: EventData[] = [
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             PRIZE MONEY :{" "}
           </span>{" "}
-          Rs 14,000.
+          Rs 14,000/-
         </p>
         <p
           className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
