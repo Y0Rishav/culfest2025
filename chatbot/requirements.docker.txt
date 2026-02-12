@@ -12,3 +12,4 @@ pydantic
 requests
 httpx
 google-cloud-aiplatform
+pymongo[srv]

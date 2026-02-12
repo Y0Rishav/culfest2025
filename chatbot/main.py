@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from langchain_agent import get_chatbot_response, get_chatbot_response_stream, resume_conversation_stream, clear_memory, get_conversation_history
 import asyncio
 import uuid
+from chat_history_db import get_chat_history_db
 
 load_dotenv()
 
@@ -61,6 +62,8 @@ async def root():
 
 async def response_generator(request: ChatRequest, conversation_id: str):
     """Generate SSE events — handles tokens, interrupts, and resume."""
+    bot_response_parts = []  # Accumulate bot response for DB storage
+    
     try:
         # Send conversation_id first
         yield f"data: {json.dumps({'type': 'conversation_id', 'conversation_id': conversation_id})}\n\n"
@@ -84,7 +87,43 @@ async def response_generator(request: ChatRequest, conversation_id: str):
                 # Interrupt event — needs user confirmation
                 yield f"data: {json.dumps(item)}\n\n"
             else:
+                bot_response_parts.append(item)  # Accumulate tokens
                 yield f"data: {json.dumps({'type': 'token', 'token': item})}\n\n"
+
+        # Save conversation to MongoDB after streaming completes
+        if bot_response_parts:
+            try:
+                bot_response = "".join(bot_response_parts)
+                user_message = request.message if request.message else f"[Resume: {request.resume_action}]"
+                
+                # Extract user details from session
+                user_email = None
+                user_name = None
+                user_phone = None
+                user_id = None
+                
+                if request.user_session and "user" in request.user_session:
+                    user_data = request.user_session["user"]
+                    user_email = user_data.get("email")
+                    user_name = user_data.get("name")
+                    user_phone = user_data.get("phone")
+                    user_id = user_data.get("id")
+                
+                # Save to MongoDB
+                chat_db = get_chat_history_db()
+                if chat_db:
+                    chat_db.save_chat(
+                        conversation_id=conversation_id,
+                        user_message=user_message,
+                        bot_response=bot_response,
+                        user_email=user_email,
+                        user_name=user_name,
+                        user_phone=user_phone,
+                        user_id=user_id
+                    )
+            except Exception as db_error:
+                print(f"Error saving chat to MongoDB: {db_error}")
+                # Don't fail the response if DB save fails
 
         yield f"data: {json.dumps({'type': 'done'})}\n\n"
 
