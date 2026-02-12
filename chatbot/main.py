@@ -12,6 +12,12 @@ import uuid
 
 load_dotenv()
 
+# Write credentials.json from env var if it doesn't exist (for Railway/cloud deploy)
+creds_json = os.getenv("GOOGLE_CREDENTIALS_JSON")
+if creds_json and not os.path.exists("credentials.json"):
+    with open("credentials.json", "w") as f:
+        f.write(creds_json)
+
 app = FastAPI(
     title="Culfest 2025 Chatbot API",
     description="LangChain-powered chatbot with streaming and memory for Culfest event information",
