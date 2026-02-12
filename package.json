@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "chatbot": "cd chatbot && python main.py",
+    "test:vertexai": "cd chatbot && python test_vertexai.py",
+    "test:apis": "cd chatbot && python test_apis.py"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.1.4",
@@ -54,9 +57,11 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^4.9.0",
+    "react-markdown": "^10.1.0",
     "react-pro-sidebar": "^1.1.0",
     "react-scroll": "^1.9.0",
     "react-swiper": "^0.1.5",
+    "remark-gfm": "^4.0.1",
     "simplex-noise": "^4.0.3",
     "swiper": "^11.1.14",
     "tailwind-merge": "^2.5.4",

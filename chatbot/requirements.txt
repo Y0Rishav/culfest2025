@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+langchain
+langchain-google-vertexai
+langchain-community
+python-dotenv
+pydantic
+requests
+httpx
+google-cloud-aiplatform
+sse-starlette

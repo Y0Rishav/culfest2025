@@ -16,7 +16,7 @@ type ResponseData = {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
+  res: NextApiResponse<ResponseData>,
 ) {
   if (req.method !== "POST") {
     return res.status(405).json({ status: 405, message: "Method Not Allowed" });
@@ -24,8 +24,10 @@ export default async function handler(
 
   try {
     const body = req.body;
+    console.log("Received registration request with body:", body);
     const { event, session, userEmails, teamName } = body;
     if (!session?.data || !session?.data?.user?.id) {
+      console.log("User not logged in. Session data:", session);
       return res
         .status(401)
         .json({ status: 401, message: "User not logged in" });
@@ -56,6 +58,7 @@ export default async function handler(
       event: event?.toString().toLowerCase(),
     });
     if (!noofParticipants) {
+      console.log("event not found in EventPart collection for event:", event);
       return res.status(409).json({ status: 404, message: "event not found" });
     }
     const minPart = noofParticipants?.minParticipants;
@@ -84,7 +87,7 @@ export default async function handler(
     const isTeamNameTaken = eventDoc.teams.some(
       (team: any) =>
         team.teamName.replace(/\s+/g, "").toLowerCase() ===
-        teamName.replace(/\s+/g, "").toLowerCase()
+        teamName.replace(/\s+/g, "").toLowerCase(),
     );
     if (isTeamNameTaken) {
       return res.status(400).json({
@@ -101,10 +104,10 @@ export default async function handler(
       if (users.length !== userEmails.length) {
         const foundEmails = users.map((user) => user.email);
         const missingEmails = userEmails.filter(
-          (email) => !foundEmails.includes(email)
+          (email) => !foundEmails.includes(email),
         );
         missingEmails.forEach((email) =>
-          failedUpdates.push({ email, reason: "User not found" })
+          failedUpdates.push({ email, reason: "User not found" }),
         );
         return res.status(400).json({
           status: 400,
@@ -116,13 +119,18 @@ export default async function handler(
         });
       }
       const eventNameLower = event.toString().toLowerCase();
-      const isCrewEvent = ["battle of bands", "battle of dance"].includes(eventNameLower);
+      const isCrewEvent = ["battle of bands", "battle of dance"].includes(
+        eventNameLower,
+      );
 
       // Check for team override: If it's a Crew Event and ANY member has paid 2850, everyone qualifies.
       let teamHasValidCrewPayment = false;
       if (isCrewEvent) {
         for (const user of users) {
-          const p = await Payment.findOne({ userId: user._id, status: "success" });
+          const p = await Payment.findOne({
+            userId: user._id,
+            status: "success",
+          });
           if (p && Number(p.amount) === 2850) {
             teamHasValidCrewPayment = true;
             break;
@@ -164,14 +172,16 @@ export default async function handler(
             if (user.registeredEvents.length > 0) {
               failedUpdates.push({
                 email: user.email,
-                reason: "Single event limit reached. Upgrade to register for more.",
+                reason:
+                  "Single event limit reached. Upgrade to register for more.",
               });
               continue;
             }
             if (isCrewEvent) {
               failedUpdates.push({
                 email: user.email,
-                reason: "Single event plan covers only standard events, not Battle of Bands/Dance.",
+                reason:
+                  "Single event plan covers only standard events, not Battle of Bands/Dance.",
               });
               continue;
             }
@@ -181,7 +191,8 @@ export default async function handler(
             if (isCrewEvent) {
               failedUpdates.push({
                 email: user.email,
-                reason: "Standard multi-event plan does not include Battle of Bands/Dance.",
+                reason:
+                  "Standard multi-event plan does not include Battle of Bands/Dance.",
               });
               continue;
             }
@@ -234,7 +245,7 @@ export default async function handler(
           users.map((user) => {
             user.registeredEvents.push(event);
             return user.save();
-          })
+          }),
         );
 
         // Update the event model
@@ -246,7 +257,7 @@ export default async function handler(
 
         await Event.updateOne(
           { eventName: event.toString().toLowerCase() },
-          { $push: { teams: newTeam } }
+          { $push: { teams: newTeam } },
         );
       } catch (err) {
         console.error("Registration error:", err);

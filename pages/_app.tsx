@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import { SessionProvider } from "next-auth/react";
 import { useRouter } from "next/router";
 import ComicBackground from "@/components/ComicBackground";
+import ChatBot from "@/components/ChatBot";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -28,13 +29,11 @@ export default function App({ Component, pageProps }: AppProps) {
                 background: "#0f172a",
               }}
             >
-              <ComicBackground
-                backgroundColor="#0f172a"
-                topRingOffset="30%"
-              />
+              <ComicBackground backgroundColor="#0f172a" topRingOffset="30%" />
             </div>
           )}
           <Component {...pageProps} />
+          <ChatBot />
         </main>
       </SessionProvider>
     </>
