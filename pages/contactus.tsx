@@ -105,7 +105,7 @@ const ContactUs: React.FC = () => {
             </a>
           </div>
 
-          <div className="container mx-auto max-w-5xl text-center">
+          <div className="container mx-auto max-w-5xl text-center pt-24">
             <motion.h1
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

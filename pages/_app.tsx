@@ -17,20 +17,27 @@ export default function App({ Component, pageProps }: AppProps) {
       <SessionProvider>
         <main className="relative">
           {!isHomePage && (
-            <div
-              style={{
-                position: "fixed",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                zIndex: 0,
-                pointerEvents: "none",
-                background: "#0f172a",
-              }}
-            >
-              <ComicBackground backgroundColor="#0f172a" topRingOffset="30%" />
-            </div>
+            <>
+              <div
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  zIndex: 0,
+                  pointerEvents: "none",
+                  background: "#0f172a",
+                }}
+              >
+                <ComicBackground backgroundColor="#0f172a" topRingOffset="30%" />
+              </div>
+              <div className="absolute top-0 left-0 w-full z-50 flex justify-center pt-10 pointer-events-none">
+                <div className="pointer-events-auto">
+                  <FloatingDockDemo />
+                </div>
+              </div>
+            </>
           )}
           <Component {...pageProps} />
           <ChatBot />

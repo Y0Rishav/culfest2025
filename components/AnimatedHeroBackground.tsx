@@ -342,7 +342,7 @@ export default function AnimatedHeroBackground() {
         style={{
           position: "absolute", inset: 0,
           display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start",
-          paddingTop: isMobile ? "15vh" : "12vh",
+          paddingTop: isMobile ? "16vh" : "14vh",
           zIndex: 10,
         }}
       >
@@ -356,31 +356,30 @@ export default function AnimatedHeroBackground() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
               style={{
-                display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "20px", marginTop: "0", zIndex: 10
+                display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "35px", marginTop: "0", zIndex: 10
               }}
             >
               <div style={{
-                width: isMobile ? "130px" : "180px",
-                height: isMobile ? "130px" : "180px",
-                borderRadius: "50%",
-                background: "#fff",
-                border: "4px solid #fcd34d",
-                boxShadow: "0 0 15px rgba(252, 211, 77, 0.6)",
+                // width: isMobile ? "120px" : "180px", // Increased size slightly
+                height: isMobile ? "120px" : "160px", // Rectangular focus
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                padding: "10px",
-                marginBottom: "5px",
-                overflow: "hidden"
+                marginBottom: "10px",
+                overflow: "hidden",
+                borderRadius: "20px", // Curved edges
+                background: "rgba(255, 255, 255, 0.9)",
+                backgroundColor: "white",
               }}>
                 <img
-                  src="/jharkhand_tourism.png"
+                  src="/jharkhand_tourism_final.png"
                   alt="Jharkhand Tourism"
                   style={{
-                    width: "100%",
                     height: "100%",
+                    width: "auto",
                     objectFit: "contain",
-                    filter: "drop-shadow(0 0 5px rgba(0,0,0,0.1))",
+                    transform: "scale(1.1)", // Crop slightly
+                    filter: "drop-shadow(0 0 10px rgba(0,0,0,0.5))", // Shadow on image itself
                   }}
                 />
               </div>

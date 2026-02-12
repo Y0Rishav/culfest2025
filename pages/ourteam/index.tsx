@@ -212,30 +212,30 @@ const Team: React.FC = () => {
             className="animate-bounce-slow h-[60px] md:h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
           />
         </Link>
-        {/* Navigation Menu */}
-        <div className="py mt-16 flex w-full justify-center">
-          <div className="hidden md:block">
+        {/* Navigation Menu (Top Centered below global navbar) */}
+        <div className="absolute top-0 left-0 w-full z-40 pointer-events-none">
+          <div className="hidden md:flex w-full justify-center mt-32 pointer-events-auto">
             <FloatingDockLink
               desktopClassName="bg-transparent transition-all duration-300"
               mobileClassName="translate-y-20 bg-transparent transition-all duration-300"
               items={links}
             />
           </div>
-          {/* Mobile Sheet */}
-          <div className="md:hidden">
+          {/* Mobile Sheet - Positioned to the left of global menu */}
+          <div className="md:hidden pointer-events-auto absolute top-5 right-20">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="fixed right-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-full shadow-lg transition-transform hover:scale-110 active:scale-95"
+                <button className="flex h-10 w-10 items-center justify-center rounded-xl shadow-lg transition-transform hover:scale-110 active:scale-95"
                   style={{
-                    background: "linear-gradient(135deg, #ffd700, #ff8c00)",
+                    background: "linear-gradient(135deg, #6366f1, #a855f7)",
                     border: "2px solid #fff",
-                    boxShadow: "0 0 15px rgba(255, 215, 0, 0.5)"
+                    boxShadow: "0 0 15px rgba(168, 85, 247, 0.5)"
                   }}
                 >
-                  <IconLayoutNavbarCollapse className="h-6 w-6 text-black" />
+                  <IconChecklist className="h-6 w-6 text-white" />
                 </button>
               </SheetTrigger>
-              <SheetContent>
+              <SheetContent side="left">
                 <FloatingDockLink
                   desktopClassName="bg-transparent transition-all duration-300"
                   mobileClassName="translate-y-20 bg-transparent transition-all duration-300"
@@ -247,7 +247,7 @@ const Team: React.FC = () => {
           </div>
         </div>
         {/* Main Content */}
-        <div className="container relative z-10 mx-auto px-4 py-16">
+        <div className="container relative z-10 mx-auto px-4 pt-64 pb-16">
           <motion.h1
             className="mb-10 text-center font-Bangers text-5xl tracking-wider sm:text-4xl md:text-7xl"
             initial={{ opacity: 0, scale: 0.8 }}
