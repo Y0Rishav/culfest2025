@@ -342,7 +342,7 @@ export default function AnimatedHeroBackground() {
         style={{
           position: "absolute", inset: 0,
           display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start",
-          paddingTop: isMobile ? "18vh" : "18vh",
+          paddingTop: isMobile ? "15vh" : "12vh",
           zIndex: 10,
         }}
       >
@@ -350,7 +350,7 @@ export default function AnimatedHeroBackground() {
         {/* MAIN TITLE: CULFEST '26 */}
         {showText && (
           <>
-            {/* Sponsor Image & Presents Text - OUTSIDE THE BRACKETS */}
+            {/* Sponsor Image & Presents Text - MOVED OUTSIDE */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -360,8 +360,8 @@ export default function AnimatedHeroBackground() {
               }}
             >
               <div style={{
-                width: isMobile ? "120px" : "160px",
-                height: isMobile ? "120px" : "160px",
+                width: isMobile ? "130px" : "180px",
+                height: isMobile ? "130px" : "180px",
                 borderRadius: "50%",
                 background: "#fff",
                 border: "4px solid #fcd34d",
@@ -369,8 +369,8 @@ export default function AnimatedHeroBackground() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                padding: "15px",
-                marginBottom: "10px",
+                padding: "10px",
+                marginBottom: "5px",
                 overflow: "hidden"
               }}>
                 <img
@@ -385,7 +385,7 @@ export default function AnimatedHeroBackground() {
                 />
               </div>
               <span style={{
-                fontFamily: "'Montserrat', sans-serif", fontSize: isMobile ? "12px" : "16px",
+                fontFamily: "'Montserrat', sans-serif", fontSize: isMobile ? "10px" : "14px",
                 color: "#9ca3af", letterSpacing: "3px", textTransform: "uppercase", fontWeight: 600
               }}>
                 PRESENTS
@@ -398,7 +398,6 @@ export default function AnimatedHeroBackground() {
               transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
               style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", width: isMobile ? "95%" : "fit-content" }}
             >
-
               {/* Encapsulating Brackets */}
               <motion.div
                 initial={{ width: 0, opacity: 0 }}
@@ -485,6 +484,6 @@ export default function AnimatedHeroBackground() {
         )}
 
       </div>
-    </div >
+    </div>
   );
 }
