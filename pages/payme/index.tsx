@@ -219,7 +219,7 @@ export default function Page() {
       <ComicBackground backgroundColor="#0a0a1a" topRingOffset="8%" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center px-4 py-16 md:py-24">
+      <div className="relative z-10 flex flex-col items-center px-4 pt-36 pb-16 md:py-24">
         {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: -30 }}

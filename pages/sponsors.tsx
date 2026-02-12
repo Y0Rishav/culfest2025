@@ -60,7 +60,7 @@ export default function Sponsors() {
         />
 
         {/* Content Layer */}
-        <div className="relative z-10 min-h-screen px-4 pt-2 pb-16 sm:px-8">
+        <div className="relative z-10 min-h-screen px-4 pt-32 pb-16 sm:px-8">
           {/* Logo */}
           <Link href="/" className="relative" style={{ zIndex: 50 }}>
             <img

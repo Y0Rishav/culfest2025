@@ -130,7 +130,7 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
     plan: plan,
     items: [
       { naam: "Participation Charge", paisa: 0 },
-      { naam: "Accomodation Charge", paisa: 0 },
+      { naam: "Accommodation Charge", paisa: 0 },
       { naam: "Food Charge", paisa: 0 },
       { naam: "Cultural Night Charge", paisa: 0 },
     ],
@@ -251,7 +251,18 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
         <meta name="description" content="Explore Contact Us Page" />
         <link rel="icon" href="/culfest_logo.png" />
       </Head>
-      <div className="flex min-h-screen items-center justify-center bg-[#0a0a1a] px-4">
+      <div className="flex min-h-screen flex-col items-center justify-start bg-[#0a0a1a] px-4 pt-40 pb-12">
+        <h1
+          className="mb-8 text-center font-Bangers text-4xl tracking-wider md:text-5xl"
+          style={{
+            background: "linear-gradient(135deg, #ffd700, #ff4444)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            textShadow: "0 0 10px rgba(255, 215, 0, 0.3)",
+          }}
+        >
+          CHECKOUT
+        </h1>
         <div
           className="w-full max-w-lg rounded-2xl p-6"
           style={{
@@ -260,16 +271,6 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
             boxShadow: "0 0 20px rgba(255, 215, 0, 0.1)",
           }}
         >
-          <h1
-            className="mb-2 text-center font-Bangers text-3xl tracking-wider md:text-4xl"
-            style={{
-              background: "linear-gradient(135deg, #ffd700, #ff4444)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Checkout
-          </h1>
           <h2
             className="mb-6 text-center font-Bangers text-xl tracking-wider md:text-2xl"
             style={{ color: "#00e5ff", textShadow: "0 0 10px rgba(0,229,255,0.3)" }}
