@@ -117,7 +117,7 @@ export function FloatingDockDemo() {
 
   return (
     <>
-      <div className="m-4 hidden h-[3rem] items-center justify-center md:block">
+      <div className="mt-4 hidden h-[3rem] items-center justify-center md:block">
         <FloatingDock
           desktopClassName="bg-transparent transition-all duration-300"
           mobileClassName="translate-y-20 bg-transparent transition-all duration-300"

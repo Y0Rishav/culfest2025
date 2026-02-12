@@ -341,59 +341,104 @@ export default function AnimatedHeroBackground() {
       <div
         style={{
           position: "absolute", inset: 0,
-          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start",
+          paddingTop: isMobile ? "18vh" : "18vh",
           zIndex: 10,
         }}
       >
 
         {/* MAIN TITLE: CULFEST '26 */}
         {showText && (
-          <motion.div
-            initial={{ scale: 3, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
-            style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", width: isMobile ? "95%" : "fit-content" }}
-          >
-
-            {/* Encapsulating Brackets */}
+          <>
+            {/* Sponsor Image & Presents Text - OUTSIDE THE BRACKETS */}
             <motion.div
-              initial={{ width: 0, opacity: 0 }}
-              animate={{ width: "110%", opacity: 1 }} // Reduced width for mobile safety
-              transition={{ delay: 0.5, duration: 0.8 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
               style={{
-                position: "absolute", top: "-20px", left: "-5%",
-                height: "100%", borderTop: "2px solid #eab308", borderLeft: "2px solid #eab308",
-                zIndex: 0
+                display: "flex", flexDirection: "column", alignItems: "center", marginBottom: "20px", marginTop: "0", zIndex: 10
               }}
-            />
-            <motion.div
-              initial={{ width: 0, opacity: 0 }}
-              animate={{ width: "110%", opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              style={{
-                position: "absolute", bottom: "-20px", right: "-5%",
-                height: "100%", borderBottom: "2px solid #eab308", borderRight: "2px solid #eab308",
-                zIndex: 0
-              }}
-            />
-
-
-            {/* The Text */}
-            <h1 style={{
-              fontSize: "clamp(32px, 12vw, 130px)", // Adjusted clamp min/max
-              fontFamily: "'Montserrat', sans-serif", fontWeight: 900, fontStyle: "italic",
-              textAlign: "center", lineHeight: 0.9, letterSpacing: "-0.02em", margin: 0,
-              background: "linear-gradient(to bottom, #fcd34d 0%, #d97706 40%, #b45309 60%, #78350f 100%)",
-              WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
-              filter: "drop-shadow(6px 6px 0px #7f1d1d)", position: "relative", zIndex: 2,
-            }}>
-              CULFEST
+            >
+              <div style={{
+                width: isMobile ? "120px" : "160px",
+                height: isMobile ? "120px" : "160px",
+                borderRadius: "50%",
+                background: "#fff",
+                border: "4px solid #fcd34d",
+                boxShadow: "0 0 15px rgba(252, 211, 77, 0.6)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "15px",
+                marginBottom: "10px",
+                overflow: "hidden"
+              }}>
+                <img
+                  src="/jharkhand_tourism.png"
+                  alt="Jharkhand Tourism"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    filter: "drop-shadow(0 0 5px rgba(0,0,0,0.1))",
+                  }}
+                />
+              </div>
               <span style={{
-                fontSize: "0.5em", color: "#fff", WebkitTextFillColor: "#fff",
-                filter: "drop-shadow(4px 4px 0px #000)", marginLeft: "10px"
-              }}>'26</span>
-            </h1>
-          </motion.div>
+                fontFamily: "'Montserrat', sans-serif", fontSize: isMobile ? "12px" : "16px",
+                color: "#9ca3af", letterSpacing: "3px", textTransform: "uppercase", fontWeight: 600
+              }}>
+                PRESENTS
+              </span>
+            </motion.div>
+
+            <motion.div
+              initial={{ scale: 3, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
+              style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", width: isMobile ? "95%" : "fit-content" }}
+            >
+
+              {/* Encapsulating Brackets */}
+              <motion.div
+                initial={{ width: 0, opacity: 0 }}
+                animate={{ width: "110%", opacity: 1 }} // Reduced width for mobile safety
+                transition={{ delay: 0.5, duration: 0.8 }}
+                style={{
+                  position: "absolute", top: "-20px", left: "-5%",
+                  height: "100%", borderTop: "2px solid #eab308", borderLeft: "2px solid #eab308",
+                  zIndex: 0
+                }}
+              />
+              <motion.div
+                initial={{ width: 0, opacity: 0 }}
+                animate={{ width: "110%", opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                style={{
+                  position: "absolute", bottom: "-20px", right: "-5%",
+                  height: "100%", borderBottom: "2px solid #eab308", borderRight: "2px solid #eab308",
+                  zIndex: 0
+                }}
+              />
+
+
+              {/* The Text */}
+              <h1 style={{
+                fontSize: "clamp(32px, 12vw, 130px)", // Adjusted clamp min/max
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 900, fontStyle: "italic",
+                textAlign: "center", lineHeight: 0.9, letterSpacing: "-0.02em", margin: 0,
+                background: "linear-gradient(to bottom, #fcd34d 0%, #d97706 40%, #b45309 60%, #78350f 100%)",
+                WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent",
+                filter: "drop-shadow(6px 6px 0px #7f1d1d)", position: "relative", zIndex: 2,
+              }}>
+                CULFEST
+                <span style={{
+                  fontSize: "0.5em", color: "#fff", WebkitTextFillColor: "#fff",
+                  filter: "drop-shadow(4px 4px 0px #000)", marginLeft: "10px"
+                }}>'26</span>
+              </h1>
+            </motion.div>
+          </>
         )}
 
         {/* Subtitle */}
@@ -440,6 +485,6 @@ export default function AnimatedHeroBackground() {
         )}
 
       </div>
-    </div>
+    </div >
   );
 }
