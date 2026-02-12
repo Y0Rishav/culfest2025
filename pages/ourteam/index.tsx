@@ -120,7 +120,7 @@ const teamMembers = {
     {
       name: "Mayank",
       post: "Cultural Secretary",
-      img: "/our team photos/mayank_JCS.png",
+      img: "/our team photos/Maynak_Jcs.jpg",
     },
     {
       name: "Priyanshu Dev",

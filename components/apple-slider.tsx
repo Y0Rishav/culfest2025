@@ -14,6 +14,7 @@ import { DummyContent5 } from "@/utils/eventadata/Quizzing";
 import { DummyContent6 } from "@/utils/eventadata/Photo";
 import { DummyContent8 } from "@/utils/eventadata/Informal";
 import { DummyContent10 } from "@/utils/eventadata/Fashion";
+import { DummyContentFlagship } from "@/utils/eventadata/Flagship";
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -116,6 +117,6 @@ const data = [
     title:
       "Walk the ramp! Showcase your style, creativity, and confidence to win fashion contests ",
     src: "/event2026/FlagshipEvent.jpeg",
-    content: <DummyContent10 />,
+    content: <DummyContentFlagship />,
   },
 ];

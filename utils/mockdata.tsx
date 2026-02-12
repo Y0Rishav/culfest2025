@@ -82,6 +82,77 @@ export const mockData: EventData[] = [
       </>
     ),
   },
+  // {
+  //   id: "battle of dance",
+  //   eventname: "Battle of Dance",
+  //   category: "FLAGSHIP EVENTS",
+  //   description:
+  //     "Battle of Dance is the ultimate dance showdown where solo performers and groups compete for glory. Show off your best moves, creativity, and rhythm to win hearts and prizes.",
+  //   image: "",
+  //   rules: (
+  //     <>
+  //       <div
+  //         title="Rules of Battle of Dance"
+  //         style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
+  //         className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
+  //       >
+  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //             RULE 1 :{" "}
+  //           </span>{" "}
+  //           Solo and Group performances allowed.
+  //         </p>
+  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //             RULE 2 :{" "}
+  //           </span>{" "}
+  //           Time limit: 3-5 minutes per performance.
+  //         </p>
+  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //             RULE 3 :{" "}
+  //           </span>{" "}
+  //           Props are allowed but must be cleared by the team immediately after the performance.
+  //         </p>
+  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //             RULE 4 :{" "}
+  //           </span>{" "}
+  //           Judges decision is final and binding.
+  //         </p>
+  //       </div>
+  //       <p
+  //         className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+  //       >
+  //         <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
+  //           PRIZE MONEY :{" "}
+  //         </span>{" "}
+  //         To Be Announced
+  //       </p>
+  //       <p
+  //         className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+  //       >
+  //         <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //           VENUE :{" "}
+  //         </span>{" "}
+  //         Open Air Theatre.
+  //       </p>
+  //       <p
+  //         className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
+  //       >
+  //         <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
+  //           CONTACT :{" "}
+  //         </span>{" "}
+  //         <div className="pl-5">
+  //           Event Coordinators
+  //         </div>
+  //       </p>
+  //     </>
+  //   ),
+  // },
 
   {
     id: "move mayhem",

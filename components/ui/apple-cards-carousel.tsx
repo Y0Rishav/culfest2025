@@ -15,8 +15,10 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import { createPortal } from "react-dom";
 
 import { getEventTheme } from "@/utils/eventThemes";
+import ComicBackground from "../ComicBackground";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -201,79 +203,85 @@ export const Card = ({
     onCardClose(index);
   };
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <>
-      <AnimatePresence>
-        {open && (
-          <div
-            className="fixed inset-0 z-50 h-screen overflow-auto"
-            style={{
-              minHeight: "100vh", // Ensure the background covers the full viewport height
-            }}
-          >
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
-            />
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              ref={containerRef}
-              layoutId={layout ? `card-${card.title}` : undefined}
-              className={`relative z-[60] mx-auto my-4 h-fit max-w-5xl rounded-3xl p-4 md:my-10 md:p-10 ${theme.bodyFont}`}
+      {mounted && createPortal(
+        <AnimatePresence>
+          {open && (
+            <div
+              className="fixed inset-0 z-[9999] h-screen overflow-auto"
               style={{
-                backgroundImage: `url('${theme.backgroundImage}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundAttachment: "fixed",
-                minHeight: "100vh",
-                color: theme.textColor,
-                boxShadow: `0 0 40px ${theme.primaryColor}80` // Add a subtle glow matching the theme
+                minHeight: "100vh", // Ensure the background covers the full viewport height
               }}
             >
-              {/* Dark Overlay for readability */}
-              <div
-                className="absolute inset-0 z-0 rounded-3xl"
-                style={{ background: theme.overlayGradient }}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
               />
 
-              <div className="relative z-10">
-                <button
-                  className="sticky right-0 top-4 ml-auto flex h-10 w-10 items-center justify-center rounded-full bg-black/50 transition-all hover:shadow-[0_0_12px_rgba(255,255,255,0.4)]"
-                  style={{
-                    borderColor: theme.accentColor,
-                    borderWidth: '1px',
-                    color: theme.accentColor
-                  }}
-                  onClick={handleClose}
-                >
-                  <IconX className="h-6 w-6" />
-                </button>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                ref={containerRef}
+                layoutId={layout ? `card-${card.title}` : undefined}
+                className={`relative z-[10000] mx-auto my-4 h-fit max-w-5xl overflow-hidden rounded-3xl p-4 md:my-10 md:p-10 ${theme.bodyFont}`}
+                style={{
+                  minHeight: "100vh",
+                  color: theme.textColor,
+                  boxShadow: `0 0 40px ${theme.primaryColor}80` // Add a subtle glow matching the theme
+                }}
+              >
+                <ComicBackground backgroundColor="#0a0a1a" />
+                {/* Dark Overlay for readability */}
+                <div
+                  className="absolute inset-0 z-0 rounded-3xl"
+                  style={{ background: theme.overlayGradient }}
+                />
 
-                <motion.p
-                  layoutId={layout ? `category-${card.title}` : undefined}
-                  className={`text-base font-medium tracking-wider ${theme.headingFont}`}
-                  style={{ color: theme.accentColor }}
-                >
-                  {card.category}
-                </motion.p>
-                <motion.p
-                  layoutId={layout ? `title-${card.title}` : undefined}
-                  className={`mt-4 text-3xl tracking-wide md:text-5xl ${theme.headingFont}`}
-                  style={{ color: theme.textColor }}
-                >
-                  {card.title}
-                </motion.p>
-                <div className="py-10">{card.content}</div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
+                <div className="relative z-10">
+                  <button
+                    className="sticky right-0 top-4 ml-auto flex h-10 w-10 items-center justify-center rounded-full bg-black/50 transition-all hover:shadow-[0_0_12px_rgba(255,255,255,0.4)]"
+                    style={{
+                      borderColor: theme.accentColor,
+                      borderWidth: '1px',
+                      color: theme.accentColor
+                    }}
+                    onClick={handleClose}
+                  >
+                    <IconX className="h-6 w-6" />
+                  </button>
+
+                  <motion.p
+                    layoutId={layout ? `category-${card.title}` : undefined}
+                    className={`text-base font-medium tracking-wider ${theme.headingFont}`}
+                    style={{ color: theme.accentColor }}
+                  >
+                    {card.category}
+                  </motion.p>
+                  <motion.p
+                    layoutId={layout ? `title-${card.title}` : undefined}
+                    className={`mt-4 text-3xl tracking-wide md:text-5xl ${theme.headingFont}`}
+                    style={{ color: theme.textColor }}
+                  >
+                    {card.title}
+                  </motion.p>
+                  <div className="py-10">{card.content}</div>
+                </div>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
 
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
