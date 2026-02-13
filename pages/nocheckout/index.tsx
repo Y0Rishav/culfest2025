@@ -86,13 +86,15 @@ export default function Checkout() {
   if (main?.user?.isNITJSR) {
     if (plan === "Culfest 2026 Standard Plan" && numericPrice === 200) {
       productPrice = 200;
+    } else if (numericPrice === 2850) {
+      productPrice = 2850;
     } else {
       productPrice = 450;
     }
   } else {
     if (plan === "Culfest 2026 Standard Plan" && numericPrice === 400) {
       productPrice = 400;
-    } else if (plan === "Battle Crew Plan" && numericPrice === 2850) {
+    } else if (numericPrice === 2850) {
       productPrice = 2850;
     } else {
       productPrice = 1250;

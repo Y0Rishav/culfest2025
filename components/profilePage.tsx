@@ -138,7 +138,7 @@ const ProfilePage = ({ session, res }: any) => {
                 </div>
               </div>
 
-              <h1 className="mt-4 text-center font-bold text-2xl text-white tracking-wide">
+              <h1 className="mt-4 w-full px-2 text-center font-bold text-2xl text-white tracking-wide break-words">
                 {user?.name?.toUpperCase() || "UNKNOWN AGENT"}
               </h1>
               <p className="text-yellow-500 font-mono text-sm tracking-wider">

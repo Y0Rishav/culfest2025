@@ -101,12 +101,8 @@ export default function MediaPage() {
   return (
     <div
       ref={containerRef}
+      className="min-h-screen flex flex-col items-center pt-24 pb-12 px-4 md:pt-[15vh] md:px-[5vh] md:pb-[5vh]"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "15vh 5vh 5vh 5vh",
-        minHeight: "100vh",
         position: "relative",
         zIndex: 10,
       }}
@@ -155,12 +151,12 @@ export default function MediaPage() {
         return (
           <div
             key={image.id}
+            className={`${index === 0 ? "" : "-mt-12 md:-mt-[150px]"}`}
             style={{
               width: "100%",
               display: "flex",
               justifyContent: index % 2 === 0 ? "flex-start" : "flex-end",
               padding: "0 0vw",
-              marginTop: index === 0 ? "0" : "-150px", // Overlap to reduce space
               position: "relative",
               zIndex: index, // Ensure stacking
             }}
@@ -172,12 +168,8 @@ export default function MediaPage() {
                 if (el) imagesRef.current[index] = el;
               }}
               id={`image-${image.id}`}
-              style={{
-                width: "90vw",
-                maxWidth: "600px",
-                aspectRatio: "16/9",
-                transition: "transform 0.5s ease",
-              }}
+              className="w-full md:w-[90vw] max-w-[90vw] md:max-w-[600px] aspect-video transition-transform duration-500 ease-in-out"
+              style={{}}
             >
               <img
                 src={image.url}

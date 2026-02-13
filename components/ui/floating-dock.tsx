@@ -19,11 +19,13 @@ export const FloatingDock = ({
   desktopClassName,
   mobileClassName,
   initial = false, // Set default value for initial
+  onItemClick,
 }: {
   items: { title: string; icon: React.ReactNode; href: string; onclick?: () => void }[];
   desktopClassName?: string;
   mobileClassName?: string;
   initial?: boolean; // Pass initial prop here to control the state
+  onItemClick?: () => void;
 }) => {
   return (
     <>
@@ -36,6 +38,7 @@ export const FloatingDock = ({
         items={items}
         className={mobileClassName}
         initial={initial}
+        onItemClick={onItemClick}
       />
     </>
   );
@@ -45,10 +48,12 @@ const FloatingDockMobile = ({
   items,
   className,
   initial = false, // default value for initial is false
+  onItemClick,
 }: {
   items: { title: string; icon: React.ReactNode; href: string; onclick?: () => void }[];
   className?: string;
   initial?: boolean; // Use initial prop for setting the open state
+  onItemClick?: () => void;
 }) => {
   const [open, setOpen] = useState(initial); // Set the initial state based on the prop
   const [openEventListMobile, setopenEventListMobile] =
@@ -81,7 +86,7 @@ const FloatingDockMobile = ({
                 {item.title !== "Events" && (
                   item.onclick ? (
                     <div
-                      onClick={(e) => { e.preventDefault(); item.onclick?.(); }}
+                      onClick={(e) => { e.preventDefault(); item.onclick?.(); onItemClick?.(); }}
                       className="flex items-center gap-3 rounded-lg bg-gray-50 p-2 dark:bg-neutral-900 cursor-pointer"
                     >
                       <div className="h-5 w-5">{item.icon}</div>
@@ -94,6 +99,7 @@ const FloatingDockMobile = ({
                       href={item.href}
                       key={item.title}
                       className="flex items-center gap-3 rounded-lg bg-gray-50 p-2 dark:bg-neutral-900"
+                      onClick={onItemClick}
                     >
                       <div className="h-5 w-5">{item.icon}</div>
                       <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-lg text-transparent">
@@ -110,7 +116,7 @@ const FloatingDockMobile = ({
                         {item.title}
                       </span>
                     </div>
-                    <EventListPhone isExpanded={openEventListMobile} />
+                    <EventListPhone isExpanded={openEventListMobile} onItemClick={onItemClick} />
                   </div>
                 )}
               </motion.div>

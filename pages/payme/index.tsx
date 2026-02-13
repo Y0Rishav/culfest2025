@@ -203,7 +203,7 @@ export default function Page() {
       accent: "#ffd700", // Gold
     },
     {
-      title: "Battle Crew Plan",
+      title: "Battle Crew Plan (Only for Flagship Events)",
       price: 2850,
       originalPrice: 5000,
       description: "For Battle of Bands / Battle of Dance (Entire Crew)",

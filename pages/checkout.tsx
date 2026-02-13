@@ -105,6 +105,8 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
       // NIT Jamshedpur Logic
       if (plan === "Culfest 2026 Standard Plan" && numericPrice === 200) {
         product.price = 200;
+      } else if (numericPrice === 2850) {
+        product.price = 2850;
       } else {
         // Multi event or default
         product.price = 450;
@@ -113,7 +115,7 @@ const PaymentComponent: React.FC<{ product: Product }> = () => {
       // Outside College Logic
       if (plan === "Culfest 2026 Standard Plan" && numericPrice === 400) {
         product.price = 400;
-      } else if (plan === "Battle Crew Plan" && numericPrice === 2850) {
+      } else if (numericPrice === 2850) {
         product.price = 2850;
       } else {
         // Premium / Multi event

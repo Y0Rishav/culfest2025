@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/sheet";
 
 export function FloatingDockDemo() {
+  const [open, setOpen] = React.useState(false);
   const { data: session, status } = useSession();
   const isAuthenticated = status === "authenticated";
 
@@ -125,7 +126,7 @@ export function FloatingDockDemo() {
         />
       </div>
       <div className="md:hidden">
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <button className="fixed right-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 shadow-md dark:bg-neutral-800">
               <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
@@ -137,6 +138,7 @@ export function FloatingDockDemo() {
               mobileClassName="translate-y-20 bg-transparent transition-all duration-300"
               items={links}
               initial={true}
+              onItemClick={() => setOpen(false)}
             />
           </SheetContent>
         </Sheet>
