@@ -28,7 +28,7 @@ const About: React.FC = () => {
 
 
         {/* Content Layer */}
-        <div className="relative z-10 min-h-screen px-4 pt-[40px] pb-8 text-gray-100 sm:px-8">
+        <div className="relative z-10 min-h-screen px-4 pt-28 pb-8 text-gray-100 sm:px-8">
           {/* Top bar: Logo + Brochure */}
           <div className="flex items-start justify-between">
             <Link href="/" className="relative" style={{ zIndex: 50 }}>

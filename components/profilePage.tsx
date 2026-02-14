@@ -85,16 +85,14 @@ const ProfilePage = ({ session, res }: any) => {
         }}
       />
 
-      {/* 2. Navigation Layer */}
-      <div className="relative flex justify-center pt-[20px]" style={{ zIndex: 50 }}>
-        <FloatingDockDemo />
-      </div>
-
       {/* 3. Main Content Content */}
-      <div className="relative z-20 flex flex-col items-center justify-center p-2 sm:p-4">
+      <div
+        className="relative z-20 flex flex-col items-center justify-center p-2 sm:p-4"
+        style={{ paddingTop: "130px" }}
+      >
 
         {/* Logo - Static (no animation) */}
-        <div className="mb-4">
+        <div className="mb-8">
           <Link href="/">
             <img
               src="/colorLogo.png"
@@ -140,7 +138,7 @@ const ProfilePage = ({ session, res }: any) => {
                 </div>
               </div>
 
-              <h1 className="mt-4 text-center font-bold text-2xl text-white tracking-wide">
+              <h1 className="mt-4 w-full px-2 text-center font-bold text-2xl text-white tracking-wide break-words">
                 {user?.name?.toUpperCase() || "UNKNOWN AGENT"}
               </h1>
               <p className="text-yellow-500 font-mono text-sm tracking-wider">

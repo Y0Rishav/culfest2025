@@ -169,15 +169,15 @@ export default function Page() {
   }
 
   const feature = [
-    "Only Participate in one event",
+    "Only Participate in one event excluding flagship events",
     "Cultural Night Access",
     "Accomodation",
     "Food Included",
   ];
 
-  const features_nit = ["Participate in all events", feature[1]];
+  const features_nit = ["Participate in all events except flagship events", feature[1]];
   const feature_all_more = [
-    "Participate in all events",
+    "Participate in all events except flagship events",
     feature[1],
     feature[2],
     feature[3],
@@ -185,25 +185,25 @@ export default function Page() {
 
   const plans = [
     {
-      title: "Culfest 2026 Standard Plan",
+      title: "Culfest 2026 Standard Plan (Exclusive of Flagship Events)",
       price: session.user.isNITJSR ? 200 : 400,
       originalPrice: session.user.isNITJSR ? 500 : 800,
-      description: "Pay for participating in one event only",
+      description: "Pay for participating in one event only excluding the flagship events",
       features: [feature[0], feature[1]],
       actionLabel: "Get It",
       accent: "#3b82f6", // Blue
     },
     {
-      title: "Culfest 2026 Premium Plan",
+      title: "Culfest 2026 Premium Plan (Exclusive of Flagship Events)",
       price: session.user.isNITJSR ? 450 : 1250,
       originalPrice: session.user.isNITJSR ? 1000 : 2500,
-      description: "Pay for participating in all the events and cultural night",
+      description: "Pay for participating in all the events and cultural night excluding the flagship events",
       features: session.user.isNITJSR ? features_nit : feature_all_more,
       actionLabel: "Get It",
       accent: "#ffd700", // Gold
     },
     {
-      title: "Battle Crew Plan",
+      title: "Battle Crew Plan (Only for Flagship Events)",
       price: 2850,
       originalPrice: 5000,
       description: "For Battle of Bands / Battle of Dance (Entire Crew)",
@@ -219,7 +219,7 @@ export default function Page() {
       <ComicBackground backgroundColor="#0a0a1a" topRingOffset="8%" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center px-4 py-16 md:py-24">
+      <div className="relative z-10 flex flex-col items-center px-4 pt-36 pb-16 md:py-24">
         {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: -30 }}

@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 
 interface MobileEventListProps {
   isExpanded: boolean;
-//   onEventSelect: (eventId: string) => void;
+  onItemClick?: () => void;
 }
 
-export default function EventListPhone({ isExpanded }: MobileEventListProps) {
+export default function EventListPhone({ isExpanded, onItemClick }: MobileEventListProps) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const router = useRouter();
 
@@ -28,7 +28,7 @@ export default function EventListPhone({ isExpanded }: MobileEventListProps) {
 
   const handleEventClick = (eventId: string) => {
     router.push(`/events/${eventId}`);
-    // onEventSelect(eventId);
+    onItemClick?.();
     setSelectedCategory(null);
   };
 
@@ -49,9 +49,8 @@ export default function EventListPhone({ isExpanded }: MobileEventListProps) {
                   {mockData.filter((event) => event.category === category).length}
                 </span>
                 <svg
-                  className={`h-4 w-4 transform transition-transform duration-300 ${
-                    selectedCategory === category ? 'rotate-90' : ''
-                  }`}
+                  className={`h-4 w-4 transform transition-transform duration-300 ${selectedCategory === category ? 'rotate-90' : ''
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

@@ -28,28 +28,28 @@ function Controls({
   initData,
 }: Props) {
   const handlePrev = () => {
-    handleData((prevData:any) => [
+    handleData((prevData: any) => [
       transitionData ? transitionData : initData,
       ...prevData.slice(0, prevData.length - 1),
     ]);
     handleCurrentSlideData({
       data: transitionData ? transitionData : sliderData[0],
       index: sliderData.findIndex(
-        (ele:any) => ele.img === data[data.length - 1].img
+        (ele: any) => ele.img === data[data.length - 1].img
       ),
     });
     handleTransitionData(data[data.length - 1]);
   };
 
   const handleNext = () => {
-    handleData((prev:any) => prev.slice(1));
+    handleData((prev: any) => prev.slice(1));
     handleCurrentSlideData({
       data: transitionData ? transitionData : initData,
-      index: sliderData.findIndex((ele:any) => ele.img === data[0].img),
+      index: sliderData.findIndex((ele: any) => ele.img === data[0].img),
     });
     handleTransitionData(data[0]);
     setTimeout(() => {
-      handleData((newData:any) => [
+      handleData((newData: any) => [
         ...newData,
         transitionData ? transitionData : initData,
       ]);

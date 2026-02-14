@@ -120,7 +120,7 @@ const PaymentPage: React.FC = () => {
   };
 
   return (
-    <div className="relative z-10 flex min-h-screen flex-col items-center justify-center p-4 text-white">
+    <div className="relative z-10 flex min-h-screen flex-col items-center justify-start p-4 pt-36 text-white">
       <h1 className="mb-4 text-2xl font-bold">GPay Payment</h1>
       <div className="mb-4">
         <img

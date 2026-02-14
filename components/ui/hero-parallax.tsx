@@ -107,7 +107,7 @@ export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
       <h1 className="font-Bangers text-4xl tracking-wider text-yellow-400 md:text-7xl" style={{ textShadow: '0 0 20px rgba(255,215,0,0.3)' }}>
-        <TypewriterEffectDemo /> 2026
+        <TypewriterEffectDemo />
       </h1>
       <p className="mt-8 max-w-2xl font-Bangers text-base tracking-wide text-gray-300 md:text-xl" style={{ letterSpacing: '1px' }}>
         Welcome to Culfest 2026, the grand cultural extravaganza of the National

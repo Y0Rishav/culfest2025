@@ -12,12 +12,23 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import Link from "next/link";
 import { getEventTheme } from "@/utils/eventThemes";
+import { useRouter } from "next/router";
 
 // Component for rendering interactive event details with theme support
 export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: any }) {
   const { data: session, status } = useSession();
+  const router = useRouter();
   const [teamName, setTeamName] = useState("");
   const [participants, setParticipants] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -25,6 +36,7 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
   const [registeredEvents, setRegisteredEvents] = useState<string[]>([]);
   const [successfullyUpdated, setSuccessfulupdates] = useState<any>([]);
   const [failedupdates, setFailedupdates] = useState<any>([]);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
 
   // Get theme based on event name and category, falling back to default if data missing
   const currentTheme = theme || (total?.eventname ? getEventTheme(total.eventname, total.category) : {
@@ -103,6 +115,7 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
             setFailedupdates(response.data.data.failedUpdates);
             setSuccessfulupdates(response.data.data.successfulUpdates);
             setParticipants([]);
+            setShowSuccessDialog(true);
           }
         }
 
@@ -377,7 +390,26 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
             </>
           )}
         </div>
-      </motion.div >
+      </motion.div>
+
+      <AlertDialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <AlertDialogContent className="bg-zinc-900 border-zinc-700 text-white">
+          <AlertDialogHeader>
+            <AlertDialogTitle className="text-xl font-bold text-green-500">Registration Successful!</AlertDialogTitle>
+            <AlertDialogDescription className="text-zinc-300">
+              You have been successfully registered for {total?.eventname}.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction
+              onClick={() => router.push("/profile")}
+              className="bg-green-600 hover:bg-green-700 text-white border-0"
+            >
+              Go to Profile
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div >
   );
 }
