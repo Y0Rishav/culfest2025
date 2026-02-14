@@ -205,7 +205,7 @@ const Team: React.FC = () => {
           </div>
         </div>
         {/* Main Content */}
-        <div className="container relative z-10 mx-auto px-4 py-8 md:py-16">
+        <div className="container relative z-10 mx-auto px-4 py-24 md:py-16">
           <motion.h1
             className="mb-10 text-center font-Bangers text-5xl tracking-wider sm:text-4xl md:text-7xl"
             initial={{ opacity: 0, scale: 0.8 }}
