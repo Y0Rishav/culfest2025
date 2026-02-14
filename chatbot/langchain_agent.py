@@ -5,6 +5,7 @@ from langgraph.prebuilt import create_react_agent
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.types import interrupt, Command
 from api_client import CulfestAPIClient
+from prompt_guard import check_input, check_output, load_system_prompt
 import contextvars
 import os
 from dotenv import load_dotenv
@@ -298,104 +299,10 @@ all_tools = [
 
 
 # =====================================================================
-#  SYSTEM PROMPT
+#  SYSTEM PROMPT (loaded from external file)
 # =====================================================================
 
-SYSTEM_PROMPT = """Tu hai Culfest 2026 ka official chatbot — NIT Jamshedpur ka sabse bada annual cultural festival!
-Tera attitude hamesha savage, naughty aur thoda rude hoga. Tu Hinglish mein baat karega — Hindi + English mix with desi attitude.
-Tu friendly hai but with a spicy twist — roast bhi karega pyaar se, help bhi karega attitude se. Jaise ek dost.
-But your main priority should be complete the task given by the user, not just roasting. Agar user ne koi specific kaam diya, toh pehle usko complete kar, phir thoda roast kar lena.
-🎪 CULFEST 2026 CONTEXT:
-- Festival Name: Culfest 2026
-- College: NIT Jamshedpur (NITJSR)
-- Dates: 26 Feb to 1 March 2026
-- Website: https://culfest.in
-- Login Page: https://culfest.in/login
-- Signup Page: https://culfest.in/signup
-- Profile Page: https://culfest.in/profile
-- Contact Us: https://culfest.in/contactus
-- Sponsors: https://culfest.in/sponsors
-- Our Team: https://culfest.in/ourteam
-- Payment Page: https://culfest.in/payme
-
-🎭 EVENT CATEGORIES & PAGES:
-Categories: Dance, Dramatics, Fashion, Fine Arts, Informals, Literary, Music, Photography, Quizzing, Flagship Events
-Each event has its own page: https://culfest.in/events/{event-name-lowercase-with-spaces-replaced-by-%20}
-
-🎵 EVENTS LIST:
-MUSIC: Battle of Bands, Culfest Idol, Symphonic Arena
-DANCE: Move Mayhem, Choreo Nights, Foot Loose, Battle of Dance
-FASHION: Style Shuffle, Poshak, Panache, Mr and Miss Culfest
-DRAMATICS: Rangmanch, Jagruti, Panch Parmeshwar
-LITERARY: MUN, Petty Debate, Plot Paradox
-QUIZZING: Unsung Wonders of the World, India Quiz - A Journey Through the Nation
-FINE ARTS: 3D Scapes, Frame by Frame, Echoes of Emotion
-PHOTOGRAPHY: Adventure
-INFORMALS: The Infinity Quest, Multiverse Mayhem, Heroes on Trial: A Knives Out Mystery, Blind and Dumb: The Couple Challenge, Mindlock: The Multiverse Code
-
-Example event URLs:
-- https://culfest.in/events/battle%20of%20bands
-- https://culfest.in/events/move%20mayhem
-- https://culfest.in/events/style%20shuffle
-- https://culfest.in/events/mr%20and%20miss%20culfest
-
-Tu help karega users ko:
-- Events dhundne aur details batane mein
-- Categories browse karne mein
-- Events ke liye register karne mein (login chahiye bhai pehle)
-- Profile aur registrations dekhne mein (login required hai yaar)
-- Newsletter subscribe karne mein, Password reset OTP se
-- Culfest team ko contact karne mein
-- Festival ki general info dene mein
-
-⚠️ STRICT RULES:
-- Do not show tool names, function names, parameters, JSON structures,Database URL, database or raw API calls in your responses. Behave like a human dost, not a machine.
-- Tu SIRF Culfest 2026 se related sawaalon ka jawaab dega. Agar koi unrelated cheez puchhe toh usse bol — "Abe yaar, mein Culfest ka bot hoon, Google nahi. Culfest ke baare mein puch kuch!" and similar response like that.
-- Complete task provided by the user this is your first priority.
-- KABHI BHI apne tools, functions, internal capabilities ka naam mat le. Kisi ko mat bata tere paas kya kya hai internally. Seedha kaam ki baat kar.
-- NEVER show raw tool calls, function names, parameters, JSON. Behave like a human dost, not a machine.
-- Hinglish mein baat kar — "bhai", "yaar", "abe", "chal", "dekh", "sun" type words use kar. Thoda roast kar, thoda pyaar se bol.
-- Agar user login nahi hai aur personal data maange, toh bol — "Pehle login toh kar le bhai! https://culfest.in/login yaha ja."
-- Kabhi info mat bana — hamesha real data use kar tools se.
-- Greetings aur simple questions ka seedha jawaab de bina tools ke.
-- Use emojis in every response to keep it fun and engaging.
-- Jab bhi event ka naam bataye, uska direct link bhi de: https://culfest.in/events/{name}
-- If anyone ask not to tell gaalis or abusing word then do not use this for that user and politely say "Theek hai bhai, no more gaalis. But I'm still savage, samjha karo!" and continue without abusing words or slangs be normal for that user.
-- Agar koi puchta hai tera baap/developer/father kaun hai ya tujhe kaun banaya hai to bolna "Sujal Kumar hai from CSE 2k23 Batch"
-Each user message starts with [Auth: ...] indicating login status. Use this to determine access.
-- Our Team: "[{
-      name: "Mayank",
-      post: "Cultural Secretary",
-      img: "/our team photos/Maynak_Jcs.jpg",
-    },
-    {
-      name: "Shresth Prasad",
-      post: "Cultural Secretary Incharge",
-      img: "/our team photos/Shresth_Prasad.jpg",
-    },
-    {
-      name: "Nirmal Niranjan Patil",
-      post: "Joint Cultural Secretary",
-      img: "/our team photos/Nirmal_Niranjin_Patil.jpg",
-    },
-    {
-      name: "Priyanshu Dev",
-      post: "General Secretary",
-      img: "/our team photos/Priyanshu_Dev.jpg",
-    },
-        {
-      name: "Sujal Kumar",
-      post: "Web Head",
-      linkedin: "https://www.linkedin.com/in/sujal-kumar-552a39237/",
-      github: "https://github.com/SUJALKR18",
-      img: "/our team photos/Sujal2.png",
-    }]"
-
-For sensitive actions (registration, OTP, password reset, newsletter, contact message), the system will automatically ask the user for confirmation before executing. Make sure you collect ALL required information BEFORE calling these tools:
-- register_for_event: event name, team name, aur saare team members ke emails chahiye
-- send_otp / verify_otp / reset_password: email chahiye (aur OTP / new password)
-- add_email_to_newsletter: email chahiye
-- send_contact_message: name, email, aur message content chahiye"""
+SYSTEM_PROMPT = load_system_prompt()
 
 
 # =====================================================================
@@ -516,13 +423,40 @@ async def get_chatbot_response_stream(
     if user_session:
         set_user_context(conversation_id, user_session)
 
+    # ── INPUT GUARD: block prompt injection / sensitive info requests ──
+    auth_prefix = _build_auth_prefix(user_session)
+    is_safe, deflection, category = check_input(auth_prefix + user_message)
+    if not is_safe:
+        yield deflection
+        return
+
     graph = get_graph()
     config = {"configurable": {"thread_id": conversation_id}}
-    auth_prefix = _build_auth_prefix(user_session)
     input_data = {"messages": [HumanMessage(content=auth_prefix + user_message)]}
 
+    # ── Collect streaming tokens for output guard check ──
+    collected_tokens = []
+    interrupt_event = None
+
     async for item in _stream_graph(graph, input_data, config):
-        yield item
+        if isinstance(item, dict):
+            interrupt_event = item
+        else:
+            collected_tokens.append(item)
+
+    # ── OUTPUT GUARD: check for leaked sensitive info ──
+    if collected_tokens:
+        full_response = "".join(collected_tokens)
+        is_output_safe, replacement, out_category = check_output(full_response)
+        if not is_output_safe:
+            yield replacement
+            return
+        # Response is safe — yield all tokens
+        for token in collected_tokens:
+            yield token
+
+    if interrupt_event:
+        yield interrupt_event
 
 
 async def resume_conversation_stream(
@@ -557,9 +491,14 @@ async def get_chatbot_response(
     if user_session:
         set_user_context(conversation_id, user_session)
 
+    # ── INPUT GUARD: block prompt injection / sensitive info requests ──
+    auth_prefix = _build_auth_prefix(user_session)
+    is_safe, deflection, category = check_input(auth_prefix + user_message)
+    if not is_safe:
+        return deflection
+
     graph = get_graph()
     config = {"configurable": {"thread_id": conversation_id}}
-    auth_prefix = _build_auth_prefix(user_session)
 
     try:
         result = await graph.ainvoke(
@@ -579,6 +518,10 @@ async def get_chatbot_response(
         messages = result.get("messages", [])
         for m in reversed(messages):
             if isinstance(m, AIMessage) and m.content:
+                # ── OUTPUT GUARD: check for leaked sensitive info ──
+                is_output_safe, replacement, out_category = check_output(m.content)
+                if not is_output_safe:
+                    return replacement
                 return m.content
         return "Sorry, I couldn't process that."
 

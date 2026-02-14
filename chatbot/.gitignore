@@ -16,3 +16,6 @@ venv/
 env/
 venv_tmkc/
 env_tmkc/
+
+# prompts (sensitive — never commit)
+prompts/
