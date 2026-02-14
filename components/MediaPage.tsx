@@ -101,12 +101,8 @@ export default function MediaPage() {
   return (
     <div
       ref={containerRef}
+      className="min-h-screen flex flex-col items-center pt-24 pb-12 px-4 md:pt-[15vh] md:px-[5vh] md:pb-[5vh]"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "5vh",
-        minHeight: "100vh",
         position: "relative",
         zIndex: 10,
       }}
@@ -122,23 +118,24 @@ export default function MediaPage() {
       <div
         ref={headerRef}
         style={{
-          // color: "yellow",
-          fontSize: "4rem",
-          fontWeight: "bold",
+          fontFamily: "'Bangers', sans-serif",
+          fontSize: "clamp(48px, 10vw, 100px)",
+          fontWeight: 400,
+          letterSpacing: "4px",
+          background: "linear-gradient(to bottom, #fcd34d 0%, #d97706 40%, #b45309 60%, #78350f 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          filter: "drop-shadow(4px 4px 0px #7f1d1d)",
+          lineHeight: 1.1,
           marginBottom: "2vh",
-          textShadow: "0px 2px 4px rgba(0, 0, 0, 0.3)",
-          // background: "rgba(255, 255, 255, 0.1)",
           padding: "10px 20px",
           borderRadius: "8px",
-          // backdropFilter: "blur(10px)",
-          // boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
           display: "inline-block",
-          // backgroundImage: "url('/andy-holmes-rCbdp8VCYhQ-unsplash.jpg')",
         }}
         // style={{}}
-        className="font-AnotherFont text-6xl text-yellow-600"
+        className="" // Removed font-AnotherFont and text-yellow-600
       >
-        Media
+        MEDIA
       </div>
 
       {/* <div>
@@ -154,11 +151,14 @@ export default function MediaPage() {
         return (
           <div
             key={image.id}
+            className={`${index === 0 ? "" : "-mt-12 md:-mt-[150px]"}`}
             style={{
               width: "100%",
               display: "flex",
               justifyContent: index % 2 === 0 ? "flex-start" : "flex-end",
               padding: "0 0vw",
+              position: "relative",
+              zIndex: index, // Ensure stacking
             }}
             onMouseEnter={() => handleMouseEnter(image.id)}
             onMouseLeave={() => handleMouseLeave(image.id)}
@@ -168,12 +168,8 @@ export default function MediaPage() {
                 if (el) imagesRef.current[index] = el;
               }}
               id={`image-${image.id}`}
-              style={{
-                width: "90vw",
-                maxWidth: "600px",
-                aspectRatio: "16/9",
-                transition: "transform 0.5s ease",
-              }}
+              className="w-full md:w-[90vw] max-w-[90vw] md:max-w-[600px] aspect-video transition-transform duration-500 ease-in-out"
+              style={{}}
             >
               <img
                 src={image.url}

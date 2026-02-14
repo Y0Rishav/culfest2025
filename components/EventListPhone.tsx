@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 
 interface MobileEventListProps {
   isExpanded: boolean;
-//   onEventSelect: (eventId: string) => void;
+  onItemClick?: () => void;
 }
 
-export default function EventListPhone({ isExpanded }: MobileEventListProps) {
+export default function EventListPhone({ isExpanded, onItemClick }: MobileEventListProps) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const router = useRouter();
 
@@ -28,13 +28,13 @@ export default function EventListPhone({ isExpanded }: MobileEventListProps) {
 
   const handleEventClick = (eventId: string) => {
     router.push(`/events/${eventId}`);
-    // onEventSelect(eventId);
+    onItemClick?.();
     setSelectedCategory(null);
   };
 
   return (
     <div className={`mt-1 overflow-hidden transition-all duration-500 ease-in-out ${
-      isExpanded ? 'max-h-[500px] scale-100 opacity-100' : 'max-h-0 scale-95 opacity-0'
+      isExpanded ? 'max-h-none scale-100 opacity-100' : 'max-h-0 scale-95 opacity-0'
     }`}>
       <div className="space-y-1 pl-4">
         {categories.map((category) => (
@@ -49,9 +49,8 @@ export default function EventListPhone({ isExpanded }: MobileEventListProps) {
                   {mockData.filter((event) => event.category === category).length}
                 </span>
                 <svg
-                  className={`h-4 w-4 transform transition-transform duration-300 ${
-                    selectedCategory === category ? 'rotate-90' : ''
-                  }`}
+                  className={`h-4 w-4 transform transition-transform duration-300 ${selectedCategory === category ? 'rotate-90' : ''
+                    }`}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -68,9 +67,9 @@ export default function EventListPhone({ isExpanded }: MobileEventListProps) {
 
             {/* Events for selected category with improved transitions */}
             <div
-              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              className={`overflow-y-auto transition-all duration-500 ease-in-out ${
                 selectedCategory === category
-                  ? 'max-h-[500px] scale-100 opacity-100'
+                  ? 'max-h-none scale-100 opacity-100'
                   : 'max-h-0 scale-90 opacity-0'
               }`}
               style={{
@@ -86,7 +85,7 @@ export default function EventListPhone({ isExpanded }: MobileEventListProps) {
                   >
                     <span className="text-sm">{event.eventname}</span>
                     <svg
-                      className="h-4 w-4"
+                      className={`h-4 w-4 transform transition-transform duration-300`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

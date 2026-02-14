@@ -19,7 +19,7 @@ export default function Sponsors() {
     { name: "Rollick", image: "/sponsors/24Sponsors/Rollick.png" },
     { name: "Jamshedpur management association", image: "/sponsors/24Sponsors/JamshedpurManagementAssociation.png" },
     { name: "Prabhat Khabar", image: "/sponsors/24Sponsors/PrabhatKhabar.png" },
-    { name: "Winkies", image: "/sponsors/previousSponsors/Winkies.png" },
+    { name: "Winkies", image: "/sponsors/previousSponsors/winkies.png" },
     { name: "Emami fair and handsome", image: "/sponsors/24Sponsors/EmamiFairAndHandsome.png" },
     { name: "Golden Leaf Resort", image: "/sponsors/24Sponsors/GoldenLeafResort.png" },
     { name: "Beyond temptation ", image: "/sponsors/24Sponsors/BeyondTemptation.png" },
@@ -60,7 +60,7 @@ export default function Sponsors() {
         />
 
         {/* Content Layer */}
-        <div className="relative z-10 min-h-screen px-4 pt-2 pb-16 sm:px-8">
+        <div className="relative z-10 min-h-screen px-4 py-12 pb-16 sm:px-8">
           {/* Logo */}
           <Link href="/" className="relative" style={{ zIndex: 50 }}>
             <img

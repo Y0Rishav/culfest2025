@@ -39,7 +39,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden pt-24 md:pt-0">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden pt-36 md:pt-36">
 
 
       {/* Logo */}
