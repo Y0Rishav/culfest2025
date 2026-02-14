@@ -84,7 +84,7 @@ export default function Checkout() {
   // Derived variables
   let productPrice = 1250;
   if (main?.user?.isNITJSR) {
-    if (plan === "Culfest 2026 Standard Plan" && numericPrice === 200) {
+    if (plan?.startsWith("Culfest 2026 Standard Plan") && numericPrice === 200) {
       productPrice = 200;
     } else if (numericPrice === 2850) {
       productPrice = 2850;
@@ -92,7 +92,7 @@ export default function Checkout() {
       productPrice = 450;
     }
   } else {
-    if (plan === "Culfest 2026 Standard Plan" && numericPrice === 400) {
+    if (plan?.startsWith("Culfest 2026 Standard Plan") && numericPrice === 400) {
       productPrice = 400;
     } else if (numericPrice === 2850) {
       productPrice = 2850;
