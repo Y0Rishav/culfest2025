@@ -5,7 +5,7 @@ from langgraph.prebuilt import create_react_agent
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.types import interrupt, Command
 from api_client import CulfestAPIClient
-from prompt_guard import check_input, check_output, load_system_prompt
+from prompt_guard import check_input, check_input_with_llm, check_output, load_system_prompt
 import contextvars
 import os
 from dotenv import load_dotenv
@@ -309,6 +309,24 @@ SYSTEM_PROMPT = load_system_prompt()
 #  GRAPH INITIALIZATION
 # =====================================================================
 
+# Shared lightweight LLM for the input guard classifier (low temp, low tokens)
+_guard_llm = None
+
+
+def get_guard_llm():
+    """Lazy singleton — cheap Gemini call used only to confirm regex flags."""
+    global _guard_llm
+    if _guard_llm is None:
+        _guard_llm = ChatVertexAI(
+            model_name="gemini-2.0-flash",
+            temperature=0.0,
+            project=os.getenv("GOOGLE_CLOUD_PROJECT"),
+            location=os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1"),
+            max_output_tokens=8,  # only needs "SAFE" or "BLOCKED"
+        )
+    return _guard_llm
+
+
 def get_graph():
     global _graph
     if _graph is None:
@@ -423,9 +441,11 @@ async def get_chatbot_response_stream(
     if user_session:
         set_user_context(conversation_id, user_session)
 
-    # ── INPUT GUARD: block prompt injection / sensitive info requests ──
+    # ── INPUT GUARD: regex flags → LLM confirms → block only if both agree ──
     auth_prefix = _build_auth_prefix(user_session)
-    is_safe, deflection, category = check_input(auth_prefix + user_message)
+    is_safe, deflection, category = await check_input_with_llm(
+        auth_prefix + user_message, llm=get_guard_llm()
+    )
     if not is_safe:
         yield deflection
         return
@@ -491,9 +511,11 @@ async def get_chatbot_response(
     if user_session:
         set_user_context(conversation_id, user_session)
 
-    # ── INPUT GUARD: block prompt injection / sensitive info requests ──
+    # ── INPUT GUARD: regex flags → LLM confirms → block only if both agree ──
     auth_prefix = _build_auth_prefix(user_session)
-    is_safe, deflection, category = check_input(auth_prefix + user_message)
+    is_safe, deflection, category = await check_input_with_llm(
+        auth_prefix + user_message, llm=get_guard_llm()
+    )
     if not is_safe:
         return deflection
 
