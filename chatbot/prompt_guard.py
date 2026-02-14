@@ -11,12 +11,21 @@ import os
 import random
 import xml.etree.ElementTree as ET
 from typing import Tuple, Optional, List
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # =====================================================================
-#  PATHS
+#  PATHS — configurable via PROMPTS_DIR env var
+#  Local dev:   PROMPTS_DIR=./prompts  (relative to chatbot/)
+#  Railway/cloud: PROMPTS_DIR=/etc/secrets   (mounted secrets volume)
+#  Fallback:    <this-file-dir>/prompts
 # =====================================================================
 
-_PROMPTS_DIR = os.path.join(os.path.dirname(__file__), "prompts")
+_PROMPTS_DIR = os.getenv(
+    "PROMPTS_DIR",
+    os.path.join(os.path.dirname(__file__), "prompts"),
+)
 _INPUT_GUARD_PATH = os.path.join(_PROMPTS_DIR, "input_guard.xml")
 _OUTPUT_GUARD_PATH = os.path.join(_PROMPTS_DIR, "output_guard.xml")
 
