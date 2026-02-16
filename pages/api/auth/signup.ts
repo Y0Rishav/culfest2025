@@ -4,6 +4,7 @@ import User from "../models/User.model";
 import Otp from "../models/Otp.model";
 import { hash } from "bcryptjs";
 import connectToDatabase from "../conntectToDatabase";
+import { getSecondDBUserModel } from "../connectToSecondDB";
 
 type ResponseData = {
   status: number;
@@ -133,6 +134,27 @@ export default async function handler(
         status: 500,
         message: "Failed to create user",
       });
+    }
+
+    // Also create user in the second database with the same _id
+    try {
+      const SecondDBUser = await getSecondDBUserModel();
+      await SecondDBUser.create({
+        _id: newUser._id, // same user id as primary database
+        email,
+        password: hashedPassword,
+        name: username,
+        phone,
+        city,
+        state,
+        college,
+        isNITJSR: isCollegeEmail,
+        graduationYear,
+        gender,
+      });
+    } catch (secondDbError) {
+      console.error("Failed to create user in second database:", secondDbError);
+      // Don't block signup if second DB write fails
     }
 
     // Delete the used OTP
