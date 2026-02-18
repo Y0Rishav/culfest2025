@@ -96,6 +96,13 @@ const teamMembers = {
       img: "/our team photos/Sujal2.png",
     },
     {
+      name: "Aditya Raj",
+      post: "Web team",
+      linkedin: "https://www.linkedin.com/in/aditya-raj-968a751ba/",
+      github: "https://github.com/raj-adi00",
+      img: "/our team photos/Aditya_Raj.jpg",
+    },
+    {
       name: "Krrish kumar",
       post: "Web team",
       linkedin: "https://www.linkedin.com/in/krrish-kumar-bb2aaa328",
