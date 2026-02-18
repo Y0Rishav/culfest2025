@@ -37,3 +37,6 @@ env
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# chatbot prompts (sensitive — never commit)
+chatbot/prompts/

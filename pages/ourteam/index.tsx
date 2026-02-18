@@ -177,9 +177,9 @@ const Team: React.FC = () => {
             className="animate-bounce-slow h-[60px] md:h-[115px] w-auto rounded-lg bg-gray-800 bg-opacity-50 p-2 backdrop-blur-md"
           />
         </Link>
-        {/* Navigation Menu (Top Centered below global navbar) */}
-        <div className="absolute top-0 left-0 w-full z-40 pointer-events-none">
-          <div className="hidden md:flex w-full justify-center mt-32 pointer-events-auto">
+        {/* Navigation Menu */}
+        <div className="py mt-4 md:mt-16 flex w-full justify-center">
+          <div className="hidden md:block">
             <FloatingDockLink
               desktopClassName="bg-transparent transition-all duration-300"
               mobileClassName="translate-y-20 bg-transparent transition-all duration-300"
@@ -212,7 +212,7 @@ const Team: React.FC = () => {
           </div>
         </div>
         {/* Main Content */}
-        <div className="container relative z-10 mx-auto px-4 pt-64 pb-16">
+        <div className="container relative z-10 mx-auto px-4 py-24 md:py-16">
           <motion.h1
             className="mb-10 text-center font-Bangers text-5xl tracking-wider sm:text-4xl md:text-7xl"
             initial={{ opacity: 0, scale: 0.8 }}
