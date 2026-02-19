@@ -175,7 +175,7 @@ export default function Page() {
     "Food Included",
   ];
 
-  const features_nit = ["Participate in all events except flagship events", feature[1]];
+  const features_nit = ["Participate in all events except flagship events", feature[1], "Culfest T-Shirt included"];
   const feature_all_more = [
     "Participate in all events except flagship events",
     feature[1],
@@ -189,7 +189,7 @@ export default function Page() {
       price: session.user.isNITJSR ? 200 : 400,
       originalPrice: session.user.isNITJSR ? 500 : 800,
       description: "Pay for participating in one event only excluding the flagship events",
-      features: [feature[0], feature[1]],
+      features: session.user.isNITJSR ? [feature[0], feature[1], "Culfest T-Shirt not included"] : [feature[0], feature[1]],
       actionLabel: "Get It",
       accent: "#3b82f6", // Blue
     },
