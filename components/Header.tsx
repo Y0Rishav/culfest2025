@@ -17,6 +17,7 @@ import {
 } from "@tabler/icons-react";
 import { BiNews } from "react-icons/bi";
 import { useSession, signOut } from "next-auth/react";
+
 import {
   Sheet,
   SheetContent,
@@ -102,6 +103,7 @@ export function FloatingDockDemo() {
 
       href: "https://chat.whatsapp.com/EOEcrnamcXA1715j3jrdJ6",
     },
+
     ...(isAuthenticated
       ? [
         {

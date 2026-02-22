@@ -66,6 +66,42 @@ const FloatingDockMobile = ({
             layoutId="nav"
             className="absolute inset-x-0 top-full mb-2 flex flex-col gap-2"
           >
+            {/* Myntra Registration - Top of Menu */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ delay: items.length * 0.05 }}
+            >
+              <a
+                href="https://myntra.onelink.me/dNYC/psb0vkzt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 rounded-lg p-2"
+                onClick={onItemClick}
+                style={{
+                  background: "linear-gradient(145deg, #f5e6d3, #e8d5b8, #dfc9a8)",
+                  border: "2px dashed #8b6f4e",
+                }}
+              >
+                <img
+                  src="/myntra-logo.png"
+                  alt="Myntra"
+                  style={{ width: "28px", height: "28px", objectFit: "contain" }}
+                />
+                <span
+                  className="text-sm font-bold tracking-wide"
+                  style={{
+                    color: "#4a3728",
+                    fontFamily: "'Bangers', sans-serif",
+                    letterSpacing: "1.5px",
+                  }}
+                >
+                  !! Register on Myntra
+                </span>
+              </a>
+            </motion.div>
+
             {items.map((item, idx) => (
               <motion.div
                 key={item.title}

@@ -147,6 +147,7 @@ const fadeItem = {
 // Team Component
 const Team: React.FC = () => {
   const [isMobile, setIsMobile] = React.useState(false);
+  const [sheetOpen, setSheetOpen] = React.useState(false);
 
   React.useEffect(() => {
     const checkMobile = () => {
@@ -178,7 +179,7 @@ const Team: React.FC = () => {
           />
         </Link>
         {/* Navigation Menu */}
-        <div className="py mt-4 md:mt-16 flex w-full justify-center">
+        <div className="py mt-24 md:mt-32 flex w-full justify-center">
           <div className="hidden md:block">
             <FloatingDockLink
               desktopClassName="bg-transparent transition-all duration-300"
@@ -187,8 +188,8 @@ const Team: React.FC = () => {
             />
           </div>
           {/* Mobile Sheet - Positioned to the left of global menu */}
-          <div className="md:hidden pointer-events-auto absolute top-5 right-20">
-            <Sheet>
+          <div className="md:hidden pointer-events-auto fixed top-5 right-20 z-50">
+            <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
               <SheetTrigger asChild>
                 <button className="flex h-10 w-10 items-center justify-center rounded-xl shadow-lg transition-transform hover:scale-110 active:scale-95"
                   style={{
@@ -206,6 +207,7 @@ const Team: React.FC = () => {
                   mobileClassName="translate-y-20 bg-transparent transition-all duration-300"
                   items={links}
                   initial={true}
+                  onItemClick={() => setSheetOpen(false)}
                 />
               </SheetContent>
             </Sheet>
