@@ -48,13 +48,17 @@ export default function Page1() {
             </Link>
           )}
 
-          {/* Myntra Coupon Ticket - Desktop */}
+          {/* Myntra Coupon Ticket - Desktop, positioned next to Jharkhand Tourism logo */}
           <a
             href="https://myntra.onelink.me/dNYC/psb0vkzt"
             target="_blank"
             rel="noopener noreferrer"
-            className="coupon-ticket absolute right-4 z-50 hidden md:right-16 md:flex transition-all hover:scale-105 active:scale-95"
-            style={{ top: "220px" }}
+            className="coupon-ticket absolute z-30 hidden md:flex transition-all hover:scale-105 active:scale-95"
+            style={{
+              top: "18vh",
+              left: "50%",
+              marginLeft: "170px",
+            }}
           >
             <div className="coupon-body">
               <div className="coupon-inner">
@@ -71,11 +75,11 @@ export default function Page1() {
           </a>
           <style jsx>{`
             .coupon-ticket {
-              transform: rotate(-18deg);
+              transform: rotate(-8deg);
               cursor: pointer;
             }
             .coupon-ticket:hover {
-              transform: rotate(-2deg) scale(1.05);
+              transform: rotate(0deg) scale(1.05);
             }
             .coupon-body {
               position: relative;
