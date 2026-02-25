@@ -38,7 +38,8 @@ export default async function handler(
 
     if (isEmail) {
       // console.log("object1");
-      const ExistingUser = await User.findOne({ email });
+      const normalizedEmail = email.toLowerCase();
+      const ExistingUser = await User.findOne({ email: new RegExp(`^${normalizedEmail.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
       //   const options = { upsert: true, new: true, setDefaultsOnInsert: true };
 
       if (!ExistingUser) {
@@ -48,10 +49,10 @@ export default async function handler(
         });
       }
 
-      const result = await Otp.findOne({ email });
+      const result = await Otp.findOne({ email: new RegExp(`^${normalizedEmail.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
       // console.log(result.otp);
       if (result.otp === otp) {
-        await Otp.deleteMany({ email: email });
+        await Otp.deleteMany({ email: new RegExp(`^${normalizedEmail.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
         return res.status(201).json({
           status: 201,
           message: "Otp verified successfully",

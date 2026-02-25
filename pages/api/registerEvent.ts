@@ -99,14 +99,18 @@ export default async function handler(
     const usersForEvent = [];
     let newTeam;
     try {
-      const users = await User.find({ email: { $in: userEmails } });
+      // Normalize all team member emails to lowercase
+      const normalizedUserEmails = userEmails.map((e: string) => e.toLowerCase());
+      // Use case-insensitive regex to match existing mixed-case emails in DB
+      const emailRegexes = normalizedUserEmails.map((e: string) => new RegExp(`^${e.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i'));
+      const users = await User.find({ email: { $in: emailRegexes } });
 
-      if (users.length !== userEmails.length) {
-        const foundEmails = users.map((user) => user.email);
-        const missingEmails = userEmails.filter(
-          (email) => !foundEmails.includes(email),
+      if (users.length !== normalizedUserEmails.length) {
+        const foundEmails = users.map((user) => user.email.toLowerCase());
+        const missingEmails = normalizedUserEmails.filter(
+          (email: string) => !foundEmails.includes(email),
         );
-        missingEmails.forEach((email) =>
+        missingEmails.forEach((email: string) =>
           failedUpdates.push({ email, reason: "User not found" }),
         );
         return res.status(400).json({

@@ -27,8 +27,9 @@ export default async function handler(
     // console.log(user);
 
     await connectToDatabase();
+    const normalizedEmail = user.email.toLowerCase();
     const response = await User.findOne({
-      email: user.email,
+      email: new RegExp(`^${normalizedEmail.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i'),
     });
     if (!response) {
       return res.status(401).json({ status: 401, message: "User not found" });

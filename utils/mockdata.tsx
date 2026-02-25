@@ -24,24 +24,24 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
-            ELIGIBILITY AND REGISTRATION :{" "}
+              ELIGIBILITY AND REGISTRATION :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. The competition is open to all college bands (internal and external).
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Each band must register before the deadline via the official Culfest'26 form.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. A band must consist of a minimum of 3 and a maximum of 8 members.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Cross-college teams are allowed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Any change in team members after registration must be informed at least 2 hours before the event.
           </p>
         </div>
@@ -51,27 +51,27 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               EQUIPMENT AND SETUP :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Provided by Organizers:
             <div className="pl-5">
-                <li>Drum kit (without cymbals)</li>
-                <li>Basic PA system</li>
-                <li>Microphones and stage monitors</li>
-                <li>DI boxes</li>
-                <li>Bands Must Bring:
-                  <div className="pl-5">
-                    Guitars, bass, keyboards <br/>
-                    Cymbals, drumsticks, and any special gear <br/>
-                  </div>
-                </li>
+              <li>Drum kit (without cymbals)</li>
+              <li>Basic PA system</li>
+              <li>Microphones and stage monitors</li>
+              <li>DI boxes</li>
+              <li>Bands Must Bring:
+                <div className="pl-5">
+                  Guitars, bass, keyboards <br />
+                  Cymbals, drumsticks, and any special gear <br />
+                </div>
+              </li>
             </div>
-            Soundcheck will be available before the event start.<br/>
-            Analog mixer will be provided. <br/>
+            Soundcheck will be available before the event start.<br />
+            Analog mixer will be provided. <br />
           </p>
         </div>
 
@@ -80,24 +80,24 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               PERFORMANCE GUIDELINES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Each band will get 15-20 minutes of stage time (including setup and exit).
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Bands must perform 1-2 songs (originals or covers).
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Songs must be free from offensive themes.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Time limit violations will lead to point deductions.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Bands must report backstage 30 minutes before their slot; failure may result in disqualification.
           </p>
         </div>
@@ -107,12 +107,12 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               JUDGEMENT CRITERIA :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Each performance will be judged on:
             <div className="pl-5">
               <li>Musical Quality (rhythm, vocals, harmonies, tightness)</li>
@@ -121,7 +121,7 @@ export const mockData: EventData[] = [
               <li>Band Coordination & Synergy</li>
               <li>Audience Engagement</li>
               <li>Judges' decisions are final and binding.</li>
-            </div> 
+            </div>
           </p>
         </div>
 
@@ -130,30 +130,30 @@ export const mockData: EventData[] = [
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300"
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               RULES & CONDUCT :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 1 :{" "}
             </span>{" "}
             Strictly no explicit language, obscene gestures, or disrespectful behavior on stage.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 2 :{" "}
             </span>{" "}
             Any damage to instruments or stage property will be fined to the band.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 3 :{" "}
             </span>{" "}
             Bands must adhere to the time slots and respect the flow of the event.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 4 :{" "}
             </span>{" "}
@@ -166,12 +166,12 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               DISQUALIFICATION CRITERIA :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             A band may be disqualified if:
             <div className="pl-5">
               <li>They exceed the time limit significantly.</li>
@@ -183,7 +183,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className=" mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
@@ -192,7 +192,7 @@ export const mockData: EventData[] = [
           Rs 65,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -201,14 +201,14 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
             CONTACT :{" "}
           </span>{" "}
           <div className="pl-5">
-            Priyanshu Dev (7307834859) <br/>
+            Priyanshu Dev (7307834859) <br />
             Shreya Sharma (7033618603)
           </div>
         </p>
@@ -229,25 +229,25 @@ export const mockData: EventData[] = [
   //         style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
   //         className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
   //       >
-  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //         <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
   //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
   //             RULE 1 :{" "}
   //           </span>{" "}
   //           Solo and Group performances allowed.
   //         </p>
-  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //         <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
   //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
   //             RULE 2 :{" "}
   //           </span>{" "}
   //           Time limit: 3-5 minutes per performance.
   //         </p>
-  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //         <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
   //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
   //             RULE 3 :{" "}
   //           </span>{" "}
   //           Props are allowed but must be cleared by the team immediately after the performance.
   //         </p>
-  //         <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+  //         <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
   //           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
   //             RULE 4 :{" "}
   //           </span>{" "}
@@ -255,7 +255,7 @@ export const mockData: EventData[] = [
   //         </p>
   //       </div>
   //       <p
-  //         className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         className=" mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
   //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
   //       >
   //         <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
@@ -264,7 +264,7 @@ export const mockData: EventData[] = [
   //         To Be Announced
   //       </p>
   //       <p
-  //         className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
   //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
   //       >
   //         <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -273,7 +273,7 @@ export const mockData: EventData[] = [
   //         Open Air Theatre.
   //       </p>
   //       <p
-  //         className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+  //         className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
   //         style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
   //       >
   //         <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -301,7 +301,7 @@ export const mockData: EventData[] = [
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 1 :{" "}
             </span>{" "}
@@ -316,7 +316,7 @@ export const mockData: EventData[] = [
             </div>
 
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 2 :{" "}
             </span>{" "}
@@ -336,27 +336,27 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               JUDGEMENT CRITERIA :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Judging will be based on creativity and choreography.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Energy, expressions, and confidence will be evaluated.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Musicality and rhythm will be considered.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Innovative and effective use of the prop will be judged in Round 2.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Overall impact and stage presence will also be assessed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             6. Judges' scores and decisions are final and non-negotiable.
           </p>
         </div>
@@ -366,21 +366,21 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               MUSIC AND TECHNICAL GUIDELINES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Music will be controlled and played by the organizers.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Participants must be ready backstage when called.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Personal music systems or external devices are not allowed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Props for Round 2 will be provided on stage, and personal props are not permitted.
           </p>
         </div>
@@ -390,26 +390,26 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               DISQUALIFICATION POLICY:{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Participants may be disqualified for violating event rules or time limits.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Use of unauthorized props or music may result in disqualification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Displaying inappropriate behavior or content is not permitted.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Ignoring instructions from organizers or stage crew can lead to disqualification.
           </p>
         </div>
         <p
-          className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className=" mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
@@ -418,7 +418,7 @@ export const mockData: EventData[] = [
           Rs 14,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -427,14 +427,14 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
             CONTACT :{" "}
           </span>{" "}
           <div className="pl-5">
-            Bhumika(8219158503) <br/>
+            Bhumika(8219158503) <br />
             Divya Pratap(9244099734)
           </div>
         </p>
@@ -456,7 +456,7 @@ export const mockData: EventData[] = [
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 1 :{" "}
             </span>{" "}
@@ -469,7 +469,7 @@ export const mockData: EventData[] = [
               The performance time for each performance is two to three minutes.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 2 :{" "}
             </span>{" "}
@@ -489,30 +489,30 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               JUDGEMENT CRITERIA :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Judging will be based on style execution and technique.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Creativity and versatility will be evaluated.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Expressions and musicality will be considered.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Adaptability to the assigned style will be assessed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Overall stage impact will also be taken into account.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             6. Duo, trio, and team performances will receive bonus consideration for coordination, synchronization, and teamwork when compared to solo performances.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             7. Judges' decisions are final and non-negotiable.
           </p>
         </div>
@@ -522,23 +522,23 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               TIME REGULATIONS :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Strict adherence to time limits is mandatory.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Exceeding the allotted time may lead to point deduction or disqualification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Entry, exit, and setup time, if any, are included within the performance time.
           </p>
         </div>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
@@ -547,7 +547,7 @@ export const mockData: EventData[] = [
           Rs 21,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -556,7 +556,7 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -585,49 +585,49 @@ export const mockData: EventData[] = [
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 1 :{" "}
             </span>{" "}
             Team performances only.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 2 :{" "}
             </span>{" "}
             Team must have at least 5 members and than 15 members.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 3 :{" "}
             </span>{" "}
             Participants may perform a skit or stage play of any genre such as drama, comedy, social issue, or fantasy.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 4 :{" "}
             </span>{" "}
             Use of props, costumes, background music, and lighting is allowed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 5 :{" "}
             </span>{" "}
             Scripts may be original or adapted, but must not include plagiarism of copyrighted material without permission.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 6 :{" "}
             </span>{" "}
             Use of offensive language, political propaganda, religious insensitivity, or inappropriate content is strictly prohibited.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 7 :{" "}
             </span>{" "}
             Exceeding the time limit may lead to penalty or disqualification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 8 :{" "}
             </span>{" "}
@@ -640,12 +640,12 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
-            TIME LIMIT :{" "}
+              TIME LIMIT :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Total performance time per team is 20 to 30 minutes, including setup and clearance.
           </p>
         </div>
@@ -655,51 +655,51 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               JUDGEMENT CRITERIA :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Storyline and script quality.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Acting and emotional expression.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Direction and coordination.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Use of stage, props, and movement.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Overall impact and audience engagement.
           </p>
         </div>
 
-         <div
+        <div
           title="Technical Requirements"
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               TECHNICAL REQUIREMENTS :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Teams must bring their own props, costumes, and audio tracks if required.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. A standard stage, sound system, and basic lighting will be provided by the organizers.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Any special technical requirement must be informed to the organizers in advance.
           </p>
         </div>
 
         <p
-          className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className=" mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
@@ -708,7 +708,7 @@ export const mockData: EventData[] = [
           Rs 18,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -717,7 +717,7 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -750,10 +750,10 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">EVENT OVERVIEW: </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               The event is titled Unsung Wonders of the World. It is conducted in teams of two participants each.
             </span>{" "}
@@ -764,7 +764,7 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               REGISTRATION RULES :{" "}
             </span>{" "}
@@ -776,7 +776,7 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               EVENT STRUCTURE :{" "}
             </span>{" "}
@@ -792,7 +792,7 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               QUIZ RULES AND REGULATIONS:{" "}
             </span>{" "}
@@ -807,7 +807,7 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               CODE OF CONDUCT :{" "}
             </span>{" "}
@@ -820,31 +820,31 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               GENERAL RULES AND REGULATIONS :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Teams are expected to adhere to the principles of fair play and
             sportsmanship.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Any form of cheating or plagiarism will result in immediate
             disqualification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The decisions of the organizers and quizmasters are final and
             binding.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             For any queries or concerns,participants can contact the event
             organizers.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -853,7 +853,7 @@ export const mockData: EventData[] = [
           Rs 13,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -862,7 +862,7 @@ export const mockData: EventData[] = [
           Diamond JUbilee Lecture Hall Complex.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -896,14 +896,14 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
-            ELIGIBILITY AND TEAM COMPOSITION :{" "}
+              ELIGIBILITY AND TEAM COMPOSITION :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. The event is open to students currently enrolled in undergraduate or postgraduate programs across institutions.<br/>
-            2. Participation is strictly limited to teams of two members only. <br/>
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
+            1. The event is open to students currently enrolled in undergraduate or postgraduate programs across institutions.<br />
+            2. Participation is strictly limited to teams of two members only. <br />
             3. A participant may be part of only one team.
           </p>
         </div>
@@ -916,7 +916,7 @@ export const mockData: EventData[] = [
           <p className="font-serif text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra text-4xl">EVENT GENRE : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The quiz focuses on India's history, culture, society, governance, economy, science, and popular culture.
             </span>{" "}
@@ -931,7 +931,7 @@ export const mockData: EventData[] = [
           <p className="font-serif text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
             <span className="font-Piedra text-4xl">EVENT DURATION :  </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Preliminary Round: 30 minutes <br /> Final Round: 45 minutes
             </span>{" "}
@@ -943,10 +943,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">EVENT STRUCTURE : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Round 1 - Preliminary Round
               <div className="pl-5">
@@ -956,7 +956,7 @@ export const mockData: EventData[] = [
               </div>
             </span>{" "}
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Round 2 - On-Stage Finals
               <div className="pl-5">
@@ -973,27 +973,27 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               RULES AND REGULATIONS :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Use of electronic devices is strictly prohibited unless explicitly permitted.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Answers, once submitted or announced, cannot be changed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Teams must follow the quizmaster’s instructions times.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Any form of malpractice or misconduct will result in immediate disqualification.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -1002,7 +1002,7 @@ export const mockData: EventData[] = [
           Rs 20,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -1011,7 +1011,7 @@ export const mockData: EventData[] = [
           Diamond JUbilee Lecture Hall Complex.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1037,49 +1037,49 @@ export const mockData: EventData[] = [
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 1 :{" "}
             </span>
             Only team performances are allowed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 2 :{" "}
             </span>
             Each team must have a minimum of 10 members and a maximum of 18 members.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 3 :{" "}
             </span>
             The use of props, placards, costumes, and musical instruments is allowed but should be minimal and suitable for a street play format.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 4 :{" "}
             </span>
             The performance must rely mainly on acting, dialogue, and expressions rather than technical effects.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 5 :{" "}
             </span>
             The explicit use of offensive language, political propaganda, religious insensitivity, or inappropriate content is strictly prohibited.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 6 :{" "}
             </span>
             The play should be suitable for a public audience.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 7 :{" "}
             </span>
             Teams must report to the venue at least 30 minutes before their performance slot.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 8 :{" "}
             </span>
@@ -1092,12 +1092,12 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
-            TIME LIMIT :{" "}
+              TIME LIMIT :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The total performance time per team is 25 to 30 minutes.
           </p>
         </div>
@@ -1107,19 +1107,19 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
-            TECHNICAL REQUIREMENTS :{" "}
+              TECHNICAL REQUIREMENTS :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            1. Teams must bring their own props, costumes, and instruments if required. <br/>
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
+            1. Teams must bring their own props, costumes, and instruments if required. <br />
             2. No elaborate stage setup will be provided as this is a street theatre event.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -1128,7 +1128,7 @@ export const mockData: EventData[] = [
           Rs 22,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -1137,7 +1137,7 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -1165,38 +1165,38 @@ export const mockData: EventData[] = [
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 1 :
             </span>{" "}
             The debate must be conducted in Hindi.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 2 :
             </span>{" "}
             Each side is given 5 minutes to present their points.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 3 :
             </span>{" "}
             The sarpanch will moderate the debate and ensure decorum is
             maintained.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 4 :
             </span>{" "}
             Humor should be lighthearted and non-offensive.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 5 :
             </span>{" "}
             Teams can use minimal props if necessary.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 6 :
             </span>{" "}
@@ -1204,7 +1204,7 @@ export const mockData: EventData[] = [
           </p>
         </div>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -1213,7 +1213,7 @@ export const mockData: EventData[] = [
           Rs 10,000.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -1222,7 +1222,7 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -1248,34 +1248,34 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1 :{" "}
             </span>{" "}
             A team can consist of a minimum of 8 and a maximum of 40 performing
             members..
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>{" "}
             The music must be submitted in mp3 format to the organizer 1 hour
             before the event begins.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>{" "}
             Performance duration must lie between 8-15 minutes.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 4 :{" "}
             </span>{" "}
             Props can also be used for the Performance like hats,sticks,etc. But
             the use of hazardous props are not allowed.Eg: fire,knifes,etc.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 5 :{" "}
             </span>{" "}
@@ -1283,7 +1283,7 @@ export const mockData: EventData[] = [
           </p>
         </div>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1292,7 +1292,7 @@ export const mockData: EventData[] = [
           Rs 35,000.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1301,7 +1301,7 @@ export const mockData: EventData[] = [
           Main stage.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1326,14 +1326,14 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1 :{" "}
             </span>{" "}
             The competition will take place in two rounds the prelims and the
             finals.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>{" "}
@@ -1347,23 +1347,23 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">PRELIMS</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1 :{" "}
             </span>
             The participants must showcase a demo of their performance, for the
             final round.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>{" "}
             The duration of performance should be 1 to 1.5 minutes.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>{" "}
@@ -1376,29 +1376,29 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">FINALS</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1 :{" "}
             </span>
             The performance time for each participant is 2 to 3 minutes.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>{" "}
             Songs should be a mixture of a minimum of 2 songs
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>
             The creative use of props is allowed in this round and it does fetch
             points in this round.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 4 :{" "}
             </span>
@@ -1408,7 +1408,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1417,7 +1417,7 @@ export const mockData: EventData[] = [
           Rs 8,000.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1426,7 +1426,7 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1451,27 +1451,27 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
-            GENERAL GUIDELINES :{" "}
+              GENERAL GUIDELINES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Team Size: Minimum 4 and maximum 10 members.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Props are strictly prohibited.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Participants must adhere only to the listed dance styles.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Music content used must be appropriate and free of offensive language.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Teams must follow all instructions provided by organizers during the event.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             6. Any violation of rules may result in penalties or disqualification.
           </p>
         </div>
@@ -1481,30 +1481,30 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2  rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">PRELIMS</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1 :{" "}
             </span>
             Performance time: 4 to 6 minutes (as per music track
             length).
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>
             Teams must perform using more than 2 music tracks.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>
             Teams are expected to showcase diversity in style,
             formation, transitions, and teamwork.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 4 :{" "}
             </span>
@@ -1517,16 +1517,16 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">FINALS</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1 :{" "}
             </span>
             Top 4 teams from the Pre-Finals qualify for the Battles.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>
@@ -1536,32 +1536,32 @@ export const mockData: EventData[] = [
               <p>Battle 2: Team 3 vs. Team 4</p>
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>
             Final Battle:
             Winner of Battle 1 vs. Winner of Battle 2.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 4 :{" "}
             </span>
             3rd Place Battle: Runner-up of Battle 1 vs. Runner-up of Battle 2.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 5 :{" "}
             </span>
             Music tracks for the battles will be provided on the venue by the organizers.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 6 :{" "}
             </span>
             Same track will be played for both teams in a particular battle.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 7 :{" "}
             </span>
@@ -1570,7 +1570,7 @@ export const mockData: EventData[] = [
               Maximum 4 members per team can compete in each round.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 8 :{" "}
             </span>
@@ -1580,7 +1580,7 @@ export const mockData: EventData[] = [
               <p>Total battle duration = 1 min × 2 teams × 5 rounds = 10 minutes</p>
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 9 :{" "}
             </span>
@@ -1589,7 +1589,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1598,7 +1598,7 @@ export const mockData: EventData[] = [
           Rs 65,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1607,7 +1607,7 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1640,7 +1640,7 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               TEAM :{" "}
             </span>
@@ -1648,7 +1648,7 @@ export const mockData: EventData[] = [
               Each team must consist of four members. One member must act as the model who will wear the final creation, while the remaining members will serve as designers.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               REGISTRATION :{" "}
             </span>
@@ -1656,7 +1656,7 @@ export const mockData: EventData[] = [
               Pre-register online before the event.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               MATERIALS :{" "}
             </span>
@@ -1666,19 +1666,19 @@ export const mockData: EventData[] = [
               Participants are strictly forbidden from using any outside decorative materials.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               THEME :{" "}
             </span>
             wil be given on the spot.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               TIME DURATION :{" "}
             </span>
             2 hours.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               JUDGING :{" "}
             </span>
@@ -1691,7 +1691,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1700,7 +1700,7 @@ export const mockData: EventData[] = [
           Rs 15,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1709,14 +1709,14 @@ export const mockData: EventData[] = [
           Lecture Hall Complex.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             For any Query , Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Shaily (9234268855) <br/> Sachin (7633822736) <br/> Swetha (9866649939)
+            Shaily (9234268855) <br /> Sachin (7633822736) <br /> Swetha (9866649939)
           </div>
         </p>
       </>
@@ -1743,19 +1743,19 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               TEAM :{" "}
             </span>
             Teams of two individual in pair.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               REGISTRATION :{" "}
             </span>
             Pre-register online before the event.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               MATERIALS :{" "}
             </span>
@@ -1764,19 +1764,19 @@ export const mockData: EventData[] = [
               It is mandatory for participants to create a raised texture in their artwork.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               THEME :{" "}
             </span>
             The theme will be revealed five minutes before the clock starts. Participants must interpret the theme through a three-dimensional perspective.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               TIME DURATION :{" "}
             </span>
             2 hours.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               JUDGING :{" "}
             </span>
@@ -1786,13 +1786,13 @@ export const mockData: EventData[] = [
               Thematic execution will be assessed on how effectively the three-dimensional elements represent the spot theme.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Use of marker is prohibited.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1801,7 +1801,7 @@ export const mockData: EventData[] = [
           Rs 10,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1810,14 +1810,14 @@ export const mockData: EventData[] = [
           Lecture Hall Complex.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
             For any Query , Contact :{" "}
           </span>{" "}
           <div className="pl-5">
-            Varnika Bharalia (6396333537)<br/> Aditya Raj Tewary (9142143387)<br/> Yaswitha (6302150133)
+            Varnika Bharalia (6396333537)<br /> Aditya Raj Tewary (9142143387)<br /> Yaswitha (6302150133)
           </div>
         </p>
       </>
@@ -1842,13 +1842,13 @@ export const mockData: EventData[] = [
           className="space-y-2  rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               PARTICIPANTS :{" "}
             </span>
             Participation is open to teams consisting of three to five members.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               THEME :{" "}
             </span>
@@ -1861,22 +1861,22 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">FORMAT : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               FILM CREATION :{" "}
             </span>
             Teams must create an original one-minute short film shot after January 2026.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               SUBMISSION :{" "}
             </span>
             Completed short films must be submitted through a drive link to phocus_nit@nitjsr.ac.in.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               SCREENING AND JUDGING :{" "}
             </span>
@@ -1889,24 +1889,24 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               TECHNICAL GUIDELINES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The use of AI tools is strictly prohibited. This includes AI-generated visuals, audio, voice, script, or editing.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Any camera device may be used, including smartphones, DSLR cameras, or mirrorless cameras.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Teams must retain and present raw footage if required for verification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Films must be original and must not violate copyright or include copyrighted music or footage.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The duration of the film must not exceed one minute, with a margin of plus or minus five seconds including titles.
           </p>
         </div>
@@ -1916,25 +1916,25 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">JUDGING CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Evaluation will be based on storytelling and creativity, which carries a weightage of 40 percent.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Cinematography and visual impact will account for 25 percent.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Editing and pace will be evaluated for 20 percent.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Sound design will contribute 15 percent to the final score.
             </span>
@@ -1942,7 +1942,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1951,7 +1951,7 @@ export const mockData: EventData[] = [
           Rs 14,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -1978,7 +1978,7 @@ export const mockData: EventData[] = [
           className="space-y-2  rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               PARTICIPANTS :{" "}
             </span>
@@ -1991,7 +1991,7 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               EVENT DURATION :{" "}
             </span>{" "}
@@ -2004,10 +2004,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">FORMAT : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               PHOTOGRAPHY CHALLENGE :{" "}
             </span>
@@ -2017,7 +2017,7 @@ export const mockData: EventData[] = [
             </div>
           </p>
           <br />
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               SUBMISSION GUIDELINES :{" "}
             </span>
@@ -2038,31 +2038,31 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               TECHNICAL GUIDELINES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               1.EQUIPMENT :{" "}
             </span>{" "}
             Any camera (DSLR, smartphone, mirrorless, etc.) is allowed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               2.EDITING RULES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             - Basic adjustments like cropping, exposure, color correction, and
             masking are permitted.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             - AI-generated content and heavy manipulations are strictly
             prohibited.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               3.METADATA REQUIREMENTS :{" "}
             </span>
@@ -2075,30 +2075,30 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">JUDGING CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Judging will be based on the accuracy and clarity of the emotion portrayed.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Creativity, originality, and concept will be evaluated.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Composition, lighting, and overall technical quality will be considered.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Emotional impact and storytelling ability will be assessed.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Adherence to rules and submission guidelines is mandatory.
             </span>
@@ -2109,19 +2109,19 @@ export const mockData: EventData[] = [
           className="space-y-2  rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1:{" "}
             </span>{" "}
             Participants must carry their own camera equipment or smartphones.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>
             Previously clicked or downloaded images are not allowed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>{" "}
@@ -2130,7 +2130,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2139,7 +2139,7 @@ export const mockData: EventData[] = [
           Rs 9,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2167,19 +2167,19 @@ export const mockData: EventData[] = [
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300"
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 1 :{" "}
             </span>{" "}
             All content must be appropriate and comply with fest guidelines.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 2 :{" "}
             </span>{" "}
             Plagiarism or reuse of existing advertisements is strictly prohibited.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
               RULE 3 :{" "}
             </span>{" "}
@@ -2192,33 +2192,33 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               TECHNICAL GUIDELINES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The maximum video length must be sixty seconds.
             </span>{" "}
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The language of the video should be either Hindi or English.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Any camera or recording device may be used, including smartphones, DSLR cameras, or mirrorless cameras.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             All editing tools and visual or sound effects are permitted.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The content must be original and created strictly during the event timeline.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The poster must appear clearly at the end of the video and should accurately reflect the advertisement concept.
             </span>
@@ -2230,30 +2230,30 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">JUDGING CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Creativity and originality will be evaluated.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Interpretation of the theme will be considered.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Marketing impact and storytelling ability will be assessed.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Technical quality, including video, sound, and editing, will be judged.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Overall presentation and audience appeal will also be taken into account.
             </span>
@@ -2261,7 +2261,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className=" mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className=" mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra " style={{ letterSpacing: "1px" }}>
@@ -2270,7 +2270,7 @@ export const mockData: EventData[] = [
           Rs 12,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -2279,7 +2279,7 @@ export const mockData: EventData[] = [
           Open Air Theatre.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "1px" }}>
@@ -2307,37 +2307,37 @@ export const mockData: EventData[] = [
           className="space-y-2  rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1:{" "}
             </span>{" "}
             Each team must consist of 10 to 18 participants.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>
             Teams may choose any theme, but relevance and consistency with the theme is mandatory.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>{" "}
             Participants must bring their own costumes, props, and accessories.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 4 :{" "}
             </span>{" "}
             Judging will focus on originality, confidence, walking style, attitude, theme portrayal, and music synchronization.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 5 :{" "}
             </span>{" "}
             All team members must be dressed according to the defined theme.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 6 :{" "}
             </span>
@@ -2350,11 +2350,11 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">ELIGIBILITY : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
-            This is a team event open to groups of 10-18 participants.<br/>
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
+            This is a team event open to groups of 10-18 participants.<br />
             Teams must ensure consistency in theme, attire, and presentation.
           </p>
         </div>
@@ -2364,29 +2364,29 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
-            JUDGING CRITERIA:{" "}
+              JUDGING CRITERIA:{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Originality and creativity will be evaluated.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Theme relevance and clarity will be assessed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Confidence and ramp presence will be considered.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Costume design and visual impact will be judged.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Music synchronization and choreography will also be evaluated.
           </p>
         </div>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2396,7 +2396,7 @@ export const mockData: EventData[] = [
         </p>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2405,7 +2405,7 @@ export const mockData: EventData[] = [
           Rs 38,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2432,18 +2432,18 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
               PARTICIPATION GUIDELINES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Participation is on an individual basis for male and female participants.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Participants may be paired by the organizers for the Couple Round.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Pairing is strictly for the purpose of the competition and does not imply any real-life relationship.
           </p>
         </div>
@@ -2453,10 +2453,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">ELIGIBILITY : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The event is open to individual male and female participants registered for Culfest.
           </p>
         </div>
@@ -2466,61 +2466,61 @@ export const mockData: EventData[] = [
           className="space-y-2  rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 1:{" "}
             </span>{" "}
             Each participant must perform a ramp walk and deliver a creative self-introduction in Round 1.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 2 :{" "}
             </span>
             The self-introduction should include the participant's name, talents, interests, ambitions, or unique qualities.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 3 :{" "}
             </span>{" "}
             In Round 2, participants will perform in pairs with coordinated movement or interaction.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 4 :{" "}
             </span>{" "}
             Judges may ask one to two situational or general questions to either or both participants.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 5 :{" "}
             </span>{" "}
             Female participants must wear cocktail dresses, while male participants must wear western suits.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 6 :{" "}
             </span>{" "}
             Costumes must be decent, elegant, and culturally appropriate.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 7 :{" "}
             </span>{" "}
             Vulgar, obscene, or offensive outfits or actions will lead to immediate disqualification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 8 :{" "}
             </span>{" "}
             Props are allowed only if they are safe, non-hazardous, and pre-approved by the organizers.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 9 :{" "}
             </span>{" "}
             Time limits for each round must be strictly followed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               RULE 10 :{" "}
             </span>{" "}
@@ -2533,20 +2533,20 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">JUDGING CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Judging will be based on confidence, clarity of speech, spontaneity, personality, and stage presence.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Coordination during the Couple Round will also be evaluated.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Overall presentation will be taken into account.
             </span>
@@ -2554,7 +2554,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2564,7 +2564,7 @@ export const mockData: EventData[] = [
         </p>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2573,7 +2573,7 @@ export const mockData: EventData[] = [
           Rs 17,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2605,10 +2605,10 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">Participation</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               This is an individual event. <br />
               Committees and agendas will be announced prior to the conference. <br />
@@ -2622,12 +2622,12 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               SPEAKING GUIDELINES :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Opening speeches should be 60-90 seconds. GSL speeches are limited to 60 seconds. Moderated caucus speeches are limited to 30 seconds per speaker. A maximum of one Point of Information (POI) is allowed per speech.
           </p>
 
@@ -2638,10 +2638,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">Resolution Rules</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Resolutions must clearly define the issue, proposed actions, and implementation mechanisms. They may be authored individually or jointly and require a simple majority to pass.
             </span>
@@ -2653,35 +2653,35 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">SESSION STRUCTURE AND POINT DISTRIBUTION </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The session begins with Roll Call, carrying 5 points, where delegates respond with "Present" or "Present and Voting", "and attendance and preparedness are recorded".
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The General Speaker's List (GSL) carries 25 points. Delegates deliver structured speeches presenting their country's stance on the agenda, with emphasis on clarity, relevance, and policy articulation.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Moderated and Unmoderated Caucuses together carry 25 points. Moderated caucuses involve short, focused speeches on specific sub-topics, while unmoderated caucuses allow informal negotiations, bloc formation, and exchange of ideas. Delegates are judged on diplomacy, engagement, and negotiation skills.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Working Papers and Resolution Drafting carry 25 points. Delegates draft solutions addressing the agenda individually or collaboratively, and are evaluated on practicality, originality, and clarity of implementation.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The Voting Procedure carries 10 points. Delegates vote on proposed resolutions following standard MUN procedure, and a simple majority is required for a resolution to pass.
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Closing Remarks carry 10 points. Delegates deliver final speeches summarizing their stance, contributions, and proposed solutions.
             </span>
@@ -2693,16 +2693,16 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">JUDGEMENT CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Judging is based on content quality and relevance, public speaking and clarity, diplomacy and negotiation skills, teamwork, proper use of MUN procedure, and the practicality and originality of proposed solutions, for a total of 100 points.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2711,7 +2711,7 @@ export const mockData: EventData[] = [
           Rs 14,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2720,7 +2720,7 @@ export const mockData: EventData[] = [
           Diamond JUbilee Lecture Hall Complex.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2756,10 +2756,10 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">Participation Guidelines</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Petty Debate is an individual event open to all registered participants of the Literary and Debating Society. Debate topics will be revealed on the spot or five minutes prior to the round. Participants must argue either for or against the assigned motion. Limited preparation time is provided to promote spontaneity and quick thinking.
           </p>
         </div>
@@ -2768,10 +2768,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">FORMAT AND ROUNDS:</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The event will consist of time-bound rounds, depending on the number of participants. Each speaker will be allotted time for an opening argument, a rebuttal, and an optional closing statement, subject to the moderator's discretion. Strict adherence to time limits is mandatory.
           </p>
         </div>
@@ -2780,10 +2780,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">Rules :</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Arguments must remain light-hearted and humorous at all times. <br />
             2. The use of offensive, discriminatory, or explicit language is strictly prohibited. <br />
             3. Personal attacks on individuals or groups are not allowed. <br />
@@ -2797,16 +2797,16 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">JUDGEMENT CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Judging will be based on creativity and originality of arguments, wit and humor, audience engagement, clarity and structure, quality of rebuttals, and effective time management.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2815,7 +2815,7 @@ export const mockData: EventData[] = [
           Rs 8,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2824,7 +2824,7 @@ export const mockData: EventData[] = [
           Diamond Jubilee Lecture Hall Complex.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2851,10 +2851,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">RULES :</span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Participation is on a solo basis. <br />
             2. Each participant receives the story at the venue and is given a 5-minute preparation window. <br />
             3. Only one speaker presents at a time. <br />
@@ -2870,16 +2870,16 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">JUDGEMENT CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Judging is based on clarity of expression, vivid descriptions, creative genre transformation, and effective time management. Extra points are awarded for speeches lasting between 60 and 120 seconds.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2888,7 +2888,7 @@ export const mockData: EventData[] = [
           Rs 8,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2897,7 +2897,7 @@ export const mockData: EventData[] = [
           Diamond Jubilee Lecture Hall Complex.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -2930,31 +2930,31 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">RULES : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Only solo performances are permitted.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Participants must perform using a pre-recorded karaoke backtrack.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Live instruments, beatboxing, or accompanying performers are not allowed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. The backtrack must be submitted in advance in either .mp3 or .wav format.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Song choice is open but must be appropriate for a public cultural event.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             6. Exceeding the prescribed time limit may result in point deduction or disqualification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             7. The use of offensive language or inappropriate content is strictly prohibited.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             8. Only Hindi and English songs are allowed.
           </p>
         </div>
@@ -2964,10 +2964,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">TIME LIMIT : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Each participant is allotted a total stage time of 5-6 minutes, including setup. The maximum singing duration is 5 minutes.
           </p>
         </div>
@@ -2977,10 +2977,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">JUDGEMENT CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Participants will be judged on vocal quality and pitch accuracy, rhythm and timing, expression and interpretation, and overall stage presence and confidence.
           </p>
         </div>
@@ -2990,10 +2990,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">ELIMINATION AND ROUNDS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The competition may include a preliminary round followed by a final round, depending on the number of entries. Top performers from the preliminary round will qualify for the finals.
           </p>
         </div>
@@ -3003,10 +3003,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">TECHNICAL REQUIREMENTS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Participants must bring their own backtrack and keep a backup copy available on their phone. A standard stage microphone and sound system will be provided by the organizers.
           </p>
         </div>
@@ -3016,17 +3016,17 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">AWARDS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Awards will be given for Winner, Runner-up, and Special Mention.
           </p>
         </div>
 
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3035,7 +3035,7 @@ export const mockData: EventData[] = [
           Rs 20,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3044,7 +3044,7 @@ export const mockData: EventData[] = [
           Open air theatre
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3075,10 +3075,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">ELIGIBILITY : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The competition is open to all registered participants of CULFEST.
           </p>
         </div>
@@ -3088,22 +3088,22 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">RULES : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Participants may perform solo or in a group of up to three members.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Only instrumental performances are allowed, and vocals are strictly prohibited.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Backtracks, prerecorded audio, samples, or external sound sources are not permitted, and all sound must be produced live on stage.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Live looping is allowed.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Violation of time limits may lead to penalties or disqualification.
           </p>
         </div>
@@ -3113,10 +3113,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">TIME LIMIT : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             The maximum performance duration is 10 minutes, including setup and sound check.
           </p>
         </div>
@@ -3125,10 +3125,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">JUDGING CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Judging will be based on technical proficiency and control, musicality, composition and arrangement, synchronizationnd coordination for group performances, stage presence and audience engagement, originality, and overall impact.
           </p>
         </div>
@@ -3137,10 +3137,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">ELIMINATION AND ROUNDS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Preliminary and final rounds may be conducted depending on the number of entries. The judges' decision will be final.
           </p>
         </div>
@@ -3149,10 +3149,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">TECHNICAL REQUIREMENT : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Standard microphones and basic audio support will be provided by the organizers. Participants must bring their own instruments and all required accessories. Any special technical requirements must be communicated to the organizers in advance.
           </p>
         </div>
@@ -3161,16 +3161,16 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">AWARDS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Awards will be presented for Winner, Runner-up, and Special Mention.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3179,7 +3179,7 @@ export const mockData: EventData[] = [
           Rs 25,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3188,7 +3188,7 @@ export const mockData: EventData[] = [
           Open air theatre
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3221,10 +3221,10 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">PARTICIPATION GUIDELINES : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The event is open to all students of the institute. Participants must register in teams of 3 to 5 members. Cross-year teams are allowed unless stated otherwise by the organizers. Solo participation is not permitted, and once registered, team members cannot be changed.
             </span>
@@ -3236,10 +3236,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">EVENT STRUCTURE : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Round 1 - Superhero Shadow Quiz (Eliminator Round)
               <div className="pl-5">
@@ -3252,7 +3252,7 @@ export const mockData: EventData[] = [
               </div>
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Round 2 -  Infinity Stone Treasure Hunt (Final Round)
               <div className="pl-5">
@@ -3271,10 +3271,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">RULES AND REGULATIONS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               Participants must carry their college ID cards.
               <div className="pl-5">
@@ -3297,10 +3297,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">SCORING AND QUALIFICATION : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               1. Round 1 scores determine qualification for Round 2. <br />
               2. Round 2 is evaluated based on:
@@ -3319,15 +3319,15 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-4xl">
-            ORGANIZERS' RIGHTS :{" "}
+              ORGANIZERS' RIGHTS :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. The organizers reserve the right to modify rules, rounds, or event flow if required.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. All decisions made by the organizing team and PnD committee will be final.
           </p>
         </div>
@@ -3337,10 +3337,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">ORGANISER'S RIGHTS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               The organizers reserve the right to modify rules, rounds, or event flow if required. All decisions made by the organizing team and PnD committee will be final.
             </span>
@@ -3348,7 +3348,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3357,7 +3357,7 @@ export const mockData: EventData[] = [
           Rs 20,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3366,7 +3366,7 @@ export const mockData: EventData[] = [
           Campus.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3397,19 +3397,19 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">PARTICIPATION GUIDELINES : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Team-based event
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Team size as per organizer instructions
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Open to all registered participants
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Participants must be present for all rounds to remain eligible
           </p>
         </div>
@@ -3418,10 +3418,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">EVENT FORMAT AND ROUNDS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Round 1 - Two Truths & a Lie (Elimination Round)
             <div className="pl-5">
               1. A superhero description with two true statements and one false statement will be shown. <br />
@@ -3430,7 +3430,7 @@ export const mockData: EventData[] = [
               4. Top 10-15 teams will qualify for the next round.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Round 2 - Chinese Whisper
             <div className="pl-5">
               1. Teams compete in pairs. <br />
@@ -3439,7 +3439,7 @@ export const mockData: EventData[] = [
               4. Scoring is based on accuracy.
             </div>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Round 3 - Universe Swapping (Final Round)
             <div className="pl-5">
               1. Teams pick one character chit and one movie/universe chit. <br />
@@ -3453,22 +3453,22 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">RULES AND REGULATIONS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Participants must follow all instructions given by the coordinators.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Use of offensive, inappropriate, or abusive language is strictly prohibited.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Any form of misconduct may lead to immediate disqualification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Judges' and organizers' decisions are final and binding.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Time limits must be strictly followed in all rounds.
           </p>
         </div>
@@ -3477,24 +3477,24 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               JUDGING CRITERIA:{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Accuracy and presence of mind
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Communication and coordination
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Creativity and originality
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Acting skills and expressions
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. Audience engagement
           </p>
         </div>
@@ -3503,24 +3503,24 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               CODE OF CONDUCT :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Participants are expected to maintain discipline and sportsmanship throughout the event.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Any unfair means or disruptive behavior will result in disqualification.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. The organizing committee reserves the right to modify rules if necessary.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3529,7 +3529,7 @@ export const mockData: EventData[] = [
           Rs 14,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3538,7 +3538,7 @@ export const mockData: EventData[] = [
           Campus.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3570,10 +3570,10 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">PARTICIPATION GUIDELINES : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Team-based event <br />
             2. Each team consists of 4 members <br />
             3. Open to all registered participants <br />
@@ -3585,10 +3585,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">EVENT FORMAT AND ROUNDS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Round 1 - Imposter Word Challenge (Elimination Round)
             <div className="pl-5">
               1. Played head-to-head between two teams: an Imposter Team and a Challenger Team.<br />
@@ -3615,10 +3615,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">TEAMS MUST DETERMINE : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Who committed the murder <br />
             2. Why the murder was committed <br />
             3. How the murder was carried out <br />
@@ -3630,10 +3630,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">RULES AND REGULATIONS : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Participants must follow all instructions given by coordinators.<br />
             2. Any form of cheating, misconduct, or misbehavior will lead to disqualification. <br />
             3. Use of offensive or inappropriate language is strictly prohibited. <br />
@@ -3646,10 +3646,10 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">JUDGING CRITERIA : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Observation and deduction skills <br />
             2. Logical reasoning and analysis <br />
             3. Teamwork and communication <br />
@@ -3659,7 +3659,7 @@ export const mockData: EventData[] = [
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3668,7 +3668,7 @@ export const mockData: EventData[] = [
           Rs 14,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3677,7 +3677,7 @@ export const mockData: EventData[] = [
 
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3717,13 +3717,13 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">TEAM COMPOSITION : </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. Each team must consist of two members (a couple).
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Teams should register prior to the start of the event.
           </p>
         </div>
@@ -3732,30 +3732,30 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               Round 1 - Dumb Charades (ELIMINATION ROUND)
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. One partner acts as the  performer and the other as the guesser.<br />
             2. The performer is given a word, phrase, movie title, or situational prompt by the organizers and must convey it using only gestures, expressions, and body language.<br />
             3. The guessing partner must identify the correct answer within the allotted time.
           </p>
 
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               Round 2 - Blindfold Makeup Challenge (FINAL ROUND)
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. One partner will be blindfolded and will have to apply makeup to
             the other partner.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. The makeup kit will be provided by the organizers.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3.Time Limit: 5 minutes.
           </p>
         </div>
@@ -3764,18 +3764,18 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
               JUDGING CRITERIA :{" "}
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             Teams are judged on coordination and teamwork, creativity and expressiveness, accuracy and clarity in the Dumb Charades round, presentation and effort in the Blind Makeup Challenge, overall performance, and adherence to rules.
           </p>
         </div>
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3784,7 +3784,7 @@ export const mockData: EventData[] = [
           Rs 18,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3793,7 +3793,7 @@ export const mockData: EventData[] = [
           OAT/Any LHC room.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3825,7 +3825,7 @@ export const mockData: EventData[] = [
           className="space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               PARTICIPATION GUIDELINES:
             </span>
@@ -3842,24 +3842,24 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               TASK & PASSWORD MECHANISM
             </span>
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             1. At the start of each level, teams will be given four different tasks.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             2. Teams must assign one task to each member before the level begins.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             3. Each successfully completed task provides one password digit along with its correct position.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             4. Writing down digits or their positions is not allowed unless explicitly permitted.
           </p>
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             5. After completing all tasks, the team may attempt to unlock the phone.
           </p>
         </div>
@@ -3868,7 +3868,7 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               RULES & REGULATIONS:
             </span>
@@ -3897,7 +3897,7 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               SCORING AND RANKING<br />
             </span>
@@ -3911,7 +3911,7 @@ export const mockData: EventData[] = [
           className="mt-4 space-y-2 rounded-md border-2 p-4 transition-all duration-300 "
           style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
         >
-          <p className="font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl">
+          <p className="font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg">
             <span className="font-Piedra text-3xl">
               DISQUALIFICATION CRITERIA<br />
             </span>
@@ -3921,7 +3921,7 @@ export const mockData: EventData[] = [
 
 
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3930,7 +3930,7 @@ export const mockData: EventData[] = [
           Rs 14,000/-
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>
@@ -3939,7 +3939,7 @@ export const mockData: EventData[] = [
           Downs Ground.
         </p>
         <p
-          className="mt-2 rounded-lg border-2 p-2 font-serif text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-3xl lg:text-3xl"
+          className="mt-2 rounded-lg border-2 p-2 font-sans text-[14px] text-white drop-shadow-[0_0_3px_black] dark:text-white sm:text-base lg:text-lg"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
         >
           <span className="font-Piedra" style={{ letterSpacing: "2px" }}>

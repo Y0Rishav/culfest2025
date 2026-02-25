@@ -39,7 +39,8 @@ export default async function handler(
 
     if (isEmail) {
       // console.log("object1");
-      const ExistingUser = await User.findOne({ email });
+      const normalizedEmail = email.toLowerCase();
+      const ExistingUser = await User.findOne({ email: new RegExp(`^${normalizedEmail.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
       const options = { upsert: true, new: true, setDefaultsOnInsert: true };
 
       if (!ExistingUser) {
@@ -50,7 +51,7 @@ export default async function handler(
       }
       const otp = String(Math.floor(Math.random() * 1000000)).padStart(6, "0"); //logic to generate 6 digit OTP
       const result = await Otp.findOneAndUpdate(
-        { email },
+        { email: new RegExp(`^${normalizedEmail.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') },
         {
           otp: otp,
           expireTime: Date.now() + 60 * 1000 * 10,

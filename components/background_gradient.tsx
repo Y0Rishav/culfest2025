@@ -31,6 +31,7 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
   const router = useRouter();
   const [teamName, setTeamName] = useState("");
   const [participants, setParticipants] = useState<string[]>([]);
+  const [initialized, setInitialized] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [registeredEvents, setRegisteredEvents] = useState<string[]>([]);
@@ -65,8 +66,15 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
   };
 
   useEffect(() => {
-    if (status === "authenticated") fetchRegisteredEvents();
-  }, [status]);
+    if (status === "authenticated") {
+      fetchRegisteredEvents();
+      // Auto-populate the logged-in user's email as the first participant
+      if (!initialized && session?.user?.email) {
+        setParticipants([session.user.email.toLowerCase()]);
+        setInitialized(true);
+      }
+    }
+  }, [status, session]);
 
   const handleAddParticipant = () => {
     setParticipants([...participants, ""]);
@@ -101,8 +109,10 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
     setError(null);
     if (validateEmails()) {
       try {
+        // Normalize all emails to lowercase before sending
+        const normalizedParticipants = participants.map(e => e.toLowerCase());
         const response = await axios.post("/api/registerEvent", {
-          userEmails: participants,
+          userEmails: normalizedParticipants,
           event: total?.eventname.toString().toLowerCase(),
           session: { data: session },
           teamName: teamName,
@@ -236,8 +246,8 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
         {/* Dynamic Rules Container with creative styling, solid borders, and hover effects */}
         <div
           className="prose prose-invert max-w-none text-left 
-            [&_p]:!font-sans [&_p]:!text-sm [&_p]:sm:!text-base [&_p]:lg:!text-lg [&_p]:!leading-relaxed [&_p]:!text-white [&_p]:!mb-6
-            [&_span]:!font-['Bangers'] [&_span]:!text-xl [&_span]:sm:!text-2xl [&_span]:!tracking-wide [&_span]:!inline [&_span]:!mr-2 
+            [&_p]:!font-sans [&_p]:!text-sm [&_p]:sm:!text-base [&_p]:lg:!text-lg [&_p]:!leading-relaxed [&_p]:!text-white [&_p]:!mb-6 [&_p]:!normal-case
+            [&_span]:!font-['Bangers'] [&_span]:!text-xl [&_span]:sm:!text-2xl [&_span]:!tracking-wide [&_span]:!inline [&_span]:!mr-2 [&_span]:!uppercase
             
             /* Apply box styling to both divs AND direct paragraphs to catch all sections */
             [&_div]:!border-2 [&_div]:!border-dashed [&_div]:!border-white/50 [&_div]:!rounded-xl [&_div]:!bg-white/5 [&_div]:!backdrop-blur-sm [&_div]:!shadow-[0_0_15px_rgba(255,255,255,0.1)] [&_div]:!mb-6 [&_div]:!mt-4
@@ -298,13 +308,13 @@ export function BackgroundGradientDemo({ total, theme }: { total: any; theme?: a
                       Participate in {total?.eventname}
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="bg-zinc-900 text-white border-zinc-700">
+                  <DialogContent className="bg-zinc-900 text-white border-zinc-700 font-sans">
                     <DialogHeader>
                       <DialogTitle className={`text-2xl ${currentTheme.headingFont} text-center`} style={{ color: currentTheme.accentColor }}>
                         Participate in {total?.eventname}
                       </DialogTitle>
                       <DialogDescription>
-                        <div className={`w-full max-w-md rounded p-4 ${currentTheme.bodyFont}`}>
+                        <div className="w-full max-w-md rounded p-4 font-sans">
                           <h2 className="mb-4 text-xl font-bold text-white">Add Participants</h2>
                           <form onSubmit={handleSubmit}>
                             <input

@@ -24,7 +24,8 @@ export default async function handler(
   }
 
   try {
-    const { email, otp, formData } = req.body;
+    const { email: rawEmail, otp, formData } = req.body;
+    const email = rawEmail?.toLowerCase();
 
     if (!email || !otp || !formData) {
       return res
@@ -43,7 +44,7 @@ export default async function handler(
     await connectToDatabase();
 
     // Check if OTP is valid
-    const existingOtp = await Otp.findOne({ email });
+    const existingOtp = await Otp.findOne({ email: new RegExp(`^${email.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
     if (!existingOtp || existingOtp.otp !== otp) {
       return res.status(400).json({
         status: 400,
@@ -52,7 +53,7 @@ export default async function handler(
     }
 
     // Check if user already exists
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({ email: new RegExp(`^${email.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
 
     if (existingUser) {
       return res.status(409).json({

@@ -75,7 +75,8 @@ export const authConfig: NextAuthOptions = {
 
           await connectToDatabase();
 
-          const user = await User.findOne({ email: credentials.email });
+          const normalizedEmail = credentials.email.toLowerCase();
+          const user = await User.findOne({ email: new RegExp(`^${normalizedEmail.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
           if (!user) {
             throw new Error("User not found");
           }
