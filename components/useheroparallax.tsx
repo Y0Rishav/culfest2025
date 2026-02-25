@@ -55,7 +55,7 @@ export const products = [
     thumbnail: "/Sachin-Jigar.png",
   },
   {
-    title: "HARSHIT",
+    title: "SUJAL",
     link: "/",
     thumbnail: "/pf.jpg",
   },

@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export default function AnimatedHeroBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [showText, setShowText] = useState(false);
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [isMobile, setIsMobile] = useState(false);
 
   // Responsive Check
@@ -16,30 +15,15 @@ export default function AnimatedHeroBackground() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  useEffect(() => {
-    // Countdown Logic (Target: Feb 26, 2026)
-    const targetDate = new Date("2026-02-26T00:00:00").getTime();
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance < 0) {
-        clearInterval(interval);
-        return;
-      }
-
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
-      });
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    }
-  }, []);
+  // Calculate current day of the fest (Feb 26 = Day 1, Mar 1 = Day 4)
+  const getFestDay = () => {
+    const startDate = new Date("2026-02-26T00:00:00");
+    const now = new Date();
+    const diffMs = now.getTime() - startDate.getTime();
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    return Math.min(Math.max(diffDays + 1, 1), 4);
+  };
+  const festDay = getFestDay();
 
   // Hexagon Tech Grid & Embers Animation
   useEffect(() => {
@@ -184,20 +168,22 @@ export default function AnimatedHeroBackground() {
     </svg>
   );
 
-  // TIME HEIST DIGIT - RESPONSIVE SIZE
-  const Digit = ({ val, label }: { val: number, label: string }) => (
+  // LIVE STATUS BOX - Same style as original countdown digits
+  const StatusBox = ({ value, label, pulse }: { value: string, label: string, pulse?: boolean }) => (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "0 10px" }}>
       <div style={{
-        background: "rgba(0,0,0,0.5)", border: "1px solid #b91c1c", color: "#f43f5e",
+        background: "rgba(0,0,0,0.5)", border: `1px solid ${pulse ? '#ef4444' : '#b91c1c'}`, color: "#f43f5e",
         fontFamily: "'Courier New', monospace",
-        fontSize: isMobile ? "16px" : "24px", // SMALLER ON MOBILE
+        fontSize: isMobile ? "14px" : "22px",
         fontWeight: "bold",
-        padding: isMobile ? "2px 5px" : "5px 10px",
-        borderRadius: "5px", textShadow: "0 0 5px #f43f5e"
+        padding: isMobile ? "4px 8px" : "6px 12px",
+        borderRadius: "5px", textShadow: "0 0 5px #f43f5e",
+        whiteSpace: "nowrap" as const,
+        ...(pulse ? { animation: "livePulse 1.5s ease-in-out infinite", boxShadow: "0 0 12px rgba(239, 68, 68, 0.6)" } : {})
       }}>
-        {val.toString().padStart(2, '0')}
+        {value}
       </div>
-      <span style={{ fontSize: isMobile ? "8px" : "10px", color: "#9ca3af", marginTop: "5px", textTransform: "uppercase" }}>{label}</span>
+      <span style={{ fontSize: isMobile ? "8px" : "10px", color: "#9ca3af", marginTop: "5px", textTransform: "uppercase", whiteSpace: "nowrap" as const }}>{label}</span>
     </div>
   );
 
@@ -466,18 +452,24 @@ export default function AnimatedHeroBackground() {
               }}
             />
 
-            {/* TIME HEIST COMPONENT - Scaled on Mobile */}
+            {/* LIVE STATUS BOXES - Same style as original countdown */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}
               style={{ display: "flex", marginTop: "30px", transform: isMobile ? "scale(0.8)" : "scale(1)" }}
             >
-              <Digit val={timeLeft.days} label="Days" />
-              <Digit val={timeLeft.hours} label="Hrs" />
-              <Digit val={timeLeft.minutes} label="Mins" />
-              <Digit val={timeLeft.seconds} label="Secs" />
+              <StatusBox value="● LIVE" label="Status" pulse />
+              <StatusBox value={`DAY ${festDay}`} label="Of 4" />
+              <StatusBox value="30+" label="Events" />
+              <StatusBox value="300+" label="Registered" />
             </motion.div>
+            <style>{`
+              @keyframes livePulse {
+                0%, 100% { box-shadow: 0 0 8px rgba(239, 68, 68, 0.4); border-color: #ef4444; }
+                50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.8); border-color: #f87171; }
+              }
+            `}</style>
 
           </motion.div>
         )}
