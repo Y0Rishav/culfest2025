@@ -134,6 +134,52 @@ export default function Checkout() {
       orderDetails.items[3].paisa = 300;
     }
   }
+  // Retry helper for payment verification
+  const verifyWithRetry = async (data: any, maxRetries = 3): Promise<any> => {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        const result = await fetch("/api/verify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        const res = await result.json();
+        if (res.isOk) {
+          localStorage.removeItem("pending_payment");
+          return res;
+        }
+        if (result.status === 400) {
+          return res;
+        }
+        console.error(`Verify attempt ${attempt} failed:`, res.message);
+      } catch (error) {
+        console.error(`Verify attempt ${attempt} network error:`, error);
+      }
+      if (attempt < maxRetries) {
+        await new Promise((resolve) => setTimeout(resolve, 2000 * Math.pow(2, attempt - 1)));
+      }
+    }
+    return null;
+  };
+
+  // On mount, check for any pending payment that wasn't verified
+  React.useEffect(() => {
+    const pendingPayment = localStorage.getItem("pending_payment");
+    if (pendingPayment) {
+      const data = JSON.parse(pendingPayment);
+      console.log("Found pending payment, retrying verification...");
+      verifyWithRetry(data).then((res) => {
+        if (res?.isOk) {
+          alert("Your previous payment has been verified successfully!");
+          localStorage.removeItem("pending_payment");
+          router.replace("/profile");
+        } else {
+          localStorage.removeItem("pending_payment");
+        }
+      });
+    }
+  }, []);
+
   if (status === "loading" || loading1) {
     return (
       <motion.div
@@ -166,57 +212,6 @@ export default function Checkout() {
       </div>
     );
   }
-
-  // Retry helper for payment verification
-  const verifyWithRetry = async (data: any, maxRetries = 3): Promise<any> => {
-    for (let attempt = 1; attempt <= maxRetries; attempt++) {
-      try {
-        const result = await fetch("/api/verify", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
-        const res = await result.json();
-        if (res.isOk) {
-          // Clear saved payment data on success
-          localStorage.removeItem("pending_payment");
-          return res;
-        }
-        // If server responded but payment verification failed (signature mismatch etc.), don't retry
-        if (result.status === 400) {
-          return res;
-        }
-        // Server error - retry
-        console.error(`Verify attempt ${attempt} failed:`, res.message);
-      } catch (error) {
-        console.error(`Verify attempt ${attempt} network error:`, error);
-      }
-      // Wait before retrying (exponential backoff: 2s, 4s, 8s)
-      if (attempt < maxRetries) {
-        await new Promise((resolve) => setTimeout(resolve, 2000 * Math.pow(2, attempt - 1)));
-      }
-    }
-    return null; // All retries failed
-  };
-
-  // On mount, check for any pending payment that wasn't verified
-  React.useEffect(() => {
-    const pendingPayment = localStorage.getItem("pending_payment");
-    if (pendingPayment) {
-      const data = JSON.parse(pendingPayment);
-      console.log("Found pending payment, retrying verification...");
-      verifyWithRetry(data).then((res) => {
-        if (res?.isOk) {
-          alert("Your previous payment has been verified successfully!");
-          localStorage.removeItem("pending_payment");
-          router.replace("/profile");
-        } else {
-          // Webhook will handle it — clear pending flag
-          localStorage.removeItem("pending_payment");
-        }
-      });
-    }
-  }, []);
 
   const processPayment = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
