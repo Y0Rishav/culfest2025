@@ -31,7 +31,7 @@ export default async function handler(
         data: null,
       });
     }
-    const payment = await Payment.findOne({ userId: user._id });
+    const payment = await Payment.findOne({ userId: user._id.toString() });
     if (!payment) {
       return res.status(200).json({
         status: 404,

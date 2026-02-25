@@ -92,6 +92,10 @@ export default async function handler(
       amount: amount,
       currency: currency,
       receipt: "rcp1",
+      notes: {
+        userId: userId,
+        email: user?.email || "",
+      },
     };
 
     const order = await razorpay.orders.create(options);
