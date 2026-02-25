@@ -167,6 +167,57 @@ export default function Checkout() {
     );
   }
 
+  // Retry helper for payment verification
+  const verifyWithRetry = async (data: any, maxRetries = 3): Promise<any> => {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        const result = await fetch("/api/verify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        const res = await result.json();
+        if (res.isOk) {
+          // Clear saved payment data on success
+          localStorage.removeItem("pending_payment");
+          return res;
+        }
+        // If server responded but payment verification failed (signature mismatch etc.), don't retry
+        if (result.status === 400) {
+          return res;
+        }
+        // Server error - retry
+        console.error(`Verify attempt ${attempt} failed:`, res.message);
+      } catch (error) {
+        console.error(`Verify attempt ${attempt} network error:`, error);
+      }
+      // Wait before retrying (exponential backoff: 2s, 4s, 8s)
+      if (attempt < maxRetries) {
+        await new Promise((resolve) => setTimeout(resolve, 2000 * Math.pow(2, attempt - 1)));
+      }
+    }
+    return null; // All retries failed
+  };
+
+  // On mount, check for any pending payment that wasn't verified
+  React.useEffect(() => {
+    const pendingPayment = localStorage.getItem("pending_payment");
+    if (pendingPayment) {
+      const data = JSON.parse(pendingPayment);
+      console.log("Found pending payment, retrying verification...");
+      verifyWithRetry(data).then((res) => {
+        if (res?.isOk) {
+          alert("Your previous payment has been verified successfully!");
+          localStorage.removeItem("pending_payment");
+          router.replace("/profile");
+        } else {
+          // Webhook will handle it — clear pending flag
+          localStorage.removeItem("pending_payment");
+        }
+      });
+    }
+  }, []);
+
   const processPayment = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
@@ -196,18 +247,22 @@ export default function Checkout() {
             productPrice,
           };
 
-          const result = await fetch("/api/verify", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-          });
+          // Save payment data to localStorage as backup before verifying
+          localStorage.setItem("pending_payment", JSON.stringify(data));
 
-          const res = await result.json();
-          if (res.isOk) {
+          const res = await verifyWithRetry(data);
+
+          if (res?.isOk) {
+            localStorage.removeItem("pending_payment");
             alert(res.message);
             router.replace("/profile");
           } else {
-            alert(res.message);
+            alert(
+              "Payment received but verification is taking longer than expected. " +
+              "Don't worry — your payment will be verified automatically. " +
+              "Please check your profile page in a few minutes."
+            );
+            router.replace("/profile");
           }
         },
         notes: {

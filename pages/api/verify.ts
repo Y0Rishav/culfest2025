@@ -88,6 +88,22 @@ export default async function handler(
 
     // console.log("verify working");
 
+    // Check if payment already exists (webhook might have saved it already)
+    const existingPayment = await Payment.findOne({ paymentId: razorpayPaymentId });
+    if (existingPayment) {
+      return res.status(200).json({
+        message: "Payment verified successfully",
+        isOk: true,
+      });
+    }
+    const existingOrderPayment = await Payment.findOne({ orderId: orderCreationId });
+    if (existingOrderPayment) {
+      return res.status(200).json({
+        message: "Payment verified successfully",
+        isOk: true,
+      });
+    }
+
     const newpayment = new Payment({
       userId: userId,
       paymentId: razorpayPaymentId,
