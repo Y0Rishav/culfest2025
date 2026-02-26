@@ -3,20 +3,8 @@ import { motion } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from "./ui/alert-dialog";
 import Image from "next/image";
 import Link from "next/link";
-
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "./ui/input-otp";
-import { Button } from "./ui/button";
 const SignupForm: React.FC = () => {
   const router = useRouter();
   const [formData, setFormData] = useState<any>({
@@ -35,44 +23,7 @@ const SignupForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [otp, setOtp] = useState("");
-  const [sentOtp, setSentOtp] = useState(false);
 
-  const [loading, setLoading] = useState(false);
-  const [isOtpCorrect, setIsOtpCorrect] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
-
-  const handleSendOtp = async (e: React.FormEvent) => {
-    e.preventDefault();
-    formData["confirmPassword"] = formData["re-enter password"];
-    if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match");
-      setTimeout(() => {
-        setError("");
-      }, 1000);
-      return;
-    }
-    setError("");
-    setLoading(true);
-    try {
-      const response = await axios.post("/api/sendemailforregister", {
-        email: formData?.email,
-        purpose: "registration",
-        phone: formData?.phone,
-      });
-      if (response.data.status === 400) {
-        setError(response.data.message);
-      } else if (response.data.status === 409) {
-        setError(response.data.message);
-      } else if (response.data.status === 201) {
-        setSentOtp(true);
-      }
-    } catch (error: any) {
-      setError(error?.response?.data?.message);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -103,7 +54,6 @@ const SignupForm: React.FC = () => {
       setIsSubmitting(true);
       const response = await axios.post("/api/auth/signup", {
         email: formData?.email,
-        otp,
         formData,
       });
       setIsSubmitting(false);
@@ -186,13 +136,7 @@ const SignupForm: React.FC = () => {
             {/* Form Fields */}
             <form
               className="grid gap-5 md:grid-cols-2"
-              onSubmit={
-                isOtpCorrect
-                  ? handleSubmit
-                  : sentOtp
-                    ? handleSubmit
-                    : handleSendOtp
-              }
+              onSubmit={handleSubmit}
             >
               {[
                 "Username",
@@ -287,63 +231,16 @@ const SignupForm: React.FC = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full relative overflow-hidden rounded-lg bg-gradient-to-r from-yellow-500 to-amber-600 py-3 font-bold text-slate-900 shadow-lg transition-all hover:shadow-[0_0_20px_rgba(250,204,21,0.5)] font-Bangers tracking-widest text-xl"
-                  disabled={loading}
+                  disabled={isSubmitting}
                 >
                   <div className="absolute inset-0 bg-white/20 translate-y-full hover:translate-y-0 transition-transform duration-300"></div>
-                  {loading
-                    ? "PROCESSING..."
-                    : isOtpCorrect
-                      ? "FINALIZE REGISTRATION"
-                      : sentOtp
-                        ? "SUBMIT VERIFICATION"
-                        : "SEND OTP VERIFICATION"}
+                  {isSubmitting ? "PROCESSING..." : "REGISTER NOW"}
                 </motion.button>
               </div>
 
               {error && <p className="text-red-400 text-center md:col-span-2 bg-red-900/20 p-2 rounded border border-red-500/30">{error}</p>}
 
-              {sentOtp && (
-                <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
-                  <AlertDialogContent className="bg-slate-900 border border-cyan-500/50 text-white font-Quicksand">
-                    <AlertDialogHeader className="relative flex justify-center">
-                      <AlertDialogTitle className="h2 text-center text-yellow-400 font-Bangers tracking-wide text-2xl">
-                        ENTER SECURITY CODE
-                        <button onClick={() => setIsOpen(false)} className="absolute right-0 top-0 text-slate-400 hover:text-white">✕</button>
-                      </AlertDialogTitle>
-                      <AlertDialogDescription className="text-center text-slate-400">
-                        A verification code has been transmitted to your email.
-                      </AlertDialogDescription>
-                    </AlertDialogHeader>
 
-                    <div className="flex justify-center py-4">
-                      <InputOTP maxLength={6} value={otp} onChange={setOtp}>
-                        <InputOTPGroup className="gap-2">
-                          {[0, 1, 2, 3, 4, 5].map(i => (
-                            <InputOTPSlot key={i} index={i} className="border-slate-600 bg-slate-800 text-white focus:border-yellow-400 w-10 h-12" />
-                          ))}
-                        </InputOTPGroup>
-                      </InputOTP>
-                    </div>
-
-                    <AlertDialogFooter>
-                      <div className="flex w-full flex-col gap-4">
-                        <AlertDialogAction
-                          onClick={handleSubmit}
-                          className="w-full bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-Bangers tracking-wide"
-                          disabled={isSubmitting}
-                          type="button"
-                        >
-                          VERIFY
-                          {isSubmitting && (
-                            <span className="ml-2 animate-spin">⟳</span>
-                          )}
-                        </AlertDialogAction>
-                        {error && <p className="text-red-400 text-center">{error}</p>}
-                      </div>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialog>
-              )}
 
               <p className="md:col-span-2 text-center mt-4 text-sm text-slate-400">
                 Already have an account?{" "}

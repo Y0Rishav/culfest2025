@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 // import connectToDatabase from "./connectToDatabase";
 import User from "../models/User.model";
-import Otp from "../models/Otp.model";
 import { hash } from "bcryptjs";
 import connectToDatabase from "../conntectToDatabase";
 import { getSecondDBUserModel } from "../connectToSecondDB";
@@ -24,10 +23,10 @@ export default async function handler(
   }
 
   try {
-    const { email: rawEmail, otp, formData } = req.body;
+    const { email: rawEmail, formData } = req.body;
     const email = rawEmail?.toLowerCase();
 
-    if (!email || !otp || !formData) {
+    if (!email || !formData) {
       return res
         .status(400)
         .json({ status: 400, message: "All fields are required!" });
@@ -43,14 +42,7 @@ export default async function handler(
 
     await connectToDatabase();
 
-    // Check if OTP is valid
-    const existingOtp = await Otp.findOne({ email: new RegExp(`^${email.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
-    if (!existingOtp || existingOtp.otp !== otp) {
-      return res.status(400).json({
-        status: 400,
-        message: "Invalid or expired OTP",
-      });
-    }
+
 
     // Check if user already exists
     const existingUser = await User.findOne({ email: new RegExp(`^${email.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') });
@@ -158,8 +150,7 @@ export default async function handler(
       // Don't block signup if second DB write fails
     }
 
-    // Delete the used OTP
-    await Otp.deleteMany({ email });
+
 
     return res.status(201).json({
       status: 201,
