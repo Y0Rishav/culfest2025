@@ -461,7 +461,7 @@ export default function AnimatedHeroBackground() {
             >
               <StatusBox value="● LIVE" label="Status" pulse />
               <StatusBox value={`DAY ${festDay}`} label="Of 4" />
-              <StatusBox value="30+" label="Events" />
+              <StatusBox value="20+" label="Events" />
               <StatusBox value="300+" label="Registered" />
             </motion.div>
             <style>{`
