@@ -187,3 +187,4 @@ This will run test queries and show the agent's responses.
 - **Gemini Pro**: Advanced language understanding
 - **Google Cloud Integration**: Seamless integration with other GCP services
 - **No API key rotation**: Uses service account authentication
+ 

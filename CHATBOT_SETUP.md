@@ -268,3 +268,4 @@ Try these questions with the chatbot:
 - **No API key rotation**: Uses service account authentication
 - **Google Cloud Integration**: Seamless with other GCP services
 - **Free credits**: $300 for new accounts
+ 

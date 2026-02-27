@@ -392,3 +392,4 @@ Your chatbot is ready to help users learn about Culfest events! 🚀
 ---
 
 Made with ❤️ for Culfest 2025 | Powered by Google Vertex AI
+ 

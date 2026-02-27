@@ -53,3 +53,4 @@ echo "Press Ctrl+C to stop both services..."
 
 # Wait for both processes
 wait $NEXTJS_PID $CHATBOT_PID
+ 

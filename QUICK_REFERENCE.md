@@ -155,3 +155,4 @@ culfest2025/
 - GCP Setup: `chatbot/VERTEX_AI_SETUP.md`
 - Backend: `chatbot/README.md`
 - Summary: `chatbot/IMPLEMENTATION_SUMMARY.md`
+ 

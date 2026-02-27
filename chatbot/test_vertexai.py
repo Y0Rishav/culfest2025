@@ -87,3 +87,4 @@ except Exception as e:
     print("4. Invalid project ID or location")
     print("\nSee VERTEX_AI_SETUP.md for troubleshooting steps.")
     sys.exit(1)
+ 

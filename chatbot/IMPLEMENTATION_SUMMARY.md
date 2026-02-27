@@ -370,3 +370,4 @@ Your Culfest chatbot is now powered by:
 - ✅ Production-ready architecture
 
 Start chatting at http://localhost:3000! 🚀
+ 

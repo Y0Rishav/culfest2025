@@ -81,3 +81,4 @@ else:
     print(f"\n❌ {failed} TEST(S) FAILED!")
     print(f"\nMake sure your Next.js server is running:")
     print("  npm run dev")
+ 

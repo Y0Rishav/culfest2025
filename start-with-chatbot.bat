@@ -46,3 +46,4 @@ taskkill /FI "WindowTitle eq Python Chatbot*" /T /F >nul 2>nul
 
 echo Services stopped.
 pause
+ 

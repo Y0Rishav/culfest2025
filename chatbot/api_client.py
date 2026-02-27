@@ -200,3 +200,4 @@ class CulfestAPIClient:
             return {"success": False, "error": "Unexpected response"}
         except Exception as e:
             return {"error": str(e), "success": False}
+ 

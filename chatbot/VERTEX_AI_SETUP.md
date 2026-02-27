@@ -203,3 +203,4 @@ After setup:
 1. Test the chatbot: `python chatbot/langchain_agent.py`
 2. Start the FastAPI server: `python chatbot/main.py`
 3. Access docs: http://localhost:8000/docs
+ 

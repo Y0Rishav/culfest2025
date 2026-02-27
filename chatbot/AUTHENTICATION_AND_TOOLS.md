@@ -518,3 +518,4 @@ def get_user_profile_tool(conversation_id: str) -> str
 ✅ **Backward Compatible** - Public tools work without login
 
 Your chatbot is now a full-featured assistant with secure user data access! 🚀
+ 
